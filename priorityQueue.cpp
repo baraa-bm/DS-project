@@ -38,7 +38,7 @@ class priorityQueue{
             // 1. allocate a new block of memory
             // 2. copy/move old elements into new block
             // 3. delete
-            element * newBlock = new element[size];
+            element * newBlock = new element[p_size];
 
             //if we are reducing the size
             if(p_size > newCapacity)
@@ -105,8 +105,48 @@ class priorityQueue{
                 else return;
             }
         }
+        //returns the value of the top element (highest priority)
+        DataType top() {
+            if (p_size == 0) {
+                cerr << "Error: Priority queue is empty. Returning default value." << endl;
+                return DataType();
+            }
+            return maxHeap[1].value;
+        }
 
-        DataType pop();
-        DataType top();
+        //removes the top (highest priority) element from the queue
+        void pop() {
+            //incase of empty queue
+            if (p_size == 0) {
+                return; 
+            }
+
+            //replace the root element with the last element in the heap
+            maxHeap[1] = maxHeap[p_size];
+            p_size--;
+
+            //modify max heap after removing (Sift Down)
+            int current = 1;
+            
+            //continue while there is at least a left child
+            while (p_left(current) <= p_size) {
+                int max_child = p_left(current);
+                
+                //if a right child exists and > left child, update max_child
+                if (p_right(current) <= p_size && maxHeap[p_right(current)].value > maxHeap[max_child].value) {
+                    max_child = p_right(current);
+                }
+
+                //if the current element and >= largest child, we're done
+                if (maxHeap[current].value >= maxHeap[max_child].value) {
+                    break;
+                }
+
+                //o.w, swap with the largest child and continue down the tree
+                swap(current, max_child);
+                current = max_child;
+            }
+        }
+        
         
 };
