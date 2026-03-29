@@ -8,8 +8,8 @@ public:
     int priority;
     int excution_duration;
     int arrival_time;
-
     int waiting_time;
+
 
     task();
     task(int,int,int,int);
