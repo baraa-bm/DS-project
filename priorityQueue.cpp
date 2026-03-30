@@ -81,7 +81,8 @@ class priorityQueue{
     //public functions
     public:
         priorityQueue(){
-            ReAlloc(2);
+            ReAlloc(2
+            );
         }
 
         //copy constructor
@@ -152,8 +153,9 @@ class priorityQueue{
         //returns the value of the top element (highest priority)
         const DataType& top() const {
             if (p_size == 0) {
-                cerr << "Error: Priority queue is empty. Returning default value." << endl;
-                return DataType();
+                // cerr << "Error: Priority queue is empty. Returning default value." << endl;
+                // return DataType();
+                throw std::runtime_error("Priority queue is empty");
             }
             return maxHeap[1].value;
         }
@@ -234,6 +236,9 @@ int main() {
         cout << PQ_copy.top() << endl;
         PQ_copy.pop();
     }
+
+    //this throws exception
+    //cout << PQ.top() << endl;
 
     // 3️⃣ Test move constructor
     priorityQueue<char> PQ3;
