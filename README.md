@@ -53,5 +53,4 @@ g++ main.cpp -o program
 Run:
 ./program
 
-## Author
-CSCE 2211 Student Project
+
