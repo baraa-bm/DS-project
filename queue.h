@@ -1,15 +1,11 @@
-//
-// Created by Youstina Abouelkher on 3/27/2026.
-//
-
 #ifndef ADS_PROJECT_QUEUE_H
 #define ADS_PROJECT_QUEUE_H
-#include "task.h"
 #include <stdexcept>
 
+template <typename T>
 class queue {
 private:
-    task* data;
+    T* data;
     int capacity;
     int head;
     int tail;
@@ -20,13 +16,13 @@ public:
     queue(int);
     ~queue();
 
-    void enqueue(const task&);
-    task dequeue();
-    const task& front() const;
+    void enqueue(const T&);
+    T dequeue();
+    const T& front() const;
 
     int sizeOfQueue() const;
     bool isEmpty() const;
 };
 
-
+#include "queue.cpp" // include template implementation
 #endif //ADS_PROJECT_QUEUE_H
