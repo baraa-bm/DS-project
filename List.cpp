@@ -1,52 +1,63 @@
 #include "List.h"
 
-List::List(): capacity(8), size(0) {
-    data = new task[capacity];
+template <typename T>
+List<T>::List(): capacity(8), size(0) {
+    data = new T[capacity];
 }
 
-List::List(int initial_capacity): capacity(initial_capacity), size(0) {
-    data = new task[capacity];
+template <typename T>
+List<T>::List(int initial_capacity): capacity(initial_capacity), size(0) {
+    data = new T[capacity];
 }
 
-List::~List() {
+template <typename T>
+List<T>::~List() {
     delete[] data;
 }
 
-void List::push_back(const task& Task) {
+template <typename T>
+void List<T>::push_back(const T& element) {
     if (size == capacity)
         resize(capacity*2);
-    data[size++] = Task; //appending the task to teh list.
+    data[size++] = element; 
 }
+
 //=============================================================
-const task& List::getter (int index) const {
-    checkBounds(index); // afeature that exist in the vector
+template <typename T>
+const T& List<T>::getter (int index) const {
+    checkBounds(index); 
     return data[index];
 }
 
-//we need to overload as we are using index access
-task& List::operator[](int index) {
+template <typename T>
+T& List<T>::operator[](int index) {
     checkBounds(index);
-    return data[index]; //whenever we use [] this method will be called
+    return data[index]; 
 }
 
-int List::sizeOfList() const {
+template <typename T>
+int List<T>::sizeOfList() const {
     return size;
 }
 
-bool List::isEmpty() const {
+template <typename T>
+bool List<T>::isEmpty() const {
     return (size == 0);
 }
 
 //===========================================================
-void List::resize(int new_capacity) {
-    task* new_data = new task[new_capacity];
+template <typename T>
+void List<T>::resize(int new_capacity) {
+    T* new_data = new T[new_capacity];
     for (int i=0; i<size; i++)
         new_data[i] = data[i];
     delete [] data;
     data = new_data;
     capacity = new_capacity;
 }
-void List::checkBounds(int index) const {
+
+template <typename T>
+void List<T>::checkBounds(int index) const {
     if (index < 0 || index >= size)
         throw std::out_of_range("Error: index out of range");
 }
