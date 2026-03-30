@@ -81,7 +81,7 @@ class priorityQueue{
     //public functions
     public:
         priorityQueue(){
-            ReAlloc(5);
+            ReAlloc(2);
         }
 
         //copy constructor
@@ -196,6 +196,9 @@ class priorityQueue{
             return p_size == 0;
         }
         
+        int size() const {return p_size;}
+        int capacity() const {return p_capacity;}
+
         ~priorityQueue(){
             delete[] maxHeap;
         }
@@ -216,6 +219,8 @@ int main() {
     while (!PQ.isEmpty()) {
         cout << PQ.top() << " (priority " << PQ.top() << ")" << endl; // note: top() returns value, not priority
         PQ.pop();
+        cout << PQ.size() << endl;
+        cout << PQ.capacity() << endl;
     }
 
     // 2️⃣ Test copy constructor
