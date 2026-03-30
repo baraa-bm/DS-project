@@ -48,9 +48,9 @@ It shows how lists, queues, and priority queues can be used together to manage t
 
 ## How to Run
 Compile:
-```g++ main.cpp -o program
+```g++ main.cpp -o program ```
 
 Run:
-```./program
+```./program ```
 
 
