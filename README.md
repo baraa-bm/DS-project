@@ -1,4 +1,4 @@
-# DS-project
+# Data Structures project
 
 ## Description
 This project is a simple task management system implemented using different data structures.
