@@ -19,20 +19,20 @@ template <typename T>
 void List<T>::push_back(const T& element) {
     if (size == capacity)
         resize(capacity*2);
-    data[size++] = element; //appending the element to the list.
+    data[size++] = element; 
 }
 
 //=============================================================
 template <typename T>
 const T& List<T>::getter (int index) const {
-    checkBounds(index); // afeature that exist in the vector
+    checkBounds(index); 
     return data[index];
 }
 
 template <typename T>
 T& List<T>::operator[](int index) {
     checkBounds(index);
-    return data[index]; //whenever we use [] this method will be called
+    return data[index]; 
 }
 
 template <typename T>
