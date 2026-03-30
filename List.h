@@ -2,7 +2,6 @@
 #define ADS_PROJECT_LIST_H
 #include <stdexcept>
 
-//it is an implementation for the vector like operations
 template <typename T>
 class List {
 private:
@@ -20,10 +19,10 @@ public:
 
     void push_back(const T &element);
     const T& getter (int) const;
-    T& operator[](int); //operator overloading as we get the element using index based.
+    T& operator[](int); 
     int sizeOfList() const;
     bool isEmpty() const;
 };
 
-#include "List.cpp" // include template implementation
+#include "List.cpp" 
 #endif //ADS_PROJECT_LIST_H
