@@ -1,5 +1,6 @@
-#include "../DataStructures/priorityQueue.h"
+#include <iostream>
 #include "manager.h"
+
 Time globalTime(0, 0);
 int x;
 void advanceTime(int h, int m){
@@ -31,14 +32,15 @@ int main(){
 
         int choice;
         cin >> choice;
-
+        string name;
+        int h,m,p;
         switch (choice)
         {
         case 1:
-            cout << "Task Name: "; cin >> name;
-            cout << "Hours, Minutes: "; cin >> h >> m;
-            cout << "Priority: "; cin >> p;
-            
+        cout << "Task Name: "; cin >> name;
+        cout << "Hours, Minutes: "; cin >> h >> m;
+        cout << "Priority: "; cin >> p;
+        {
             task* newTask = new task();
             newTask->name = name;
             newTask->arrival_time = globalTime;
@@ -46,6 +48,7 @@ int main(){
             newTask->priority = p;
 
             mgr.addtask(newTask, p);
+        }
             break;
         case 2:
             mgr.printAllTasks();
