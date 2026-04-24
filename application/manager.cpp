@@ -2,7 +2,6 @@
 
 void manager::addtask(task * newTask, int priority){
     l_tasks.push_back(*newTask);
-    q_tasks.enqueue(newTask);
     pq_tasks.insert(newTask, priority);
 }
 
@@ -27,4 +26,7 @@ float manager::totalTimeExcecution(){
     return totalHours;
 }
 
+float manager::averageWaitingTime(){
+
+}
 

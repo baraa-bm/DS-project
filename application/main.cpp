@@ -1,4 +1,13 @@
 #include "../DataStructures/priorityQueue.h"
+
+Time globalTime(0, 0);
+int x;
+void advanceTime(int h, int m){
+    globalTime.hours += h;
+    globalTime.minutes += m;
+}
+
+
 int main(){
 
     bool isRunning = true;
@@ -16,6 +25,7 @@ int main(){
         cout << "5- Average waiting time";
         cout << "6- Total excecution time";
         cout << "7- Tasks throughput";
+        cout << "8- Advance time";
         cout << "0 - exit";
 
         int choice;
