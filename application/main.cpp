@@ -35,6 +35,17 @@ int main(){
         switch (choice)
         {
         case 1:
+            cout << "Task Name: "; cin >> name;
+            cout << "Hours, Minutes: "; cin >> h >> m;
+            cout << "Priority: "; cin >> p;
+            
+            task* newTask = new task();
+            newTask->name = name;
+            newTask->arrival_time = globalTime;
+            newTask->excution_duration = Time(h, m);
+            newTask->priority = p;
+
+            mgr.addtask(newTask, p);
             break;
         case 2:
             mgr.printAllTasks();
