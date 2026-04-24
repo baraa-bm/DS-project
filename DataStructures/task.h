@@ -14,6 +14,7 @@ public:
     int priority;
     Time excution_duration;
     Time arrival_time;
+    Time start_time;
     status _status;
 
     task();

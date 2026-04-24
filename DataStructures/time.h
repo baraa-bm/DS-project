@@ -8,6 +8,31 @@ class Time{
     
     Time();
     Time(int h, int m);
+
+    void normalize() {
+        if (minutes >= 60) {
+            hours += minutes / 60;
+            minutes %= 60;
+        } else if (minutes < 0) {
+            // Handle negative minutes for subtraction
+            int hourBorrow = (abs(minutes) / 60) + 1;
+            hours -= hourBorrow;
+            minutes += hourBorrow * 60;
+        }
+    }
+
+    int toTotalMinutes() const {
+        return (hours * 60) + minutes;
+    }
+
+    Time operator-(const Time& other) const {
+        int diff = toTotalMinutes() - other.toTotalMinutes();
+        return Time(0, diff); 
+    }
+
+    Time operator+(const Time& other) const {
+        return Time(hours + other.hours, minutes + other.minutes);
+    }
 };
 
 #endif //ADS_PROJECT_TIME_H
