@@ -13,7 +13,7 @@ private:
     queue<task*> q_tasks;
     List<task> l_tasks; 
     priorityQueue pq_tasks;
-    int completedTasks = 0;
+
 
     //current user
 public:

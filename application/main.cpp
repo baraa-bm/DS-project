@@ -1,5 +1,5 @@
 #include "../DataStructures/priorityQueue.h"
-
+#include "manager.h"
 Time globalTime(0, 0);
 int x;
 void advanceTime(int h, int m){
@@ -10,6 +10,7 @@ void advanceTime(int h, int m){
 
 int main(){
 
+    manager mgr;
     bool isRunning = true;
     while(isRunning){
         //enter username and password
@@ -35,7 +36,15 @@ int main(){
         {
         case 1:
             break;
-        
+        case 2:
+            mgr.printAllTasks();
+            break;
+        case 3:
+            mgr.printNextTask();
+            break;
+         case 4:
+            mgr.printCurrentTask();
+            break;
         default:
             break;
         }
