@@ -6,6 +6,7 @@ void manager::addtask(task * newTask, int priority){
 }
 
 void manager::popTask(task *completedTask){
+    completedTasks++;
     pq_tasks.pop();
 }
 
@@ -22,11 +23,22 @@ float manager::totalTimeExcecution(){
         }
     }
     
-    float totalHours = hours + (minutes/60);
+    float totalHours = hours + (minutes/60.0);
     return totalHours;
 }
 
 float manager::averageWaitingTime(){
 
+}
+
+
+float manager::taskThroughput(){
+float totalTime = totalTimeExcecution();
+
+    if(totalTime == 0){
+        return 0; // avoid division by zero
+    }
+
+    return completedTasks / totalTime;
 }
 
