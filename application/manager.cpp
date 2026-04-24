@@ -7,6 +7,7 @@ void manager::addtask(task * newTask, int priority){
 
 void manager::popTask(task *completedTask){
     completedTasks++;
+    currentTask = pq_tasks.top();
     pq_tasks.pop();
 }
 
@@ -70,7 +71,7 @@ void manager::printNextTask(){
                             << t->excution_duration.minutes << "m\n";
 }
 
-void manager::printCurrentTasks(){
+void manager::printAllTasks(){
     int size = l_tasks.sizeOfList();
 
     if (size == 0) {
@@ -101,4 +102,20 @@ void manager::printCurrentTasks(){
        
     }
     cout << "====================================\n\n";
+}
+
+void manager::printCurrentTask(){
+    if (currentTask == nullptr) {
+        cout << "No current task is running.\n";
+        return;
+    }
+
+    cout << "\n[Current Task]\n";
+    cout << "  ID       : " << currentTask->ID << "\n";
+    cout << "  Name     : " << currentTask->name << "\n";
+    cout << "  Priority : " << currentTask->priority << "\n";
+    cout << "  Arrival  : " << currentTask->arrival_time.hours << "h "
+                         << currentTask->arrival_time.minutes << "m\n";
+    cout << "  Duration : " << currentTask->excution_duration.hours << "h "
+                         << currentTask->excution_duration.minutes << "m\n";
 }

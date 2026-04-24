@@ -18,11 +18,13 @@ private:
     //current user
 public:
     int completedTasks = 0;
+    task* currentTask; //for printing the current patient with the doctor
 
     void addtask(task * newTask, int priority);
     void popTask(task *);
-    void printCurrentTasks();
+    void printAllTasks();
     void printNextTask();
+    void printCurrentTask();
 
     //stats
     float averageWaitingTime();
