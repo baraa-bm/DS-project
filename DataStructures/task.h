@@ -7,8 +7,6 @@
 enum status{pending, current ,completed};
 
 class task {
-private:
-    int id;
 public:
     static int _ID;
     int ID;
@@ -19,9 +17,6 @@ public:
     status _status;
 
     task();
-    int getid() const {
-        return id;
-    }
 };
 
 
