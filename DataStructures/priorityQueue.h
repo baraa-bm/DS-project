@@ -11,15 +11,12 @@ using namespace std;
 class priorityQueue {
 private:
     struct element {
-        task value;
+        task* value;
         int priority;
         int order;
 
         element();
-        element(const task& value, int priority);
-
-        element(element&& other) noexcept;
-        element& operator=(element&& other);
+        element(task *value, int priority);
 
         element& operator=(const element& other);
     };
@@ -41,11 +38,9 @@ private:
 
 public:
     priorityQueue();
-    priorityQueue(const priorityQueue& other);
-    priorityQueue(priorityQueue&& other);
 
-    void insert(const task& val, int priority);
-    const task& top() const;
+    void insert(task *, int priority);
+    task * top() const;
     void pop();
 
     bool isEmpty() const;

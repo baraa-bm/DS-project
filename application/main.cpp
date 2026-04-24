@@ -1,28 +1,35 @@
 #include "../DataStructures/priorityQueue.h"
 int main(){
-    task task1;
-    task task2;
-    task task3;
-    task task4;
-    task task5;
 
-    task1.id = 1;
-    task2.id = 2;
-    task3.id = 3;
-    task4.id = 4; 
-    task5.id = 5;
+    bool isRunning = true;
+    while(isRunning){
+        //enter username and password
 
-    priorityQueue PQ;
+        //load data
 
-    PQ.insert(task1, 1);
-    PQ.insert(task2, 2);
-    PQ.insert(task3, 2);
-    PQ.insert(task4, 3);
-    PQ.insert(task5, 1);
+        //options
+        cout << "========== Options ============ \n";
+        cout << "1- Add a task";
+        cout << "2- Show all tasks";
+        cout << "3- Show next task";
+        cout << "4- Show current task";
+        cout << "5- Average waiting time";
+        cout << "6- Total excecution time";
+        cout << "7- Tasks throughput";
+        cout << "0 - exit";
 
-    for(int i = 0; i < 5; i++){
-        cout << PQ.top().id << endl;
-        PQ.pop();
+        int choice;
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            break;
+        
+        default:
+            break;
+        }
+
     }
 
     return 0;

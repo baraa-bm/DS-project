@@ -2,18 +2,23 @@
 #define ADS_PROJECT_TASK_H
 
 #include "Time.h"
+#include <string>
+
+enum status{pending, current ,completed};
 
 class task {
 private:
     int id;
 public:
+    static int _ID;
+    int ID;
+    std::string name;
     int priority;
     Time excution_duration;
     Time arrival_time;
-    Time waiting_time;
+    status _status;
 
     task();
-    task(int,int,int,int);
     int getid() const {
         return id;
     }
