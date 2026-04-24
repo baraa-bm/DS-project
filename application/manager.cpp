@@ -28,14 +28,12 @@ float manager::totalTimeExcecution(){
 }
 
 float manager::averageWaitingTime(){
-    int completedTasks = 0;
     float waitingTime_h = 0;
     float waitingTime_m = 0;
     int size = l_tasks.sizeOfList();
 
     for(int i = 0; i < size; i++){
         if(l_tasks[i]._status == completed){
-            completedTasks++;
             waitingTime_h += (l_tasks[i].start_time.hours - l_tasks[i].arrival_time.hours);
             waitingTime_m += (l_tasks[i].start_time.minutes - l_tasks[i].arrival_time.minutes);
         }

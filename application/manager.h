@@ -16,6 +16,8 @@ private:
 
     //current user
 public:
+    int completedTasks = 0;
+
     void addtask(task * newTask, int priority);
     void popTask(task *);
     void printCurrentTasks();
