@@ -1,4 +1,3 @@
-#include "queue.h"
 
 template <typename T>
 queue<T>::queue(): capacity(8), head(0), tail(0), size(0) {

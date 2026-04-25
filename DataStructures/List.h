@@ -24,5 +24,5 @@ public:
     bool isEmpty() const;
 };
 
-#include "List.cpp" 
+#include "List.tpp" 
 #endif //ADS_PROJECT_LIST_H

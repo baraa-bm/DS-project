@@ -1,5 +1,3 @@
-#include "List.h"
-
 template <typename T>
 List<T>::List(): capacity(8), size(0) {
     data = new T[capacity];

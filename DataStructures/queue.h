@@ -24,5 +24,5 @@ public:
     bool isEmpty() const;
 };
 
-#include "queue.cpp" // include template implementation
+#include "queue.tpp" // include template implementation
 #endif //ADS_PROJECT_QUEUE_H
