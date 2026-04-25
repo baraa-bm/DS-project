@@ -35,6 +35,23 @@ class Time{
     Time operator+(const Time& other) const {
         return Time(hours + other.hours, minutes + other.minutes);
     }
+
+    bool operator>(const Time& other) const {
+        if(hours > other.hours) return true;
+        else if(hours < other.hours) return false;
+        else if(minutes > other.minutes) return true;
+        else return false;
+    }
+
+    bool operator==(const Time& other) const {
+        if(hours == other.hours && minutes == other.minutes) return true;
+        return false;
+    }
+
+    bool operator>=(const Time& other){
+        if(*this > other || *this == other) return true;
+        return false;
+    }
 };
 
 #endif //ADS_PROJECT_TIME_H

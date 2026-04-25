@@ -2,13 +2,35 @@
 
 void manager::addtask(task * newTask, int priority){
     l_tasks.push_back(*newTask);
+    if(pq_tasks.isEmpty()) currentTask = newTask;
     pq_tasks.insert(newTask, priority);
 }
 
-void manager::popTask(task *completedTask){
+void manager::executeTask(task *completedTask){
     completedTasks++;
-    currentTask = pq_tasks.top();
+    pringCompletedTask();
     pq_tasks.pop();
+}
+
+void manager::pringCompletedTask(){
+        cout << "\n[Completed Task]\n";
+    cout << "  ID       : " << currentTask->ID << "\n";
+    cout << "  Name     : " << currentTask->name << "\n";
+    cout << "  Priority : " << currentTask->priority << "\n";
+    cout << "  Arrival  : " << currentTask->arrival_time.hours << "h "
+                         << currentTask->arrival_time.minutes << "m\n";
+    cout << "  Duration : " << currentTask->excution_duration.hours << "h "
+                         << currentTask->excution_duration.minutes << "m\n\n";
+}
+
+void manager::updateTasks(Time globalTime){
+    if((currentTask->arrival_time + currentTask->excution_duration >= globalTime)){
+        executeTask(pq_tasks.top());
+        currentTask = pq_tasks.top();
+
+        cout << "Current Task: \n";
+        printCurrentTask();
+    }
 }
 
 float manager::totalTimeExcecution(){
@@ -55,21 +77,21 @@ float totalTime = totalTimeExcecution();
     return completedTasks / totalTime;
 }
 
-void manager::printNextTask(){
-    if (pq_tasks.isEmpty()) {
-        cout << "No tasks pending.\n";
-        return;
-    }
-    task* t = pq_tasks.top();
-    cout << "\n[Next Task]\n";
-    cout << "  ID       : " << t->ID       << "\n";
-    cout << "  Name     : " << t->name     << "\n";
-    cout << "  Priority : " << t->priority << "\n";
-    cout << "  Arrival  : " << t->arrival_time.hours << "h "
-                            << t->arrival_time.minutes << "m\n";
-    cout << "  Duration : " << t->excution_duration.hours << "h "
-                            << t->excution_duration.minutes << "m\n";
-}
+// void manager::printNextTask(){
+//     if (pq_tasks.isEmpty()) {
+//         cout << "No tasks pending.\n";
+//         return;
+//     }
+//     task* t = pq_tasks.top();
+//     cout << "\n[Next Task]\n";
+//     cout << "  ID       : " << t->ID       << "\n";
+//     cout << "  Name     : " << t->name     << "\n";
+//     cout << "  Priority : " << t->priority << "\n";
+//     cout << "  Arrival  : " << t->arrival_time.hours << "h "
+//                             << t->arrival_time.minutes << "m\n";
+//     cout << "  Duration : " << t->excution_duration.hours << "h "
+//                             << t->excution_duration.minutes << "m\n";
+// }
 
 void manager::printAllTasks(){
     int size = l_tasks.sizeOfList();

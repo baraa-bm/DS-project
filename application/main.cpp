@@ -56,7 +56,7 @@ int main(){
         cout << "\n========== Options ============\n";
         cout << "1- Add a task\n";
         cout << "2- Show all tasks\n";
-        cout << "3- Show next task\n";
+        //cout << "3- Show next task\n";
         cout << "4- Show current task\n";
         cout << "5- Average waiting time\n";
         cout << "6- Total excecution time\n";
@@ -93,13 +93,14 @@ int main(){
             newTask->priority = p;
 
             mgr->addtask(newTask, p);
+            //update tasks
         }
             break;
         case 2:
             mgr->printAllTasks();
             break;
         case 3:
-            mgr->printNextTask();
+            //mgr->printNextTask();
             break;
          case 4:
             mgr->printCurrentTask();
@@ -111,6 +112,8 @@ int main(){
             }
             advanceTime(h, m);
             cout << "Time is now: " << globalTime.hours << "h " << globalTime.minutes << "m\n";
+
+            mgr->updateTasks(globalTime);
             break;
         case 9: {
             cout << "Enter save path (e.g. data.json or data.txt): ";

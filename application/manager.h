@@ -14,16 +14,17 @@ private:
     List<task> l_tasks; 
     priorityQueue pq_tasks;
 
-
     //current user
 public:
     int completedTasks = 0;
     task* currentTask; //for printing the current patient with the doctor
 
     void addtask(task * newTask, int priority);
-    void popTask(task *);
+    void executeTask(task *);
+    void updateTasks(Time globalTime);
     void printAllTasks();
-    void printNextTask();
+    void pringCompletedTask();
+    //void printNextTask();
     void printCurrentTask();
 
     //stats

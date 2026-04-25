@@ -103,7 +103,7 @@ void priorityQueue::insert(task * val, int priority) {
 
 task* priorityQueue::top() const {
     if (p_size == 0)
-        throw runtime_error("Priority queue is empty");
+        return nullptr;
 
     return maxHeap[1].value;
 }
