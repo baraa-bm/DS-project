@@ -1,6 +1,7 @@
 #include <iostream>
 #include "manager.h"
 #include "persistence.h"
+#include "user.h"
 
 #include <string>
 #include <limits>
@@ -43,12 +44,28 @@ static void readWord(const char* prompt, string& out) {
 }
 
 int main(){
+    User currentUser("admin", "1234");
+    bool loggedIn = false;
+// system login (happens only once when application is started up)
+    cout << "--- System Login ---\n";
+    while (!loggedIn) {
+    string uName, pwd;
+    cout << "Username: ";
+    cin >> uName;
+    cout << "Password: ";
+    cin >> pwd;
 
+    if (uName == currentUser.getUsername() && currentUser.authenticate(pwd)) {
+        cout << "Login successful!\n";
+        loggedIn = true;
+    } else {
+        cout << "Incorrect credentials. Try again.\n";
+    }
+    }
     manager* mgr = new manager();
     mgr->currentTask = nullptr;
     bool isRunning = true;
     while(isRunning){
-        //enter username and password
 
         //load data
 
