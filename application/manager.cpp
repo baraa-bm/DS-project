@@ -101,7 +101,7 @@ void manager::printAllTasks(){
         return;
     }
 
-    cout << "\n========== All Tasks (" << size << ") \n";
+    cout << "\n========== All Tasks (" << size << ") ==========\n";
 
     for (int i = 0; i < size; i++) {
         task t = l_tasks[i];
@@ -120,6 +120,7 @@ void manager::printAllTasks(){
                                 << t.arrival_time.minutes    << "m\n";
         cout << "  Duration : " << t.excution_duration.hours   << "h "
                                 << t.excution_duration.minutes << "m\n";
+        cout << "------------------------------\n";
 
        
     }
