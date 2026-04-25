@@ -9,6 +9,7 @@ include_directories(DataStructures application)
 add_executable(main
     application/main.cpp
     application/manager.cpp
+    application/persistence.cpp
     DataStructures/List.cpp
     DataStructures/priorityQueue.cpp
     DataStructures/queue.cpp

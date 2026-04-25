@@ -1,5 +1,10 @@
 #include <iostream>
 #include "manager.h"
+#include "persistence.h"
+
+#include <string>
+
+using namespace std;
 
 Time globalTime(0, 0);
 int x;
@@ -11,7 +16,8 @@ void advanceTime(int h, int m){
 
 int main(){
 
-    manager mgr;
+    manager* mgr = new manager();
+    mgr->currentTask = nullptr;
     bool isRunning = true;
     while(isRunning){
         //enter username and password
@@ -28,6 +34,8 @@ int main(){
         cout << "6- Total excecution time";
         cout << "7- Tasks throughput";
         cout << "8- Advance time";
+        cout << "9- Save to file (.json or .txt)";
+        cout << "10- Load from file (.json or .txt)";
         cout << "0 - exit";
 
         int choice;
@@ -47,17 +55,57 @@ int main(){
             newTask->excution_duration = Time(h, m);
             newTask->priority = p;
 
-            mgr.addtask(newTask, p);
+            mgr->addtask(newTask, p);
         }
             break;
         case 2:
-            mgr.printAllTasks();
+            mgr->printAllTasks();
             break;
         case 3:
-            mgr.printNextTask();
+            mgr->printNextTask();
             break;
          case 4:
-            mgr.printCurrentTask();
+            mgr->printCurrentTask();
+            break;
+        case 8:
+            cout << "Advance by (hours minutes): ";
+            cin >> h >> m;
+            advanceTime(h, m);
+            cout << "Time is now: " << globalTime.hours << "h " << globalTime.minutes << "m\n";
+            break;
+        case 9: {
+            cout << "Enter save path (e.g. data.json or data.txt): ";
+            string path;
+            cin >> path;
+            string err;
+            if (PersistenceManager::saveToFile(path, *mgr, globalTime, &err)) {
+                cout << "Saved successfully to " << path << "\n";
+            } else {
+                cout << "Save failed: " << err << "\n";
+            }
+            break;
+        }
+        case 10: {
+            cout << "Enter load path (e.g. data.json or data.txt): ";
+            string path;
+            cin >> path;
+            PersistedState st;
+            st.globalTime = Time(0, 0);
+            string err;
+            manager* fresh = PersistenceManager::loadNewFromFile(path, st, &err);
+            if (!fresh) {
+                cout << "Load failed: " << err << "\n";
+                break;
+            }
+            delete mgr;
+            mgr = fresh;
+            globalTime = st.globalTime;
+            cout << "Loaded successfully from " << path << "\n";
+            cout << "Time restored to: " << globalTime.hours << "h " << globalTime.minutes << "m\n";
+            break;
+        }
+        case 0:
+            isRunning = false;
             break;
         default:
             break;
@@ -65,5 +113,6 @@ int main(){
 
     }
 
+    delete mgr;
     return 0;
 }

@@ -1,10 +1,10 @@
 #ifndef ADS_PROJECT_MANAGER_H
 #define ADS_PROJECT_MANAGER_H
 
-#include "C:\Users\Youstina Abouelkher\Desktop\ads final clone\DS-project\DataStructures\task.cpp"
-#include "C:\Users\Youstina Abouelkher\Desktop\ads final clone\DS-project\DataStructures\List.h"
-#include "C:\Users\Youstina Abouelkher\Desktop\ads final clone\DS-project\DataStructures\queue.h"
-#include "C:\Users\Youstina Abouelkher\Desktop\ads final clone\DS-project\DataStructures\priorityQueue.h"
+#include "../DataStructures/task.h"
+#include "../DataStructures/List.h"
+#include "../DataStructures/queue.h"
+#include "../DataStructures/priorityQueue.h"
 
 //the manager class handles the logic of the program using the data structures and the tasks.
 
@@ -30,5 +30,8 @@ public:
     float averageWaitingTime();
     float taskThroughput();
     float totalTimeExcecution();
+
+    // Allow persistence to read/write tasks without changing data structures.
+    friend class PersistenceManager;
 };
 #endif //ADS_PROJECT_MANAGER_H
