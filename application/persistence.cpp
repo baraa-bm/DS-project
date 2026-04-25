@@ -137,7 +137,7 @@ manager* PersistenceManager::loadNewFromFile(const std::string& path, PersistedS
     std::lock_guard<std::mutex> guard(g_persistMutex);
 
     std::string lockPath;
-    if (!acquireLockFile(path, error, lockPath)) return false;
+    if (!acquireLockFile(path, error, lockPath)) return nullptr;
 
     manager* fresh = new manager();
     // Important: your current code doesn't initialize this pointer.
@@ -168,7 +168,7 @@ bool PersistenceManager::saveAsTxt(const std::string& path, const manager& mgr, 
     out << "TASK_COUNT " << mgr.l_tasks.sizeOfList() << "\n";
 
     for (int i = 0; i < mgr.l_tasks.sizeOfList(); i++) {
-        const task& t = mgr.l_tasks[i];
+        const task& t = mgr.l_tasks.getter(i);
         out << "TASK "
             << t.ID << "|"
             << t.name << "|"
@@ -283,7 +283,7 @@ bool PersistenceManager::saveAsJson(const std::string& path, const manager& mgr,
     out << "  \"tasks\": [\n";
 
     for (int i = 0; i < mgr.l_tasks.sizeOfList(); i++) {
-        const task& t = mgr.l_tasks[i];
+        const task& t = mgr.l_tasks.getter(i);
         out << "    {\n";
         out << "      \"ID\": " << t.ID << ",\n";
         out << "      \"name\": \"" << escapeJson(t.name) << "\",\n";

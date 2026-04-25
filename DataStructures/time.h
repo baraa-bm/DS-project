@@ -1,6 +1,8 @@
 #ifndef ADS_PROJECT_TIME_H
 #define ADS_PROJECT_TIME_H
 
+#include <cstdlib> // std::abs
+
 class Time{
     public:
     int hours;
@@ -15,7 +17,7 @@ class Time{
             minutes %= 60;
         } else if (minutes < 0) {
             // Handle negative minutes for subtraction
-            int hourBorrow = (abs(minutes) / 60) + 1;
+            int hourBorrow = (std::abs(minutes) / 60) + 1;
             hours -= hourBorrow;
             minutes += hourBorrow * 60;
         }
