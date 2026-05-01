@@ -1,18 +1,63 @@
-cmake_minimum_required(VERSION 3.10)
-project(DS-project)
+cmake_minimum_required(VERSION 3.16)
 
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+project(Patient_Manager VERSION 0.1 LANGUAGES CXX)
 
-include_directories(DataStructures application)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(main
-    application/main.cpp
-    application/manager.cpp
-    application/persistence.cpp
-    DataStructures/List.cpp
-    DataStructures/priorityQueue.cpp
-    DataStructures/queue.cpp
-    DataStructures/task.cpp
-    DataStructures/time.cpp
+find_package(Qt6 REQUIRED COMPONENTS Widgets)
+
+qt_standard_project_setup(REQUIRES 6.10)
+
+file(GLOB_RECURSE SOURCES
+    application/*.cpp
+    DataStructures/*.cpp
+)
+
+file(GLOB_RECURSE HEADERS
+    application/*.h
+    DataStructures/*.h
+    mainwindow.h
+    mainwindow.ui
+)
+
+qt_add_executable(appPatient_Manager
+    ${SOURCES}
+    ${HEADERS}
+    mainwindow.cpp
+)
+
+target_link_libraries(appPatient_Manager
+    PRIVATE Qt6::Widgets
+)
+
+target_include_directories(appPatient_Manager PRIVATE
+    application
+    DataStructures
+)
+
+# qt_add_qml_module(appPatient_Manager
+#     URI Patient_Manager
+#     QML_FILES
+#         Main.qml
+# )
+
+# Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
+# If you are developing for iOS or macOS you should consider setting an
+# explicit, fixed bundle identifier manually though.
+set_target_properties(appPatient_Manager PROPERTIES
+#    MACOSX_BUNDLE_GUI_IDENTIFIER com.example.appPatient_Manager
+    MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
+    MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
+    MACOSX_BUNDLE TRUE
+    WIN32_EXECUTABLE TRUE
+)
+
+target_link_libraries(appPatient_Manager
+    PRIVATE Qt6::Widgets
+)
+
+install(TARGETS appPatient_Manager
+    BUNDLE DESTINATION .
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
