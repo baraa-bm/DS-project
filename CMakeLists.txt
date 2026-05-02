@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 project(Patient_Manager VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_AUTORCC ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
@@ -24,6 +25,7 @@ qt_add_executable(appPatient_Manager
     ${SOURCES}
     ${HEADERS}
     mainwindow.cpp
+    resources.qrc
 )
 
 target_link_libraries(appPatient_Manager
@@ -31,6 +33,7 @@ target_link_libraries(appPatient_Manager
 )
 
 target_include_directories(appPatient_Manager PRIVATE
+    .
     application
     DataStructures
 )

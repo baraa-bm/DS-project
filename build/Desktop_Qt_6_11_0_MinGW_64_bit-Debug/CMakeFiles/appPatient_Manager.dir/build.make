@@ -75,11 +75,19 @@ appPatient_Manager_autogen/timestamp: CMakeFiles/appPatient_Manager.dir/compiler
 	D:\QT\Tools\CMake_64\bin\cmake.exe -E cmake_autogen "C:/Users/p8036/Desktop/Task Scheduling/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/appPatient_Manager_autogen.dir/AutogenInfo.json" Debug
 	D:\QT\Tools\CMake_64\bin\cmake.exe -E touch "C:/Users/p8036/Desktop/Task Scheduling/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/appPatient_Manager_autogen/timestamp"
 
+appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp: C:/Users/p8036/Desktop/Task\ Scheduling/resources.qrc
+appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp: CMakeFiles/appPatient_Manager_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json
+appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp: C:/Users/p8036/Desktop/Task\ Scheduling/style.qss
+appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp: D:/QT/6.11.0/mingw_64/bin/rcc.exe
+appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp: D:/QT/6.11.0/mingw_64/bin/rcc.exe
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Automatic RCC for resources.qrc"
+	D:\QT\Tools\CMake_64\bin\cmake.exe -E cmake_autorcc "C:/Users/p8036/Desktop/Task Scheduling/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/appPatient_Manager_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json" Debug
+
 CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/mocs_compilation.cpp.obj: CMakeFiles/appPatient_Manager.dir/flags.make
 CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/mocs_compilation.cpp.obj: CMakeFiles/appPatient_Manager.dir/includes_CXX.rsp
 CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/mocs_compilation.cpp.obj: appPatient_Manager_autogen/mocs_compilation.cpp
 CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/mocs_compilation.cpp.obj: CMakeFiles/appPatient_Manager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/mocs_compilation.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/mocs_compilation.cpp.obj"
 	D:\QT\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\appPatient_Manager.dir\appPatient_Manager_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\appPatient_Manager.dir\appPatient_Manager_autogen\mocs_compilation.cpp.obj -c "C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\appPatient_Manager_autogen\mocs_compilation.cpp"
 
 CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/mocs_compilation.cpp.i: cmake_force
@@ -94,7 +102,7 @@ CMakeFiles/appPatient_Manager.dir/DataStructures/AppTime.cpp.obj: CMakeFiles/app
 CMakeFiles/appPatient_Manager.dir/DataStructures/AppTime.cpp.obj: CMakeFiles/appPatient_Manager.dir/includes_CXX.rsp
 CMakeFiles/appPatient_Manager.dir/DataStructures/AppTime.cpp.obj: C:/Users/p8036/Desktop/Task\ Scheduling/DataStructures/AppTime.cpp
 CMakeFiles/appPatient_Manager.dir/DataStructures/AppTime.cpp.obj: CMakeFiles/appPatient_Manager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/appPatient_Manager.dir/DataStructures/AppTime.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/appPatient_Manager.dir/DataStructures/AppTime.cpp.obj"
 	D:\QT\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appPatient_Manager.dir/DataStructures/AppTime.cpp.obj -MF CMakeFiles\appPatient_Manager.dir\DataStructures\AppTime.cpp.obj.d -o CMakeFiles\appPatient_Manager.dir\DataStructures\AppTime.cpp.obj -c "C:\Users\p8036\Desktop\Task Scheduling\DataStructures\AppTime.cpp"
 
 CMakeFiles/appPatient_Manager.dir/DataStructures/AppTime.cpp.i: cmake_force
@@ -109,7 +117,7 @@ CMakeFiles/appPatient_Manager.dir/DataStructures/priorityQueue.cpp.obj: CMakeFil
 CMakeFiles/appPatient_Manager.dir/DataStructures/priorityQueue.cpp.obj: CMakeFiles/appPatient_Manager.dir/includes_CXX.rsp
 CMakeFiles/appPatient_Manager.dir/DataStructures/priorityQueue.cpp.obj: C:/Users/p8036/Desktop/Task\ Scheduling/DataStructures/priorityQueue.cpp
 CMakeFiles/appPatient_Manager.dir/DataStructures/priorityQueue.cpp.obj: CMakeFiles/appPatient_Manager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/appPatient_Manager.dir/DataStructures/priorityQueue.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/appPatient_Manager.dir/DataStructures/priorityQueue.cpp.obj"
 	D:\QT\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appPatient_Manager.dir/DataStructures/priorityQueue.cpp.obj -MF CMakeFiles\appPatient_Manager.dir\DataStructures\priorityQueue.cpp.obj.d -o CMakeFiles\appPatient_Manager.dir\DataStructures\priorityQueue.cpp.obj -c "C:\Users\p8036\Desktop\Task Scheduling\DataStructures\priorityQueue.cpp"
 
 CMakeFiles/appPatient_Manager.dir/DataStructures/priorityQueue.cpp.i: cmake_force
@@ -124,7 +132,7 @@ CMakeFiles/appPatient_Manager.dir/DataStructures/task.cpp.obj: CMakeFiles/appPat
 CMakeFiles/appPatient_Manager.dir/DataStructures/task.cpp.obj: CMakeFiles/appPatient_Manager.dir/includes_CXX.rsp
 CMakeFiles/appPatient_Manager.dir/DataStructures/task.cpp.obj: C:/Users/p8036/Desktop/Task\ Scheduling/DataStructures/task.cpp
 CMakeFiles/appPatient_Manager.dir/DataStructures/task.cpp.obj: CMakeFiles/appPatient_Manager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/appPatient_Manager.dir/DataStructures/task.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/appPatient_Manager.dir/DataStructures/task.cpp.obj"
 	D:\QT\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appPatient_Manager.dir/DataStructures/task.cpp.obj -MF CMakeFiles\appPatient_Manager.dir\DataStructures\task.cpp.obj.d -o CMakeFiles\appPatient_Manager.dir\DataStructures\task.cpp.obj -c "C:\Users\p8036\Desktop\Task Scheduling\DataStructures\task.cpp"
 
 CMakeFiles/appPatient_Manager.dir/DataStructures/task.cpp.i: cmake_force
@@ -139,7 +147,7 @@ CMakeFiles/appPatient_Manager.dir/application/main.cpp.obj: CMakeFiles/appPatien
 CMakeFiles/appPatient_Manager.dir/application/main.cpp.obj: CMakeFiles/appPatient_Manager.dir/includes_CXX.rsp
 CMakeFiles/appPatient_Manager.dir/application/main.cpp.obj: C:/Users/p8036/Desktop/Task\ Scheduling/application/main.cpp
 CMakeFiles/appPatient_Manager.dir/application/main.cpp.obj: CMakeFiles/appPatient_Manager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/appPatient_Manager.dir/application/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/appPatient_Manager.dir/application/main.cpp.obj"
 	D:\QT\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appPatient_Manager.dir/application/main.cpp.obj -MF CMakeFiles\appPatient_Manager.dir\application\main.cpp.obj.d -o CMakeFiles\appPatient_Manager.dir\application\main.cpp.obj -c "C:\Users\p8036\Desktop\Task Scheduling\application\main.cpp"
 
 CMakeFiles/appPatient_Manager.dir/application/main.cpp.i: cmake_force
@@ -154,7 +162,7 @@ CMakeFiles/appPatient_Manager.dir/application/manager.cpp.obj: CMakeFiles/appPat
 CMakeFiles/appPatient_Manager.dir/application/manager.cpp.obj: CMakeFiles/appPatient_Manager.dir/includes_CXX.rsp
 CMakeFiles/appPatient_Manager.dir/application/manager.cpp.obj: C:/Users/p8036/Desktop/Task\ Scheduling/application/manager.cpp
 CMakeFiles/appPatient_Manager.dir/application/manager.cpp.obj: CMakeFiles/appPatient_Manager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/appPatient_Manager.dir/application/manager.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/appPatient_Manager.dir/application/manager.cpp.obj"
 	D:\QT\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appPatient_Manager.dir/application/manager.cpp.obj -MF CMakeFiles\appPatient_Manager.dir\application\manager.cpp.obj.d -o CMakeFiles\appPatient_Manager.dir\application\manager.cpp.obj -c "C:\Users\p8036\Desktop\Task Scheduling\application\manager.cpp"
 
 CMakeFiles/appPatient_Manager.dir/application/manager.cpp.i: cmake_force
@@ -169,7 +177,7 @@ CMakeFiles/appPatient_Manager.dir/application/persistence.cpp.obj: CMakeFiles/ap
 CMakeFiles/appPatient_Manager.dir/application/persistence.cpp.obj: CMakeFiles/appPatient_Manager.dir/includes_CXX.rsp
 CMakeFiles/appPatient_Manager.dir/application/persistence.cpp.obj: C:/Users/p8036/Desktop/Task\ Scheduling/application/persistence.cpp
 CMakeFiles/appPatient_Manager.dir/application/persistence.cpp.obj: CMakeFiles/appPatient_Manager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/appPatient_Manager.dir/application/persistence.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/appPatient_Manager.dir/application/persistence.cpp.obj"
 	D:\QT\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appPatient_Manager.dir/application/persistence.cpp.obj -MF CMakeFiles\appPatient_Manager.dir\application\persistence.cpp.obj.d -o CMakeFiles\appPatient_Manager.dir\application\persistence.cpp.obj -c "C:\Users\p8036\Desktop\Task Scheduling\application\persistence.cpp"
 
 CMakeFiles/appPatient_Manager.dir/application/persistence.cpp.i: cmake_force
@@ -184,7 +192,7 @@ CMakeFiles/appPatient_Manager.dir/application/user.cpp.obj: CMakeFiles/appPatien
 CMakeFiles/appPatient_Manager.dir/application/user.cpp.obj: CMakeFiles/appPatient_Manager.dir/includes_CXX.rsp
 CMakeFiles/appPatient_Manager.dir/application/user.cpp.obj: C:/Users/p8036/Desktop/Task\ Scheduling/application/user.cpp
 CMakeFiles/appPatient_Manager.dir/application/user.cpp.obj: CMakeFiles/appPatient_Manager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/appPatient_Manager.dir/application/user.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/appPatient_Manager.dir/application/user.cpp.obj"
 	D:\QT\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appPatient_Manager.dir/application/user.cpp.obj -MF CMakeFiles\appPatient_Manager.dir\application\user.cpp.obj.d -o CMakeFiles\appPatient_Manager.dir\application\user.cpp.obj -c "C:\Users\p8036\Desktop\Task Scheduling\application\user.cpp"
 
 CMakeFiles/appPatient_Manager.dir/application/user.cpp.i: cmake_force
@@ -199,7 +207,7 @@ CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj: CMakeFiles/appPatient_Mana
 CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj: CMakeFiles/appPatient_Manager.dir/includes_CXX.rsp
 CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj: C:/Users/p8036/Desktop/Task\ Scheduling/mainwindow.cpp
 CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj: CMakeFiles/appPatient_Manager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj"
 	D:\QT\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj -MF CMakeFiles\appPatient_Manager.dir\mainwindow.cpp.obj.d -o CMakeFiles\appPatient_Manager.dir\mainwindow.cpp.obj -c "C:\Users\p8036\Desktop\Task Scheduling\mainwindow.cpp"
 
 CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.i: cmake_force
@@ -209,6 +217,21 @@ CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.i: cmake_force
 CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.s"
 	D:\QT\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\p8036\Desktop\Task Scheduling\mainwindow.cpp" -o CMakeFiles\appPatient_Manager.dir\mainwindow.cpp.s
+
+CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.obj: CMakeFiles/appPatient_Manager.dir/flags.make
+CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.obj: CMakeFiles/appPatient_Manager.dir/includes_CXX.rsp
+CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.obj: appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp
+CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.obj: CMakeFiles/appPatient_Manager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.obj"
+	D:\QT\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.obj -MF CMakeFiles\appPatient_Manager.dir\appPatient_Manager_autogen\EWIEGA46WW\qrc_resources.cpp.obj.d -o CMakeFiles\appPatient_Manager.dir\appPatient_Manager_autogen\EWIEGA46WW\qrc_resources.cpp.obj -c "C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\appPatient_Manager_autogen\EWIEGA46WW\qrc_resources.cpp"
+
+CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.i"
+	D:\QT\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\appPatient_Manager_autogen\EWIEGA46WW\qrc_resources.cpp" > CMakeFiles\appPatient_Manager.dir\appPatient_Manager_autogen\EWIEGA46WW\qrc_resources.cpp.i
+
+CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.s"
+	D:\QT\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\appPatient_Manager_autogen\EWIEGA46WW\qrc_resources.cpp" -o CMakeFiles\appPatient_Manager.dir\appPatient_Manager_autogen\EWIEGA46WW\qrc_resources.cpp.s
 
 # Object files for target appPatient_Manager
 appPatient_Manager_OBJECTS = \
@@ -220,7 +243,8 @@ appPatient_Manager_OBJECTS = \
 "CMakeFiles/appPatient_Manager.dir/application/manager.cpp.obj" \
 "CMakeFiles/appPatient_Manager.dir/application/persistence.cpp.obj" \
 "CMakeFiles/appPatient_Manager.dir/application/user.cpp.obj" \
-"CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj"
+"CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj" \
+"CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.obj"
 
 # External object files for target appPatient_Manager
 appPatient_Manager_EXTERNAL_OBJECTS =
@@ -234,6 +258,7 @@ appPatient_Manager.exe: CMakeFiles/appPatient_Manager.dir/application/manager.cp
 appPatient_Manager.exe: CMakeFiles/appPatient_Manager.dir/application/persistence.cpp.obj
 appPatient_Manager.exe: CMakeFiles/appPatient_Manager.dir/application/user.cpp.obj
 appPatient_Manager.exe: CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj
+appPatient_Manager.exe: CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.obj
 appPatient_Manager.exe: CMakeFiles/appPatient_Manager.dir/build.make
 appPatient_Manager.exe: D:/QT/6.11.0/mingw_64/lib/libQt6Widgets.a
 appPatient_Manager.exe: D:/QT/6.11.0/mingw_64/lib/libQt6Gui.a
@@ -242,7 +267,7 @@ appPatient_Manager.exe: D:/QT/6.11.0/mingw_64/lib/libQt6EntryPoint.a
 appPatient_Manager.exe: CMakeFiles/appPatient_Manager.dir/linkLibs.rsp
 appPatient_Manager.exe: CMakeFiles/appPatient_Manager.dir/objects1.rsp
 appPatient_Manager.exe: CMakeFiles/appPatient_Manager.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable appPatient_Manager.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable appPatient_Manager.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\appPatient_Manager.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -253,6 +278,7 @@ CMakeFiles/appPatient_Manager.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles\appPatient_Manager.dir\cmake_clean.cmake
 .PHONY : CMakeFiles/appPatient_Manager.dir/clean
 
+CMakeFiles/appPatient_Manager.dir/depend: appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp
 CMakeFiles/appPatient_Manager.dir/depend: appPatient_Manager_autogen/timestamp
 	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\p8036\Desktop\Task Scheduling" "C:\Users\p8036\Desktop\Task Scheduling" "C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug" "C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug" "C:\Users\p8036\Desktop\Task Scheduling\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles\appPatient_Manager.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/appPatient_Manager.dir/depend

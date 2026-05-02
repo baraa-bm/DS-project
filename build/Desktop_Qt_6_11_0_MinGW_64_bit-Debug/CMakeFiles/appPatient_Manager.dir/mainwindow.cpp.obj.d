@@ -386,7 +386,7 @@ CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj: \
  D:/QT/6.11.0/mingw_64/include/QtWidgets/qsizepolicy.h \
  D:/QT/6.11.0/mingw_64/include/QtGui/qcursor.h \
  D:/QT/6.11.0/mingw_64/include/QtGui/qbitmap.h \
- C:/Users/p8036/Desktop/Task\ Scheduling/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/appPatient_Manager_autogen/include/ui_mainwindow.h \
+ C:/Users/p8036/Desktop/TASKSC~1/build/DESKTO~1/APPPAT~1/include/ui_mainwindow.h \
  D:/QT/6.11.0/mingw_64/include/QtCore/QVariant \
  D:/QT/6.11.0/mingw_64/include/QtWidgets/QApplication \
  D:/QT/6.11.0/mingw_64/include/QtWidgets/qapplication.h \

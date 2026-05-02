@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-062aacda02e70172c0c7.json",
+					"jsonFile" : "directory-.-Debug-16242a6f53a64802bc7e.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "appPatient_Manager::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appPatient_Manager-Debug-fefcc6a553564946cd33.json",
+					"jsonFile" : "target-appPatient_Manager-Debug-654a7bb8717275e8d992.json",
 					"name" : "appPatient_Manager",
 					"projectIndex" : 0
 				},

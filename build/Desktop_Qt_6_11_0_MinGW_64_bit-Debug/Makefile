@@ -271,6 +271,30 @@ DataStructures/task.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\appPatient_Manager.dir\build.make CMakeFiles/appPatient_Manager.dir/DataStructures/task.cpp.s
 .PHONY : DataStructures/task.cpp.s
 
+appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.obj: appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.obj
+.PHONY : appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.obj
+
+# target to build an object file
+appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appPatient_Manager.dir\build.make CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.obj
+.PHONY : appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.obj
+
+appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.i: appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.i
+.PHONY : appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.i
+
+# target to preprocess a source file
+appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appPatient_Manager.dir\build.make CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.i
+.PHONY : appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.i
+
+appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.s: appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.s
+.PHONY : appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.s
+
+# target to generate assembly for a file
+appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appPatient_Manager.dir\build.make CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.s
+.PHONY : appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.s
+
 appPatient_Manager_autogen/mocs_compilation.obj: appPatient_Manager_autogen/mocs_compilation.cpp.obj
 .PHONY : appPatient_Manager_autogen/mocs_compilation.obj
 
@@ -439,6 +463,9 @@ help:
 	@echo ... DataStructures/task.obj
 	@echo ... DataStructures/task.i
 	@echo ... DataStructures/task.s
+	@echo ... appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.obj
+	@echo ... appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.i
+	@echo ... appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.s
 	@echo ... appPatient_Manager_autogen/mocs_compilation.obj
 	@echo ... appPatient_Manager_autogen/mocs_compilation.i
 	@echo ... appPatient_Manager_autogen/mocs_compilation.s

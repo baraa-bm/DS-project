@@ -24,6 +24,7 @@ appPatient_Manager_autogen/timestamp: \
 	C:/Users/p8036/Desktop/Task\ Scheduling/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/appPatient_Manager_autogen/moc_predefs.h \
 	C:/Users/p8036/Desktop/Task\ Scheduling/mainwindow.cpp \
 	C:/Users/p8036/Desktop/Task\ Scheduling/mainwindow.h \
+	C:/Users/p8036/Desktop/Task\ Scheduling/resources.qrc \
 	D:/QT/6.11.0/mingw_64/include/QtCore/q17memory.h \
 	D:/QT/6.11.0/mingw_64/include/QtCore/q20bit.h \
 	D:/QT/6.11.0/mingw_64/include/QtCore/q20functional.h \

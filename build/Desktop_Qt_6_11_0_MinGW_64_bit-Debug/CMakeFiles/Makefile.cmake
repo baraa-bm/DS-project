@@ -14,6 +14,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.30.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.30.5/CMakeRCCompiler.cmake"
   "CMakeFiles/3.30.5/CMakeSystem.cmake"
+  "C:/Users/p8036/Desktop/Task Scheduling/resources.qrc"
   "D:/QT/6.11.0/mingw_64/lib/cmake/Qt6/FindWrapAtomic.cmake"
   "D:/QT/6.11.0/mingw_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake"
   "D:/QT/6.11.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake"
@@ -226,6 +227,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/appPatient_Manager_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/appPatient_Manager_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json"
   ".qt/QtDeploySupport.cmake"
   ".qt/QtDeployTargets.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
