@@ -23,6 +23,9 @@ class Ui_MainWindow
 public:
     QFrame *MediQueueFrame;
     QLabel *label;
+    QLabel *label_3;
+    QLabel *label_4;
+    QLabel *CurrentTime;
     QFrame *SimulatorFrame;
     QPushButton *add5m;
     QPushButton *add15m;
@@ -31,7 +34,21 @@ public:
     QLabel *TimeSimulator;
     QLabel *label_2;
     QFrame *PatientsFrame;
+    QLabel *QueueStatus;
     QFrame *StatsFrame;
+    QLabel *label_5;
+    QFrame *CrucialFrame;
+    QLabel *label_6;
+    QLabel *CurcialNumber;
+    QFrame *UrgentFrame;
+    QLabel *label_7;
+    QLabel *UrgentNumber;
+    QFrame *NormalFrame;
+    QLabel *label_8;
+    QLabel *NormaNumber;
+    QFrame *TotalFrame;
+    QLabel *label_9;
+    QLabel *TotaNumber;
 
     void setupUi(QDialog *MainWindow)
     {
@@ -138,15 +155,24 @@ public:
         palette1.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Accent, brush3);
 #endif
         MediQueueFrame->setPalette(palette1);
-        MediQueueFrame->setFrameShape(QFrame::Shape::StyledPanel);
+        MediQueueFrame->setFrameShape(QFrame::Shape::WinPanel);
         MediQueueFrame->setFrameShadow(QFrame::Shadow::Raised);
         label = new QLabel(MediQueueFrame);
         label->setObjectName("label");
         label->setGeometry(QRect(10, 10, 81, 41));
+        label_3 = new QLabel(MediQueueFrame);
+        label_3->setObjectName("label_3");
+        label_3->setGeometry(QRect(10, 70, 211, 16));
+        label_4 = new QLabel(MediQueueFrame);
+        label_4->setObjectName("label_4");
+        label_4->setGeometry(QRect(1010, 30, 91, 16));
+        CurrentTime = new QLabel(MediQueueFrame);
+        CurrentTime->setObjectName("CurrentTime");
+        CurrentTime->setGeometry(QRect(1030, 70, 48, 16));
         SimulatorFrame = new QFrame(MainWindow);
         SimulatorFrame->setObjectName("SimulatorFrame");
         SimulatorFrame->setGeometry(QRect(50, 170, 301, 191));
-        SimulatorFrame->setFrameShape(QFrame::Shape::StyledPanel);
+        SimulatorFrame->setFrameShape(QFrame::Shape::WinPanel);
         SimulatorFrame->setFrameShadow(QFrame::Shadow::Raised);
         add5m = new QPushButton(SimulatorFrame);
         add5m->setObjectName("add5m");
@@ -179,13 +205,63 @@ public:
         PatientsFrame = new QFrame(MainWindow);
         PatientsFrame->setObjectName("PatientsFrame");
         PatientsFrame->setGeometry(QRect(390, 170, 821, 151));
-        PatientsFrame->setFrameShape(QFrame::Shape::StyledPanel);
+        PatientsFrame->setFrameShape(QFrame::Shape::WinPanel);
         PatientsFrame->setFrameShadow(QFrame::Shadow::Raised);
+        QueueStatus = new QLabel(PatientsFrame);
+        QueueStatus->setObjectName("QueueStatus");
+        QueueStatus->setGeometry(QRect(340, 70, 201, 16));
         StatsFrame = new QFrame(MainWindow);
         StatsFrame->setObjectName("StatsFrame");
-        StatsFrame->setGeometry(QRect(50, 380, 301, 281));
-        StatsFrame->setFrameShape(QFrame::Shape::StyledPanel);
+        StatsFrame->setGeometry(QRect(50, 380, 301, 261));
+        StatsFrame->setFrameShape(QFrame::Shape::WinPanel);
         StatsFrame->setFrameShadow(QFrame::Shadow::Raised);
+        label_5 = new QLabel(StatsFrame);
+        label_5->setObjectName("label_5");
+        label_5->setGeometry(QRect(20, 10, 121, 16));
+        CrucialFrame = new QFrame(StatsFrame);
+        CrucialFrame->setObjectName("CrucialFrame");
+        CrucialFrame->setGeometry(QRect(20, 50, 261, 31));
+        CrucialFrame->setFrameShape(QFrame::Shape::StyledPanel);
+        CrucialFrame->setFrameShadow(QFrame::Shadow::Raised);
+        label_6 = new QLabel(CrucialFrame);
+        label_6->setObjectName("label_6");
+        label_6->setGeometry(QRect(10, 0, 51, 31));
+        CurcialNumber = new QLabel(CrucialFrame);
+        CurcialNumber->setObjectName("CurcialNumber");
+        CurcialNumber->setGeometry(QRect(240, 10, 48, 16));
+        UrgentFrame = new QFrame(StatsFrame);
+        UrgentFrame->setObjectName("UrgentFrame");
+        UrgentFrame->setGeometry(QRect(20, 100, 261, 31));
+        UrgentFrame->setFrameShape(QFrame::Shape::StyledPanel);
+        UrgentFrame->setFrameShadow(QFrame::Shadow::Raised);
+        label_7 = new QLabel(UrgentFrame);
+        label_7->setObjectName("label_7");
+        label_7->setGeometry(QRect(10, 5, 48, 21));
+        UrgentNumber = new QLabel(UrgentFrame);
+        UrgentNumber->setObjectName("UrgentNumber");
+        UrgentNumber->setGeometry(QRect(240, 10, 48, 16));
+        NormalFrame = new QFrame(StatsFrame);
+        NormalFrame->setObjectName("NormalFrame");
+        NormalFrame->setGeometry(QRect(20, 150, 261, 31));
+        NormalFrame->setFrameShape(QFrame::Shape::StyledPanel);
+        NormalFrame->setFrameShadow(QFrame::Shadow::Raised);
+        label_8 = new QLabel(NormalFrame);
+        label_8->setObjectName("label_8");
+        label_8->setGeometry(QRect(10, 5, 48, 21));
+        NormaNumber = new QLabel(NormalFrame);
+        NormaNumber->setObjectName("NormaNumber");
+        NormaNumber->setGeometry(QRect(240, 10, 48, 16));
+        TotalFrame = new QFrame(StatsFrame);
+        TotalFrame->setObjectName("TotalFrame");
+        TotalFrame->setGeometry(QRect(20, 200, 261, 31));
+        TotalFrame->setFrameShape(QFrame::Shape::StyledPanel);
+        TotalFrame->setFrameShadow(QFrame::Shadow::Raised);
+        label_9 = new QLabel(TotalFrame);
+        label_9->setObjectName("label_9");
+        label_9->setGeometry(QRect(10, 0, 81, 31));
+        TotaNumber = new QLabel(TotalFrame);
+        TotaNumber->setObjectName("TotaNumber");
+        TotaNumber->setGeometry(QRect(240, 10, 48, 16));
 
         retranslateUi(MainWindow);
 
@@ -196,12 +272,25 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Dialog", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "MediQueue", nullptr));
+        label_3->setText(QCoreApplication::translate("MainWindow", "Advanced Patient Scheduling System", nullptr));
+        label_4->setText(QCoreApplication::translate("MainWindow", "Current Time", nullptr));
+        CurrentTime->setText(QCoreApplication::translate("MainWindow", "0:00", nullptr));
         add5m->setText(QCoreApplication::translate("MainWindow", "+5m", nullptr));
         add15m->setText(QCoreApplication::translate("MainWindow", "+15m", nullptr));
         add30m->setText(QCoreApplication::translate("MainWindow", "+30m", nullptr));
         add1h->setText(QCoreApplication::translate("MainWindow", "+1h", nullptr));
         TimeSimulator->setText(QCoreApplication::translate("MainWindow", "Time Simulator", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Advance time to simulate patient waiting time", nullptr));
+        QueueStatus->setText(QCoreApplication::translate("MainWindow", "No Patients in Queue", nullptr));
+        label_5->setText(QCoreApplication::translate("MainWindow", "Queue Statistics", nullptr));
+        label_6->setText(QCoreApplication::translate("MainWindow", "Crucial", nullptr));
+        CurcialNumber->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        label_7->setText(QCoreApplication::translate("MainWindow", "Urgent", nullptr));
+        UrgentNumber->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        label_8->setText(QCoreApplication::translate("MainWindow", "Normal", nullptr));
+        NormaNumber->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        label_9->setText(QCoreApplication::translate("MainWindow", "Total Patients", nullptr));
+        TotaNumber->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
     } // retranslateUi
 
 };
