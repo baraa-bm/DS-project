@@ -7,7 +7,8 @@ set(CMAKE_AUTORCC ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
-qt_standard_project_setup(REQUIRES 6.10)
+qt_standard_project_setup()
+
 
 file(GLOB_RECURSE SOURCES
     application/*.cpp

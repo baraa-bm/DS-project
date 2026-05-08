@@ -1,0 +1,5 @@
+C:/Users/AUC/Downloads/ds project/DS-project/build-login/CMakeFiles/appMediQueue_Login.dir
+C:/Users/AUC/Downloads/ds project/DS-project/build-login/CMakeFiles/edit_cache.dir
+C:/Users/AUC/Downloads/ds project/DS-project/build-login/CMakeFiles/rebuild_cache.dir
+C:/Users/AUC/Downloads/ds project/DS-project/build-login/CMakeFiles/appMediQueue_Login_autogen_timestamp_deps.dir
+C:/Users/AUC/Downloads/ds project/DS-project/build-login/CMakeFiles/appMediQueue_Login_autogen.dir

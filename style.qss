@@ -1,17 +1,172 @@
-QPushButton{
-    background-color: #1761FC;
-color: white;
-
+QDialog#MainWindow {
+    background-color: #f4f8ff;
+    font-family: "Segoe UI";
+    color: #172033;
 }
 
-QDialog{
-background-color: #FCFDFF;
+QFrame {
+    background-color: #ffffff;
+    border: 1px solid #edf2f7;
+    border-radius: 12px;
 }
 
-QFrame{
-background-color: white;
+QFrame#MediQueueFrame {
+    border: 1px solid #e7edf5;
+    border-radius: 14px;
+    background-color: #ffffff;
 }
 
-QLabel{
-color: black;
+QFrame#SimulatorFrame,
+QFrame#PatientsFrame,
+QFrame#StatsFrame {
+    border: 1px solid #edf2f7;
+    border-radius: 14px;
+    background-color: #ffffff;
+}
+
+QFrame#CrucialFrame,
+QFrame#UrgentFrame,
+QFrame#NormalFrame,
+QFrame#TotalFrame {
+    border-radius: 8px;
+    border: 0;
+}
+
+QFrame#CrucialFrame {
+    background-color: #fff1f3;
+}
+
+QFrame#UrgentFrame {
+    background-color: #fff7ed;
+}
+
+QFrame#NormalFrame {
+    background-color: #edfdf4;
+}
+
+QFrame#TotalFrame {
+    background-color: #eef6ff;
+    border: 1px solid #bfd7f4;
+}
+
+QLabel {
+    color: #172033;
+    background-color: transparent;
+    border: 0;
+    font-family: "Segoe UI";
+    font-size: 13px;
+    font-weight: 400;
+}
+
+QLabel#label {
+    qproperty-text: "MediQueue Pro";
+    color: #123a7a;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+QLabel#label_3 {
+    color: #123a7a;
+    font-size: 14px;
+}
+
+QLabel#label_4 {
+    color: #526071;
+    font-size: 12px;
+}
+
+QLabel#CurrentTime {
+    color: #123a7a;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+QLabel#TimeSimulator,
+QLabel#label_5 {
+    color: #172033;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+QLabel#TimeSimulator {
+    qproperty-text: ">>  Time Simulator";
+    color: #173f83;
+}
+
+QLabel#label_2 {
+    color: #5b6472;
+    font-size: 12px;
+}
+
+QLabel#QueueStatus {
+    color: #172033;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+QLabel#label_6,
+QLabel#label_7,
+QLabel#label_8,
+QLabel#label_9 {
+    color: #263242;
+    font-size: 13px;
+}
+
+QLabel#CurcialNumber {
+    color: #d11d37;
+    font-weight: 800;
+}
+
+QLabel#UrgentNumber {
+    color: #c46a17;
+    font-weight: 800;
+}
+
+QLabel#NormaNumber {
+    color: #149b57;
+    font-weight: 800;
+}
+
+QLabel#TotaNumber {
+    color: #1164d8;
+    font-weight: 800;
+}
+
+QPushButton {
+    min-width: 64px;
+    max-width: 84px;
+    min-height: 24px;
+    max-height: 28px;
+    border: 0;
+    border-radius: 4px;
+    padding: 1px 6px;
+    color: #ffffff;
+    font-family: "Segoe UI";
+    font-size: 12px;
+    font-weight: 700;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #2884f7, stop:1 #1260ed);
+}
+
+QPushButton:hover {
+    background: #155be2;
+}
+
+QPushButton:pressed {
+    background: #0f47bd;
+}
+
+QPushButton#add5m {
+    qproperty-text: "+ 5 min";
+}
+
+QPushButton#add15m {
+    qproperty-text: "+ 15 min";
+}
+
+QPushButton#add30m {
+    qproperty-text: "+ 30 min";
+}
+
+QPushButton#add1h {
+    qproperty-text: "+ 1 hour";
 }
