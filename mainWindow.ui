@@ -622,10 +622,10 @@
    <widget class="QPushButton" name="add5m">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>85</y>
-      <width>76</width>
-      <height>26</height>
+      <x>30</x>
+      <y>80</y>
+      <width>101</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -635,10 +635,10 @@
    <widget class="QPushButton" name="add15m">
     <property name="geometry">
      <rect>
-      <x>106</x>
-      <y>85</y>
-      <width>76</width>
-      <height>26</height>
+      <x>150</x>
+      <y>80</y>
+      <width>101</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -648,10 +648,10 @@
    <widget class="QPushButton" name="add30m">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>121</y>
-      <width>76</width>
-      <height>26</height>
+      <x>30</x>
+      <y>130</y>
+      <width>101</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -661,10 +661,10 @@
    <widget class="QPushButton" name="add1h">
     <property name="geometry">
      <rect>
-      <x>106</x>
-      <y>121</y>
-      <width>76</width>
-      <height>26</height>
+      <x>150</x>
+      <y>130</y>
+      <width>101</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -936,6 +936,155 @@
       <string>0</string>
      </property>
     </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="AddPatient">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>660</y>
+     <width>301</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>+ New Patient Check-In</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="NewPatient">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>340</y>
+     <width>821</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::WinPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Patient Check-In</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Patient Name</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="PatientName">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>771</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Enter patient name</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Priority</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CheckIn">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>270</y>
+      <width>771</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Check-In Patient</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CrucialButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>160</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Crucial</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="UrgentButton">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>160</y>
+      <width>251</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Urgent</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="NormalButton">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>160</y>
+      <width>251</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Normal</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="close_checkIn">
+    <property name="geometry">
+     <rect>
+      <x>789</x>
+      <y>10</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>x</string>
+    </property>
    </widget>
   </widget>
  </widget>

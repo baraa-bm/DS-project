@@ -4,7 +4,7 @@
 #include "AppTime.h"
 #include <string>
 
-enum status{pending, current ,completed};
+enum status{pending, current ,completed, hold};
 
 class task {
 public:

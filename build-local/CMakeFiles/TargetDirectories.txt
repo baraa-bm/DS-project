@@ -1,9 +1,0 @@
-C:/Users/AUC/Downloads/ds project/DS-project/build-local/CMakeFiles/appPatient_Manager.dir
-C:/Users/AUC/Downloads/ds project/DS-project/build-local/CMakeFiles/edit_cache.dir
-C:/Users/AUC/Downloads/ds project/DS-project/build-local/CMakeFiles/rebuild_cache.dir
-C:/Users/AUC/Downloads/ds project/DS-project/build-local/CMakeFiles/list_install_components.dir
-C:/Users/AUC/Downloads/ds project/DS-project/build-local/CMakeFiles/install.dir
-C:/Users/AUC/Downloads/ds project/DS-project/build-local/CMakeFiles/install/local.dir
-C:/Users/AUC/Downloads/ds project/DS-project/build-local/CMakeFiles/install/strip.dir
-C:/Users/AUC/Downloads/ds project/DS-project/build-local/CMakeFiles/appPatient_Manager_autogen_timestamp_deps.dir
-C:/Users/AUC/Downloads/ds project/DS-project/build-local/CMakeFiles/appPatient_Manager_autogen.dir

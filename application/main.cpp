@@ -8,6 +8,7 @@
 #include<QFile>
 #include<QApplication>
 #include"mainwindow.h"
+#include "login_window/logindialog.h"
 
 
 using namespace std;
@@ -109,7 +110,9 @@ int main(int argc, char *argv[])
     }
 
     MainWindow w;
-    w.showFullScreen();
+    LoginDialog L;
+    L.show();
+    w.show();
     return a.exec();
 }
 

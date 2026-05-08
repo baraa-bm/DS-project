@@ -133,10 +133,6 @@ QLabel#TotaNumber {
 }
 
 QPushButton {
-    min-width: 64px;
-    max-width: 84px;
-    min-height: 24px;
-    max-height: 28px;
     border: 0;
     border-radius: 4px;
     padding: 1px 6px;
@@ -145,6 +141,71 @@ QPushButton {
     font-size: 12px;
     font-weight: 700;
     background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #2884f7, stop:1 #1260ed);
+}
+
+QPushButton#CrucialButton,
+QPushButton#NormalButton,
+QPushButton#UrgentButton{
+    min-height: 70px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    background-color: white;
+
+    font-family: "Segoe UI";
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #111827;
+
+    padding: 6px;
+}
+
+QPushButton#NormalButton:hover {
+    border: 2px solid #00C950;
+}
+
+QPushButton#NormalButton:checked {
+    background-color: #F0FDF4;
+    border: 2px solid #00C950;
+    color: #00C950;
+}
+
+
+QPushButton#UrgentButton:hover {
+    border: 2px solid #FF6900;
+}
+
+QPushButton#UrgentButton:checked {
+    background-color: #FFF7ED;
+    border: 2px solid #FF6900;
+    color: #FF6900;
+}
+
+
+QPushButton#CrucialButton:hover {
+    border: 2px solid #FB2C36;
+}
+
+QPushButton#CrucialButton:checked {
+    background-color: #FEF2F2;
+    border: 2px solid #FB2C36;
+    color: #FB2C36;
+}
+
+QLineEdit {
+  min-height: 38px;
+  border: 1px solid #d6dbe3;
+  border-radius: 8px;
+  padding: 0 12px;
+  font-size: 13px;
+  background-color: white;
+  color: black;
+}
+
+QLineEdit:focus {
+  border: 1px solid #1f66f2;
 }
 
 QPushButton:hover {
