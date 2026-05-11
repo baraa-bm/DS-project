@@ -161,6 +161,14 @@ C:/Users/p8036/Desktop/Task-Scheduling/build/Imported_Kit-Debug/appPatient_Manag
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qwidget.h \
+  C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/AppTime.h \
+  C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/List.h \
+  C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/List.tpp \
+  C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/priorityQueue.h \
+  C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/queue.h \
+  C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/queue.tpp \
+  C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/task.h \
+  C:/Users/p8036/Desktop/Task-Scheduling/application/manager.h \
   C:/msys64/ucrt64/include/_mingw.h \
   C:/msys64/ucrt64/include/_mingw_mac.h \
   C:/msys64/ucrt64/include/_mingw_off_t.h \
@@ -181,6 +189,8 @@ C:/Users/p8036/Desktop/Task-Scheduling/build/Imported_Kit-Debug/appPatient_Manag
   C:/msys64/ucrt64/include/c++/14.2.0/bits/allocator.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/atomic_base.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/atomic_lockfree_defines.h \
+  C:/msys64/ucrt64/include/c++/14.2.0/bits/basic_ios.h \
+  C:/msys64/ucrt64/include/c++/14.2.0/bits/basic_ios.tcc \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/basic_string.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/basic_string.tcc \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/char_traits.h \
@@ -202,9 +212,12 @@ C:/Users/p8036/Desktop/Task-Scheduling/build/Imported_Kit-Debug/appPatient_Manag
   C:/msys64/ucrt64/include/c++/14.2.0/bits/hashtable_policy.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/invoke.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/ios_base.h \
+  C:/msys64/ucrt64/include/c++/14.2.0/bits/istream.tcc \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/list.tcc \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/locale_classes.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/locale_classes.tcc \
+  C:/msys64/ucrt64/include/c++/14.2.0/bits/locale_facets.h \
+  C:/msys64/ucrt64/include/c++/14.2.0/bits/locale_facets.tcc \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/localefwd.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/memory_resource.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/memoryfwd.h \
@@ -212,6 +225,7 @@ C:/Users/p8036/Desktop/Task-Scheduling/build/Imported_Kit-Debug/appPatient_Manag
   C:/msys64/ucrt64/include/c++/14.2.0/bits/nested_exception.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/new_allocator.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/node_handle.h \
+  C:/msys64/ucrt64/include/c++/14.2.0/bits/ostream.tcc \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/ostream_insert.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/parse_numbers.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/postypes.h \
@@ -278,6 +292,7 @@ C:/Users/p8036/Desktop/Task-Scheduling/build/Imported_Kit-Debug/appPatient_Manag
   C:/msys64/ucrt64/include/c++/14.2.0/cstring \
   C:/msys64/ucrt64/include/c++/14.2.0/ctime \
   C:/msys64/ucrt64/include/c++/14.2.0/cwchar \
+  C:/msys64/ucrt64/include/c++/14.2.0/cwctype \
   C:/msys64/ucrt64/include/c++/14.2.0/debug/assertions.h \
   C:/msys64/ucrt64/include/c++/14.2.0/debug/debug.h \
   C:/msys64/ucrt64/include/c++/14.2.0/exception \
@@ -290,7 +305,10 @@ C:/Users/p8036/Desktop/Task-Scheduling/build/Imported_Kit-Debug/appPatient_Manag
   C:/msys64/ucrt64/include/c++/14.2.0/ext/type_traits.h \
   C:/msys64/ucrt64/include/c++/14.2.0/functional \
   C:/msys64/ucrt64/include/c++/14.2.0/initializer_list \
+  C:/msys64/ucrt64/include/c++/14.2.0/ios \
   C:/msys64/ucrt64/include/c++/14.2.0/iosfwd \
+  C:/msys64/ucrt64/include/c++/14.2.0/iostream \
+  C:/msys64/ucrt64/include/c++/14.2.0/istream \
   C:/msys64/ucrt64/include/c++/14.2.0/iterator \
   C:/msys64/ucrt64/include/c++/14.2.0/limits \
   C:/msys64/ucrt64/include/c++/14.2.0/list \
@@ -299,6 +317,7 @@ C:/Users/p8036/Desktop/Task-Scheduling/build/Imported_Kit-Debug/appPatient_Manag
   C:/msys64/ucrt64/include/c++/14.2.0/new \
   C:/msys64/ucrt64/include/c++/14.2.0/numeric \
   C:/msys64/ucrt64/include/c++/14.2.0/optional \
+  C:/msys64/ucrt64/include/c++/14.2.0/ostream \
   C:/msys64/ucrt64/include/c++/14.2.0/pstl/execution_defs.h \
   C:/msys64/ucrt64/include/c++/14.2.0/pstl/glue_numeric_defs.h \
   C:/msys64/ucrt64/include/c++/14.2.0/pstl/pstl_config.h \
@@ -336,6 +355,8 @@ C:/Users/p8036/Desktop/Task-Scheduling/build/Imported_Kit-Debug/appPatient_Manag
   C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
   C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
+  C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
+  C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
   C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/error_constants.h \
   C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr.h \
@@ -368,6 +389,7 @@ C:/Users/p8036/Desktop/Task-Scheduling/build/Imported_Kit-Debug/appPatient_Manag
   C:/msys64/ucrt64/include/time.h \
   C:/msys64/ucrt64/include/vadefs.h \
   C:/msys64/ucrt64/include/wchar.h \
+  C:/msys64/ucrt64/include/wctype.h \
   C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
   C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdarg.h \
   C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdbool.h \

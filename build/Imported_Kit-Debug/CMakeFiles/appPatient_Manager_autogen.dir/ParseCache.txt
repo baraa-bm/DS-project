@@ -2,14 +2,14 @@
 C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/AppTime.h
 C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/priorityQueue.cpp
 C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/List.h
-C:/Users/p8036/Desktop/Task-Scheduling/application/persistence.h
+C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/priorityQueue.h
 C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/queue.h
 C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/task.h
-C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/priorityQueue.h
+C:/Users/p8036/Desktop/Task-Scheduling/application/persistence.h
 C:/Users/p8036/Desktop/Task-Scheduling/application/manager.h
+C:/Users/p8036/Desktop/Task-Scheduling/application/user.h
 C:/Users/p8036/Desktop/Task-Scheduling/mainwindow.cpp
  uic:ui_mainwindow.h
-C:/Users/p8036/Desktop/Task-Scheduling/application/user.h
 C:/Users/p8036/Desktop/Task-Scheduling/login_window/logindialog.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/QString
@@ -554,6 +554,14 @@ C:/Users/p8036/Desktop/Task-Scheduling/mainwindow.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgetsexports.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qwidget.h
+ mdp:C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/AppTime.h
+ mdp:C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/List.h
+ mdp:C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/List.tpp
+ mdp:C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/priorityQueue.h
+ mdp:C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/queue.h
+ mdp:C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/queue.tpp
+ mdp:C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/task.h
+ mdp:C:/Users/p8036/Desktop/Task-Scheduling/application/manager.h
  mdp:C:/Users/p8036/Desktop/Task-Scheduling/build/Imported_Kit-Debug/appPatient_Manager_autogen/moc_predefs.h
  mdp:C:/Users/p8036/Desktop/Task-Scheduling/mainwindow.h
  mdp:C:/msys64/ucrt64/include/_mingw.h
@@ -576,6 +584,8 @@ C:/Users/p8036/Desktop/Task-Scheduling/mainwindow.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/allocator.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/atomic_base.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/atomic_lockfree_defines.h
+ mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/basic_ios.h
+ mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/basic_ios.tcc
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/basic_string.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/basic_string.tcc
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/char_traits.h
@@ -597,9 +607,12 @@ C:/Users/p8036/Desktop/Task-Scheduling/mainwindow.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/hashtable_policy.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/invoke.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/ios_base.h
+ mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/istream.tcc
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/list.tcc
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/locale_classes.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/locale_classes.tcc
+ mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/locale_facets.h
+ mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/locale_facets.tcc
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/localefwd.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/memory_resource.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/memoryfwd.h
@@ -607,6 +620,7 @@ C:/Users/p8036/Desktop/Task-Scheduling/mainwindow.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/nested_exception.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/new_allocator.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/node_handle.h
+ mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/ostream.tcc
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/ostream_insert.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/parse_numbers.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/bits/postypes.h
@@ -673,6 +687,7 @@ C:/Users/p8036/Desktop/Task-Scheduling/mainwindow.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/cstring
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/ctime
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/cwchar
+ mdp:C:/msys64/ucrt64/include/c++/14.2.0/cwctype
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/debug/assertions.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/debug/debug.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/exception
@@ -685,7 +700,10 @@ C:/Users/p8036/Desktop/Task-Scheduling/mainwindow.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/ext/type_traits.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/functional
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/initializer_list
+ mdp:C:/msys64/ucrt64/include/c++/14.2.0/ios
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/iosfwd
+ mdp:C:/msys64/ucrt64/include/c++/14.2.0/iostream
+ mdp:C:/msys64/ucrt64/include/c++/14.2.0/istream
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/iterator
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/limits
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/list
@@ -694,6 +712,7 @@ C:/Users/p8036/Desktop/Task-Scheduling/mainwindow.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/new
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/numeric
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/optional
+ mdp:C:/msys64/ucrt64/include/c++/14.2.0/ostream
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/pstl/execution_defs.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/pstl/glue_numeric_defs.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/pstl/pstl_config.h
@@ -731,6 +750,8 @@ C:/Users/p8036/Desktop/Task-Scheduling/mainwindow.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/cpu_defines.h
+ mdp:C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_base.h
+ mdp:C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_inline.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/error_constants.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h
  mdp:C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr.h
@@ -763,6 +784,7 @@ C:/Users/p8036/Desktop/Task-Scheduling/mainwindow.h
  mdp:C:/msys64/ucrt64/include/time.h
  mdp:C:/msys64/ucrt64/include/vadefs.h
  mdp:C:/msys64/ucrt64/include/wchar.h
+ mdp:C:/msys64/ucrt64/include/wctype.h
  mdp:C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h
  mdp:C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdarg.h
  mdp:C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdbool.h

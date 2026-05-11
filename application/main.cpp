@@ -13,8 +13,7 @@
 
 using namespace std;
 
-Time globalTime(0, 0);
-int x;
+Time globalTime(5, 0);
 void advanceTime(int h, int m){
     globalTime.hours += h;
     globalTime.minutes += m;
@@ -60,7 +59,7 @@ static bool registerUser(const string& username, const string& password) {
         while (inFile >> u >> p) {
             if (u == username) {
                 inFile.close();
-                return false; // User already exists!
+                return false; // User already exists
             }
         }
         inFile.close();
@@ -97,6 +96,8 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
+    manager *mgr = new manager();
+
     // 1. Point to your resource file (the colon ':' is vital!)
     QFile styleFile(":/style.qss");
 
@@ -110,8 +111,10 @@ int main(int argc, char *argv[])
     }
 
     MainWindow w;
+    w.Task_Manager = mgr;
+    w.currentTime = globalTime;
     LoginDialog L;
-    L.show();
+    //L.show();
     w.show();
     return a.exec();
 }

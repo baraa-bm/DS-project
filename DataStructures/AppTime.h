@@ -27,6 +27,11 @@ class Time{
         return (hours * 60) + minutes;
     }
 
+    void operator=(const Time& other){
+        this->hours = other.hours;
+        this->minutes = other.minutes;
+    }
+
     Time operator-(const Time& other) const {
         int diff = toTotalMinutes() - other.toTotalMinutes();
         return Time(0, diff); 

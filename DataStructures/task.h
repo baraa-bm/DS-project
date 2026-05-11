@@ -18,6 +18,7 @@ public:
     status _status;
 
     task();
+    task(Time arrival_time, Time execution_duration, std::string name, int priority);
 };
 
 

@@ -19,6 +19,7 @@ public:
     int completedTasks = 0;
     task* currentTask; //for printing the current patient with the doctor
 
+    task* createTask(Time arrival_time, Time execution_duration, string name, int priority);
     void addtask(task * newTask, int priority);
     void executeTask(task *);
     void updateTasks(Time globalTime);

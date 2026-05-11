@@ -6,6 +6,11 @@ void manager::addtask(task * newTask, int priority){
     pq_tasks.insert(newTask, priority);
 }
 
+task* manager::createTask(Time arrival_time, Time execution_duration, string name, int priority){
+    task * newTask = new task(arrival_time, execution_duration, name, priority);
+    return newTask;
+}
+
 void manager::executeTask(task *completedTask){
     completedTasks++;
     pringCompletedTask();

@@ -15,6 +15,7 @@ qt_standard_project_setup()
 file(GLOB_RECURSE SOURCES
     application/*.cpp
     DataStructures/*.cpp
+    DataStructures/*.tpp
     login_window/*.cpp
 )
 

@@ -41,7 +41,7 @@ void priorityQueue::ReAlloc(int newCapacity) {
         p_size = newCapacity;
 
     for (int i = 1; i <= p_size; i++)
-        newBlock[i] = move(maxHeap[i]);
+        newBlock[i] = maxHeap[i];
 
     delete[] maxHeap;
     maxHeap = newBlock;
@@ -53,9 +53,9 @@ int priorityQueue::p_left(int i) { return i * 2; }
 int priorityQueue::p_right(int i) { return i * 2 + 1; }
 
 void priorityQueue::swap(int i, int j) {
-    element temp = move(maxHeap[i]);
-    maxHeap[i] = move(maxHeap[j]);
-    maxHeap[j] = move(temp);
+    element temp = maxHeap[i];
+    maxHeap[i] = maxHeap[j];
+    maxHeap[j] = temp;
 }
 
 // shift-up (heapify up)
@@ -82,7 +82,7 @@ void priorityQueue::insert(task * val, int priority) {
 
     // first insertion
     if (p_size == 0) {
-        maxHeap[1] = move(newElement);
+        maxHeap[1] = newElement;
         p_size++;
         return;
     }
@@ -94,7 +94,7 @@ void priorityQueue::insert(task * val, int priority) {
 
     // insert at end
     int new_index = p_size + 1;
-    maxHeap[new_index] = move(newElement);
+    maxHeap[new_index] = newElement;
     p_size++;
 
     // restore heap property
@@ -112,7 +112,7 @@ task* priorityQueue::top() const {
 void priorityQueue::pop() {
     if (p_size == 0) return;
 
-    maxHeap[1] = move(maxHeap[p_size]);
+    maxHeap[1] = maxHeap[p_size];
     p_size--;
 
     int current = 1;
