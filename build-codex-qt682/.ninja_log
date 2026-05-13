@@ -27,3 +27,10 @@
 980	2809	8004074336770027	CMakeFiles/appPatient_Manager.dir/application/main.cpp.obj	b3befe4bdac7caac
 1028	3155	8004074337268185	CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj	88b60e4ea24444a4
 3155	3545	8004074358618487	appPatient_Manager.exe	f43fe0ceac3ec53
+16	501	8004096917794209	appPatient_Manager_autogen/timestamp	ba7449dd0e1dd1b6
+16	501	8004096917794209	appPatient_Manager_autogen/mocs_compilation.cpp	ba7449dd0e1dd1b6
+16	501	8004096917794209	C:/Users/AUC/Downloads/ds project/DS-project/build-codex-qt682/appPatient_Manager_autogen/timestamp	ba7449dd0e1dd1b6
+16	501	8004096917794209	C:/Users/AUC/Downloads/ds project/DS-project/build-codex-qt682/appPatient_Manager_autogen/mocs_compilation.cpp	ba7449dd0e1dd1b6
+503	3348	8004096922693796	CMakeFiles/appPatient_Manager.dir/login_window/userauth.cpp.obj	ff60139f176b722e
+534	3963	8004096922949581	CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj	88b60e4ea24444a4
+3963	4625	8004096957312339	appPatient_Manager.exe	f43fe0ceac3ec53
