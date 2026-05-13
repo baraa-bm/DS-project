@@ -153,6 +153,7 @@ void MainWindow::on_CheckIn_clicked()
         );
     ui->PatientName->clear();
     ui->PatientLastName->clear();
+    ui->TaskDuration->clear();
     ui->PatientAge->clear();
     ui->NewPatient->hide();
     refreshPatientsList();

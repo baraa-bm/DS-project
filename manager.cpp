@@ -2,8 +2,44 @@
 
 void manager::addtask(task * newTask, int priority){
     l_tasks.push_back(*newTask);
-    if(pq_tasks.isEmpty()) currentTask = newTask;
-    pq_tasks.insert(newTask, priority);
+
+    if (currentTask != nullptr && priority > currentTask->priority) {
+        // --- PREEMPTION LOGIC ---
+        // 1. Calculate how much time the current patient already spent with doctor
+        int timeSpentMins = newTask->arrival_time.toTotalMinutes() - currentTask->start_time.toTotalMinutes();
+        if (timeSpentMins > 0) {
+            int remainingMins = currentTask->excution_duration.toTotalMinutes() - timeSpentMins;
+            if (remainingMins < 1) remainingMins = 1; // Prevent 0 min instant finish
+            currentTask->excution_duration = Time(0, remainingMins);
+        }
+
+        currentTask->_status = hold;
+
+        newTask->_status = current;
+        // Insert new task into queue. currentTask is already in the queue
+        pq_tasks.insert(newTask, priority);
+        currentTask = pq_tasks.top(); // The highest priority instantly becomes current
+    }
+    else if (currentTask == nullptr) {
+        // System is empty
+        newTask->_status = current;
+        pq_tasks.insert(newTask, priority);
+        currentTask = pq_tasks.top();
+    }
+    else {
+        // Normal addition
+        newTask->_status = pending;
+        pq_tasks.insert(newTask, priority);
+    }
+
+    // Update the copy in l_tasks so stats calculations are perfectly accurate
+    int size = l_tasks.sizeOfList();
+    for(int i = 0; i < size; i++){
+        if(l_tasks[i].ID == newTask->ID){
+            l_tasks[i]._status = newTask->_status;
+            break;
+        }
+    }
 }
 
 List<task> &manager::getTasks(){
@@ -19,7 +55,14 @@ task* manager::createTask(Time arrival_time, Time execution_duration, string nam
 void manager::executeTask(task *completedTask){
     completedTasks++;
     //display completed task
-    pq_tasks.pop();
+    int size = l_tasks.sizeOfList();
+    for(int i = 0; i < size; i++){
+        if(l_tasks[i].ID == completedTask->ID){
+            l_tasks[i]._status = completed;
+            l_tasks[i].start_time = completedTask->start_time;
+            break;
+        }
+    }
 }
 
 void manager::printCompletedTask(){   // fix: renamed from pringCompletedTask
@@ -37,22 +80,34 @@ void manager::printCompletedTask(){   // fix: renamed from pringCompletedTask
 void manager::updateTasks(Time *globalTime){
     if (currentTask == nullptr) return;
 
+    while (currentTask != nullptr) {
+        Time finishTime = currentTask->start_time + currentTask->excution_duration;
 
-    Time finishTime = currentTask->start_time + currentTask->excution_duration;
+        if ( *globalTime >= finishTime ) {
 
-    if( *globalTime >= finishTime ){
+            currentTask->_status = completed;
+            executeTask(currentTask);
 
-        currentTask->_status = completed;
-        executeTask(currentTask);
-
-        if (!pq_tasks.isEmpty()) {
-            currentTask = pq_tasks.top();
-            currentTask->_status = current;
-            currentTask->start_time = *globalTime;
-
+            // Pop the completed patient out of the priority queue
             pq_tasks.pop();
+
+            // Bring in the next patient
+            if (!pq_tasks.isEmpty()) {
+                task* nextTask = pq_tasks.top();
+
+                if (nextTask->arrival_time > finishTime) {
+                    nextTask->start_time = nextTask->arrival_time;
+                } else {
+                    nextTask->start_time = finishTime;
+                }
+
+                currentTask = nextTask;
+                currentTask->_status = current;
+            } else {
+                currentTask = nullptr; // Doctor is free
+            }
         } else {
-            currentTask = nullptr;
+            break; // Patient is still with doctor
         }
     }
 }
