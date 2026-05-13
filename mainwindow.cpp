@@ -1,12 +1,13 @@
 #include "mainwindow.h"
-#include <QBrush>
+#include "ui_mainwindow.h"
 #include <QButtonGroup>
+#include <QBrush>
 #include <QIntValidator>
 #include <QListWidgetItem>
 #include <QSize>
 #include <QTime>
 #include <QTimer>
-#include "ui_mainwindow.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QDialog(parent)
@@ -140,14 +141,10 @@ void MainWindow::on_CheckIn_clicked()
     string name = Qname.toStdString();
 
     int priority;
-    if (ui->NormalButton->isChecked()) {
-        priority = 1;
-    } else if (ui->CrucialButton->isChecked()) {
-        priority = 3;
-    } else if (ui->UrgentButton->isChecked()) {
-        priority = 2;
-    } else
-        return;
+    if      (ui->NormalButton->isChecked())  { priority = 1; }
+    else if (ui->CrucialButton->isChecked()) { priority = 3; }
+    else if (ui->UrgentButton->isChecked())  { priority = 2; }
+    else return;
 
     int durationMinutes = 10; // default to 10 minutes if left blank
     if (!ui->TaskDuration->text().isEmpty()) {

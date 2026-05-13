@@ -37,26 +37,22 @@ void manager::printCompletedTask(){   // fix: renamed from pringCompletedTask
 void manager::updateTasks(Time *globalTime){
     if (currentTask == nullptr) return;
 
-    // BUG FIX: Calculate finish time based on when they STARTED, not arrived
+
     Time finishTime = currentTask->start_time + currentTask->excution_duration;
 
-    // Check if the current time has passed or reached the finish time
     if( *globalTime >= finishTime ){
 
         currentTask->_status = completed;
         executeTask(currentTask);
 
-        // Bring in the next patient
         if (!pq_tasks.isEmpty()) {
             currentTask = pq_tasks.top();
             currentTask->_status = current;
-
-            // <-- BUG FIX: Set their new start time to NOW since they just left the waiting room
             currentTask->start_time = *globalTime;
 
-            pq_tasks.pop(); // Remove them from the queue
+            pq_tasks.pop();
         } else {
-            currentTask = nullptr; // Doctor is free
+            currentTask = nullptr;
         }
     }
 }
