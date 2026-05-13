@@ -13,10 +13,10 @@
 
 using namespace std;
 
-Time globalTime(5, 0);
+Time *globalTime = new Time (5,0);
 void advanceTime(int h, int m){
-    globalTime.hours += h;
-    globalTime.minutes += m;
+    globalTime->hours += h;
+    globalTime->minutes += m;
 }
 
 static void clearBadInput() {

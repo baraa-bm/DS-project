@@ -8,9 +8,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    ui->NewPatient->hide();
+    displayTime(*currentTime);
 
-    ui->CurrentTime->setText(currentTime.hours + ":" + currentTime.minutes);
+    ui->NewPatient->hide();
 
     //priority buttons set to checkable
     ui->CrucialButton->setCheckable(true);
@@ -25,6 +25,23 @@ MainWindow::MainWindow(QWidget *parent)
     priorityGroup->addButton(ui->NormalButton);
 
     priorityGroup->setExclusive(true);
+}
+
+void MainWindow::displayTime(Time time)
+{
+    ui->CurrentTime->setText(
+        QString("%1:%2")
+            .arg(time.hours, 2, 10, QChar('0'))
+            .arg(time.minutes, 2, 10, QChar('0'))
+        );
+}
+
+void MainWindow::updateTime(Time increment)
+{
+    Time newTime = *currentTime + increment;
+    *currentTime = newTime;
+
+    displayTime(*currentTime);
 }
 
 MainWindow::~MainWindow()
@@ -54,7 +71,7 @@ void MainWindow::on_CheckIn_clicked()
         return;
     }
 
-    Task_Manager->addtask(Task_Manager->createTask(currentTime, Time{0,10}, name , priority), priority);
+    Task_Manager->addtask(Task_Manager->createTask(*currentTime, Time{0,10}, name , priority), priority);
     ui->NewPatient->hide();
 
     //display tasks
@@ -63,5 +80,28 @@ void MainWindow::on_CheckIn_clicked()
 void MainWindow::on_close_checkIn_clicked()
 {
     ui->NewPatient->hide();
+}
+
+void MainWindow::on_add5m_clicked()
+{
+    updateTime(Time{0, 5});
+}
+
+
+void MainWindow::on_add15m_clicked()
+{
+    updateTime(Time{0, 15});
+}
+
+
+void MainWindow::on_add30m_clicked()
+{
+    updateTime(Time{0, 30});
+}
+
+
+void MainWindow::on_add1h_clicked()
+{
+    updateTime(Time{1, 0});
 }
 

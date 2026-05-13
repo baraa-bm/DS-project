@@ -14,7 +14,10 @@ class MainWindow : public QDialog
 
 public:
     manager *Task_Manager;
-    Time currentTime = Time(5,0);
+    Time *currentTime = new Time(5,0);
+
+    void displayTime(Time time);
+    void updateTime(Time increment);
 
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
@@ -25,6 +28,14 @@ private slots:
     void on_CheckIn_clicked();
 
     void on_close_checkIn_clicked();
+
+    void on_add5m_clicked();
+
+    void on_add15m_clicked();
+
+    void on_add30m_clicked();
+
+    void on_add1h_clicked();
 
 private:
     Ui::MainWindow *ui;

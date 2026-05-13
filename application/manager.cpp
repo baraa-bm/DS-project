@@ -28,13 +28,12 @@ void manager::pringCompletedTask(){
                          << currentTask->excution_duration.minutes << "m\n\n";
 }
 
-void manager::updateTasks(Time globalTime){
-    if((currentTask->arrival_time + currentTask->excution_duration >= globalTime)){
+void manager::updateTasks(Time *globalTime){
+    if((currentTask->arrival_time + currentTask->excution_duration >= *globalTime)){
         executeTask(pq_tasks.top());
         currentTask = pq_tasks.top();
 
-        cout << "Current Task: \n";
-        printCurrentTask();
+        //display new time
     }
 }
 
