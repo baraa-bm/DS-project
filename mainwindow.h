@@ -18,9 +18,6 @@ public:
     //      assign a real manager in main() or via a setter before use
     manager *Task_Manager = nullptr;
 
-    Time currentTime = Time(5, 0);
-
-    manager *Task_Manager;
     Time *currentTime = new Time(5,0);
 
     void displayTime(Time time);

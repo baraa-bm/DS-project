@@ -11,8 +11,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->NewPatient->hide();
 
     ui->CurrentTime->setText(
-        QString::number(currentTime.hours) + ":" +
-        QString::number(currentTime.minutes).rightJustified(2, '0')
+        QString::number(currentTime->hours) + ":" +
+        QString::number(currentTime->minutes).rightJustified(2, '0')
         );
 
 
@@ -115,7 +115,7 @@ void MainWindow::on_CheckIn_clicked()
 
 
     Task_Manager->addtask(
-        Task_Manager->createTask(currentTime, Time{0, 10}, name, priority),
+        Task_Manager->createTask(*currentTime, Time{0, 10}, name, priority),
         priority
         );
 

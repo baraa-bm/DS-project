@@ -32,10 +32,9 @@ void manager::printCompletedTask(){   // fix: renamed from pringCompletedTask
          << currentTask->excution_duration.minutes << "m\n\n";
 }
 
-<<<<<<< HEAD
-void manager::updateTasks(Time globalTime){
+void manager::updateTasks(Time *globalTime){
     // fix: was ">=" (never triggers); should be "<=" meaning deadline has been reached
-    if((currentTask->arrival_time + currentTask->excution_duration) <= globalTime){
+    if((currentTask->arrival_time + currentTask->excution_duration) <= *globalTime){
         executeTask(pq_tasks.top());  // print + pop happens inside
 
         // fix: guard against empty queue before calling top()
@@ -47,14 +46,6 @@ void manager::updateTasks(Time globalTime){
             currentTask = nullptr;
             cout << "No more tasks in queue.\n";
         }
-=======
-void manager::updateTasks(Time *globalTime){
-    if((currentTask->arrival_time + currentTask->excution_duration >= *globalTime)){
-        executeTask(pq_tasks.top());
-        currentTask = pq_tasks.top();
-
-        //display new time
->>>>>>> ec09663621297f715833740239718b0e1cfd86c3
     }
 }
 
