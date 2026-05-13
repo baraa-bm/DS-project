@@ -228,6 +228,9 @@ public:
         PatientsList = new QListWidget(PatientsFrame);
         PatientsList->setObjectName("PatientsList");
         PatientsList->setGeometry(QRect(0, 0, 701, 151));
+        PatientsList->setFrameShape(QFrame::Shape::WinPanel);
+        PatientsList->setFrameShadow(QFrame::Shadow::Raised);
+        PatientsList->setSortingEnabled(false);
         StatsFrame = new QFrame(MainWindow);
         StatsFrame->setObjectName("StatsFrame");
         StatsFrame->setGeometry(QRect(50, 380, 301, 261));

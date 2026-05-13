@@ -60,4 +60,6 @@ public:
         return toTotalMinutes() < other.toTotalMinutes();
     }
 };
+
 #endif //ADS_PROJECT_TIME_H
+

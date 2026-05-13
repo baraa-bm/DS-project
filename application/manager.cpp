@@ -32,6 +32,7 @@ void manager::printCompletedTask(){   // fix: renamed from pringCompletedTask
          << currentTask->excution_duration.minutes << "m\n\n";
 }
 
+
 void manager::updateTasks(Time *globalTime){
     // fix: was ">=" (never triggers); should be "<=" meaning deadline has been reached
     if((currentTask->arrival_time + currentTask->excution_duration) <= *globalTime){
@@ -48,6 +49,16 @@ void manager::updateTasks(Time *globalTime){
         }
     }
 }
+
+// void manager::updateTasks(Time *globalTime){
+//     if((currentTask->arrival_time + currentTask->excution_duration >= *globalTime)){
+//         executeTask(pq_tasks.top());
+//         currentTask = pq_tasks.top();
+
+//         //display new time
+//     }
+// }
+
 
 float manager::totalTimeExcecution(){
     int hours = 0; int minutes = 0;

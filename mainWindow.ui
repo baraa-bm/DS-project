@@ -755,6 +755,15 @@
       <height>151</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <property name="sortingEnabled">
+     <bool>false</bool>
+    </property>
    </widget>
   </widget>
   <widget class="QFrame" name="StatsFrame">
