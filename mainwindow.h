@@ -13,27 +13,34 @@ class MainWindow : public QDialog
     Q_OBJECT
 
 public:
-    // fix: initialize to nullptr so it's never a dangling pointer;
-    //      assign a real manager in main() or via a setter before use
     manager *Task_Manager = nullptr;
-
     Time *currentTime = new Time(5,0);
 
     void displayTime(Time time);
     void updateTime(Time increment);
 
+    void refreshPatientsList();
+
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    void refreshPatientsList();
-
 private slots:
     void on_AddPatient_clicked();
+
     void on_CheckIn_clicked();
+
     void on_close_checkIn_clicked();
+
+    void on_add5m_clicked();
+
+    void on_add15m_clicked();
+
+    void on_add30m_clicked();
+
+    void on_add1h_clicked();
 
 private:
     Ui::MainWindow *ui;
 };
 
-#endif
+#endif // MAINWINDOW_H
