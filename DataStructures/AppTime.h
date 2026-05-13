@@ -1,13 +1,12 @@
 #ifndef ADS_PROJECT_TIME_H
 #define ADS_PROJECT_TIME_H
-
 #include <cstdlib> // std::abs
 
-class Time{
-    public:
+class Time {
+public:
     int hours;
     int minutes;
-    
+
     Time();
     Time(int h, int m);
 
@@ -16,7 +15,6 @@ class Time{
             hours += minutes / 60;
             minutes %= 60;
         } else if (minutes < 0) {
-            // Handle negative minutes for subtraction
             int hourBorrow = (std::abs(minutes) / 60) + 1;
             hours -= hourBorrow;
             minutes += hourBorrow * 60;
@@ -27,14 +25,14 @@ class Time{
         return (hours * 60) + minutes;
     }
 
-    void operator=(const Time& other){
+    void operator=(const Time& other) {
         this->hours = other.hours;
         this->minutes = other.minutes;
     }
 
     Time operator-(const Time& other) const {
         int diff = toTotalMinutes() - other.toTotalMinutes();
-        return Time(0, diff); 
+        return Time(0, diff);
     }
 
     Time operator+(const Time& other) const {
@@ -42,21 +40,26 @@ class Time{
     }
 
     bool operator>(const Time& other) const {
-        if(hours > other.hours) return true;
-        else if(hours < other.hours) return false;
-        else if(minutes > other.minutes) return true;
-        else return false;
+        return toTotalMinutes() > other.toTotalMinutes();
     }
 
     bool operator==(const Time& other) const {
-        if(hours == other.hours && minutes == other.minutes) return true;
-        return false;
+        return toTotalMinutes() == other.toTotalMinutes();
     }
 
-    bool operator>=(const Time& other){
-        if(*this > other || *this == other) return true;
-        return false;
+    bool operator>=(const Time& other) const {   // fix: added const (was missing)
+        return toTotalMinutes() >= other.toTotalMinutes();
+    }
+
+    // fix: added — was missing, caused the compiler error in manager.cpp:37
+    bool operator<=(const Time& other) const {
+        return toTotalMinutes() <= other.toTotalMinutes();
+    }
+
+    bool operator<(const Time& other) const {
+        return toTotalMinutes() < other.toTotalMinutes();
     }
 };
 
 #endif //ADS_PROJECT_TIME_H
+

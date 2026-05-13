@@ -15,6 +15,7 @@
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
@@ -36,6 +37,7 @@ public:
     QLabel *label_2;
     QFrame *PatientsFrame;
     QLabel *QueueStatus;
+    QListWidget *PatientsList;
     QFrame *StatsFrame;
     QLabel *label_5;
     QFrame *CrucialFrame;
@@ -216,12 +218,19 @@ public:
         label_2->setFont(font2);
         PatientsFrame = new QFrame(MainWindow);
         PatientsFrame->setObjectName("PatientsFrame");
-        PatientsFrame->setGeometry(QRect(390, 170, 821, 151));
+        PatientsFrame->setGeometry(QRect(480, 180, 821, 151));
+        PatientsFrame->setMinimumSize(QSize(0, 151));
         PatientsFrame->setFrameShape(QFrame::Shape::WinPanel);
         PatientsFrame->setFrameShadow(QFrame::Shadow::Raised);
         QueueStatus = new QLabel(PatientsFrame);
         QueueStatus->setObjectName("QueueStatus");
         QueueStatus->setGeometry(QRect(300, 70, 261, 16));
+        PatientsList = new QListWidget(PatientsFrame);
+        PatientsList->setObjectName("PatientsList");
+        PatientsList->setGeometry(QRect(0, 0, 701, 151));
+        PatientsList->setFrameShape(QFrame::Shape::WinPanel);
+        PatientsList->setFrameShadow(QFrame::Shadow::Raised);
+        PatientsList->setSortingEnabled(false);
         StatsFrame = new QFrame(MainWindow);
         StatsFrame->setObjectName("StatsFrame");
         StatsFrame->setGeometry(QRect(50, 380, 301, 261));
@@ -279,7 +288,7 @@ public:
         AddPatient->setGeometry(QRect(50, 660, 301, 41));
         NewPatient = new QFrame(MainWindow);
         NewPatient->setObjectName("NewPatient");
-        NewPatient->setGeometry(QRect(390, 340, 821, 341));
+        NewPatient->setGeometry(QRect(470, 380, 821, 341));
         NewPatient->setFrameShape(QFrame::Shape::WinPanel);
         NewPatient->setFrameShadow(QFrame::Shadow::Raised);
         label_10 = new QLabel(NewPatient);

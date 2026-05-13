@@ -231,3 +231,5 @@ QPushButton#add30m {
 QPushButton#add1h {
     qproperty-text: "+ 1 hour";
 }
+
+QListWidget {color: red}

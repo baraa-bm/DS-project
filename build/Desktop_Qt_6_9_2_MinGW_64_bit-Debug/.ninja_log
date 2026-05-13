@@ -1,0 +1,63 @@
+# ninja log v6
+1051	1905	8003894010470995	CMakeFiles/appPatient_Manager.dir/application/user.cpp.obj	d3ef6fdfa09baa4c
+928	1017	8003894009979140	C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp	eeaf1093d142e02e
+49	636	8003953778919498	appPatient_Manager_autogen/timestamp	c9c60819052fc807
+1060	1295	8003894010560582	CMakeFiles/appPatient_Manager.dir/login_window/main_login.cpp.obj	c96d5b753e88898
+49	636	8003953778919498	C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/timestamp	c9c60819052fc807
+49	636	8003953778919498	appPatient_Manager_autogen/mocs_compilation.cpp	c9c60819052fc807
+49	636	8003953778919498	C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/mocs_compilation.cpp	c9c60819052fc807
+928	1017	8003894009979140	appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp	eeaf1093d142e02e
+1188	1781	8003932509956299	CMakeFiles/appPatient_Manager.dir/DataStructures/priorityQueue.cpp.obj	3f2bed9faed957f5
+1087	1234	8003926312140360	CMakeFiles/appPatient_Manager.dir/DataStructures/AppTime.cpp.obj	62a2ed855df92556
+2395	2686	8003943595568541	appPatient_Manager.exe	3c0acbe294f704a3
+1064	4756	8003894010599647	CMakeFiles/appPatient_Manager.dir/login_window/userauth.cpp.obj	489688fc3a0a05d3
+1073	1316	8003894010678156	CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.obj	13eb9b479e6dcab9
+1096	1645	8003926312202769	CMakeFiles/appPatient_Manager.dir/DataStructures/task.cpp.obj	31aff94eab47da24
+1197	1845	8003932510047915	CMakeFiles/appPatient_Manager.dir/application/manager.cpp.obj	b8f59b879b0521bc
+590	1205	8003952308683593	CMakeFiles/appPatient_Manager.dir/application/persistence.cpp.obj	ce04261bd2d8233c
+637	2830	8003953779952898	CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/mocs_compilation.cpp.obj	c8ae739f3b104c9d
+1056	5036	8003894010497747	CMakeFiles/appPatient_Manager.dir/login_window/logindialog.cpp.obj	546b40d6600b0cee
+1192	4432	8003932509992150	CMakeFiles/appPatient_Manager.dir/application/main.cpp.obj	803c3da9a8326bfb
+226	2395	8003943573877237	CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj	40774b456e1b6ee7
+54	214	8003954783135556	appPatient_Manager_autogen/timestamp	c9c60819052fc807
+54	214	8003954783135556	appPatient_Manager_autogen/mocs_compilation.cpp	c9c60819052fc807
+54	214	8003954783135556	C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/timestamp	c9c60819052fc807
+54	214	8003954783135556	C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/mocs_compilation.cpp	c9c60819052fc807
+220	2670	8003954784802332	CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj	40774b456e1b6ee7
+51	221	8003955412779165	appPatient_Manager_autogen/timestamp	c9c60819052fc807
+51	221	8003955412779165	appPatient_Manager_autogen/mocs_compilation.cpp	c9c60819052fc807
+51	221	8003955412779165	C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/timestamp	c9c60819052fc807
+51	221	8003955412779165	C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/mocs_compilation.cpp	c9c60819052fc807
+224	585	8003955414516480	CMakeFiles/appPatient_Manager.dir/application/manager.cpp.obj	b8f59b879b0521bc
+43	200	8003955527431576	appPatient_Manager_autogen/timestamp	c9c60819052fc807
+43	200	8003955527431576	appPatient_Manager_autogen/mocs_compilation.cpp	c9c60819052fc807
+43	200	8003955527431576	C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/timestamp	c9c60819052fc807
+43	200	8003955527431576	C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/mocs_compilation.cpp	c9c60819052fc807
+201	1969	8003955529017876	CMakeFiles/appPatient_Manager.dir/application/main.cpp.obj	803c3da9a8326bfb
+45	1835	8003956245451725	CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/mocs_compilation.cpp.obj	c8ae739f3b104c9d
+19	1389	8003959849562366	appPatient_Manager_autogen/timestamp	c9c60819052fc807
+19	1389	8003959849562366	appPatient_Manager_autogen/mocs_compilation.cpp	c9c60819052fc807
+19	1389	8003959849562366	C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/timestamp	c9c60819052fc807
+19	1389	8003959849562366	C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/mocs_compilation.cpp	c9c60819052fc807
+1396	1544	8003959850823459	CMakeFiles/appPatient_Manager.dir/DataStructures/AppTime.cpp.obj	62a2ed855df92556
+1405	1956	8003959850913402	CMakeFiles/appPatient_Manager.dir/DataStructures/task.cpp.obj	31aff94eab47da24
+1401	2120	8003959850873440	CMakeFiles/appPatient_Manager.dir/DataStructures/priorityQueue.cpp.obj	3f2bed9faed957f5
+1418	2591	8003959851035823	CMakeFiles/appPatient_Manager.dir/application/persistence.cpp.obj	ce04261bd2d8233c
+1391	4409	8003959850773450	CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/mocs_compilation.cpp.obj	c8ae739f3b104c9d
+1409	4744	8003959850953433	CMakeFiles/appPatient_Manager.dir/application/main.cpp.obj	803c3da9a8326bfb
+43	1111	8003960592407837	appPatient_Manager_autogen/timestamp	c9c60819052fc807
+43	1111	8003960592407837	appPatient_Manager_autogen/mocs_compilation.cpp	c9c60819052fc807
+43	1111	8003960592407837	C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/timestamp	c9c60819052fc807
+43	1111	8003960592407837	C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/mocs_compilation.cpp	c9c60819052fc807
+1123	1762	8003960593675255	CMakeFiles/appPatient_Manager.dir/application/manager.cpp.obj	b8f59b879b0521bc
+1127	2094	8003960593715269	CMakeFiles/appPatient_Manager.dir/application/persistence.cpp.obj	ce04261bd2d8233c
+1113	3442	8003960593577213	CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/mocs_compilation.cpp.obj	c8ae739f3b104c9d
+1118	3645	8003960593625147	CMakeFiles/appPatient_Manager.dir/application/main.cpp.obj	803c3da9a8326bfb
+1131	3914	8003960593757240	CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj	40774b456e1b6ee7
+3914	4136	8003960621555525	appPatient_Manager.exe	3c0acbe294f704a3
+48	209	8003961309508497	appPatient_Manager_autogen/timestamp	c9c60819052fc807
+48	209	8003961309508497	appPatient_Manager_autogen/mocs_compilation.cpp	c9c60819052fc807
+48	209	8003961309508497	C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/timestamp	c9c60819052fc807
+48	209	8003961309508497	C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/mocs_compilation.cpp	c9c60819052fc807
+209	2247	8003961311121306	CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj	40774b456e1b6ee7
+2247	2525	8003961331501835	appPatient_Manager.exe	3c0acbe294f704a3
