@@ -33,10 +33,38 @@ void manager::printCompletedTask(){   // fix: renamed from pringCompletedTask
 }
 
 
-void manager::updateTasks(Time *globalTime){
-    if((currentTask->arrival_time + currentTask->excution_duration) >= *globalTime){
-        executeTask(pq_tasks.top());  // print + pop happens inside
+void manager::updateTasks(Time *globalTime) {
+    if (!globalTime) return;
 
+    // If no task is running, try to grab the next one from the queue
+    if (currentTask == nullptr) {
+        if (!pq_tasks.isEmpty()) {
+            currentTask = pq_tasks.top();
+            pq_tasks.pop();
+            if (currentTask) {
+                currentTask->_status = current;
+                currentTask->start_time = *globalTime;
+            }
+        }
+        return;
+    }
+
+    Time finishTime = currentTask->start_time + currentTask->excution_duration;
+
+    if (*globalTime >= finishTime) {
+        currentTask->_status = completed;
+        completedTasks++;
+
+        if (!pq_tasks.isEmpty()) {
+            currentTask = pq_tasks.top();
+            pq_tasks.pop();
+            if (currentTask) {
+                currentTask->_status = current;
+                currentTask->start_time = *globalTime;
+            }
+        } else {
+            currentTask = nullptr;
+        }
     }
 }
 

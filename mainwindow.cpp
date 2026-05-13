@@ -19,11 +19,6 @@ MainWindow::MainWindow(QWidget *parent)
     // Show the real PC time when the window opens.
     displayPcTime();
 
-    // Update the clock every second so the seconds visibly move.
-    QTimer *clockTimer = new QTimer(this);
-    connect(clockTimer, &QTimer::timeout, this, &MainWindow::displayPcTime);
-    clockTimer->start(1000);
-
     ui->CrucialButton->setCheckable(true);
     ui->UrgentButton->setCheckable(true);
     ui->NormalButton->setCheckable(true);
@@ -180,15 +175,12 @@ void MainWindow::displayPcTime()
     // Get the current time from the computer.
     QTime pcTime = QTime::currentTime();
 
-    // Add the minutes from the Time Simulator buttons.
-    QTime shownTime = pcTime.addSecs(simulatedMinutes * 60);
-
     // Save hours and minutes in the old project Time object.
-    currentTime->hours = shownTime.hour();
-    currentTime->minutes = shownTime.minute();
+    currentTime->hours = pcTime.hour();
+    currentTime->minutes = pcTime.minute();
 
     // Show hours, minutes, and seconds on the screen.
-    ui->CurrentTime->setText(shownTime.toString("HH:mm:ss"));
+    ui->CurrentTime->setText(pcTime.toString("HH:mm:ss"));
 
     if (Task_Manager != nullptr) {
         Task_Manager->updateTasks(currentTime); // Tell manager time passed
@@ -199,10 +191,12 @@ void MainWindow::displayPcTime()
 void MainWindow::updateTime(Time increment)
 {
     // Remember how much fake time the simulator added.
-    simulatedMinutes += increment.toTotalMinutes();
+    Time newTime = increment + *currentTime;
+
+    *currentTime = newTime;
 
     // Redraw the clock right away.
-    displayPcTime();
+    displayTime(*currentTime);
 }
 
 void MainWindow::on_add5m_clicked()
