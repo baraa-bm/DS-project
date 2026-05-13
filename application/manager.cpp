@@ -17,7 +17,7 @@ task* manager::createTask(Time arrival_time, Time execution_duration, string nam
 
 void manager::executeTask(task *completedTask){
     completedTasks++;
-    printCompletedTask();   // fix: was "pringCompletedTask" (typo)
+    //display completed task
     pq_tasks.pop();
 }
 
@@ -37,6 +37,10 @@ void manager::updateTasks(Time *globalTime){
     if((currentTask->arrival_time + currentTask->excution_duration) >= *globalTime){
         executeTask(pq_tasks.top());  // print + pop happens inside
 
+<<<<<<< HEAD
+=======
+        //update the new tasks list
+>>>>>>> gui+integration
     }
 }
 
