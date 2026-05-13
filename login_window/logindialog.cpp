@@ -26,84 +26,19 @@ void LoginDialog::buildUi()
 {
     setObjectName("LoginDialog");
     setWindowTitle("MediQueue Pro");
-    setFixedSize(560, 620);
+    setFixedSize(460, 520);
     if (QScreen* screen = QApplication::primaryScreen()) {
         const QRect available = screen->availableGeometry();
         move(available.center() - rect().center());
     }
 
-    setStyleSheet(
-        "QDialog#LoginDialog {"
-        "  background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #1462f3, stop:1 #3627b9);"
-        "}"
-        "QFrame#Card {"
-        "  background: white;"
-        "  border-radius: 18px;"
-        "}"
-        "QLabel {"
-        "  color: #111827;"
-        "  font-family: Segoe UI;"
-        "}"
-        "QLabel#Title {"
-        "  font-size: 23px;"
-        "  font-weight: 700;"
-        "}"
-        "QLabel#Subtitle, QLabel#Footer {"
-        "  color: #5b6472;"
-        "  font-size: 12px;"
-        "}"
-        "QLabel#FieldLabel {"
-        "  font-size: 12px;"
-        "  font-weight: 600;"
-        "}"
-        "QLineEdit {"
-        "  min-height: 38px;"
-        "  border: 1px solid #d6dbe3;"
-        "  border-radius: 8px;"
-        "  padding: 0 12px;"
-        "  font-size: 13px;"
-        "  background-color: white"
-        "  color: black;"
-        "}"
-        "QLineEdit:focus {"
-        "  border: 1px solid #1f66f2;"
-        "}"
-        "QPushButton#PrimaryButton {"
-        "  min-height: 38px;"
-        "  border: none;"
-        "  border-radius: 8px;"
-        "  color: white;"
-        "  font-size: 13px;"
-        "  font-weight: 700;"
-        "  background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #1d6cf4, stop:1 #0d47e8);"
-        "}"
-        "QPushButton#PrimaryButton:hover {"
-        "  background: #155be2;"
-        "}"
-        "QPushButton#LinkButton {"
-        "  border: none;"
-        "  color: #1155c8;"
-        "  font-weight: 700;"
-        "  background: transparent;"
-        "}"
-        "QFrame#DemoBox {"
-        "  background: #eef6ff;"
-        "  border: 1px solid #cfe1f5;"
-        "  border-radius: 8px;"
-        "}"
-        "QLabel#Message {"
-        "  min-height: 20px;"
-        "  font-size: 12px;"
-        "}"
-    );
-
     QVBoxLayout* pageLayout = new QVBoxLayout(this);
-    pageLayout->setContentsMargins(50, 30, 50, 26);
-    pageLayout->setSpacing(10);
+    pageLayout->setContentsMargins(30, 18, 30, 16);
+    pageLayout->setSpacing(7);
 
     QFrame* card = new QFrame(this);
     card->setObjectName("Card");
-    card->setFixedWidth(360);
+    card->setFixedWidth(320);
 
     QGraphicsDropShadowEffect* shadow = new QGraphicsDropShadowEffect(card);
     shadow->setBlurRadius(30);
@@ -112,16 +47,13 @@ void LoginDialog::buildUi()
     card->setGraphicsEffect(shadow);
 
     QVBoxLayout* cardLayout = new QVBoxLayout(card);
-    cardLayout->setContentsMargins(28, 22, 28, 20);
-    cardLayout->setSpacing(9);
+    cardLayout->setContentsMargins(22, 16, 22, 14);
+    cardLayout->setSpacing(6);
 
     QLabel* icon = new QLabel("+", card);
+    icon->setObjectName("LoginIcon");
     icon->setAlignment(Qt::AlignCenter);
-    icon->setFixedSize(48, 48);
-    icon->setStyleSheet(
-        "background:#145de8; color:white; border-radius:12px;"
-        "font-size:28px; font-weight:800;"
-    );
+    icon->setFixedSize(42, 42);
     cardLayout->addWidget(icon, 0, Qt::AlignHCenter);
 
     QLabel* title = new QLabel("MediQueue Pro", card);
@@ -166,11 +98,11 @@ void LoginDialog::buildUi()
     QFrame* demoBox = new QFrame(card);
     demoBox->setObjectName("DemoBox");
     QVBoxLayout* demoLayout = new QVBoxLayout(demoBox);
-    demoLayout->setContentsMargins(12, 9, 12, 9);
+    demoLayout->setContentsMargins(10, 7, 10, 7);
     QLabel* demoText = new QLabel("Demo Credentials:\nEmail: demo@hospital.com\nPassword: demo123", demoBox);
+    demoText->setObjectName("DemoText");
     demoText->setWordWrap(true);
-    demoText->setMinimumHeight(42);
-    demoText->setStyleSheet("color:#173f68; font-size:9px;");
+    demoText->setMinimumHeight(36);
     demoLayout->addWidget(demoText);
     cardLayout->addWidget(demoBox);
 
@@ -190,7 +122,6 @@ void LoginDialog::buildUi()
     QLabel* footer = new QLabel("Trusted by healthcare professionals worldwide", this);
     footer->setObjectName("Footer");
     footer->setAlignment(Qt::AlignCenter);
-    footer->setStyleSheet("color: white;");
     pageLayout->addWidget(footer);
 }
 

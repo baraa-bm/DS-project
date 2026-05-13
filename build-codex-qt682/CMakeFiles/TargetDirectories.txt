@@ -1,0 +1,9 @@
+C:/Users/AUC/Downloads/ds project/DS-project/build-codex-qt682/CMakeFiles/appPatient_Manager.dir
+C:/Users/AUC/Downloads/ds project/DS-project/build-codex-qt682/CMakeFiles/edit_cache.dir
+C:/Users/AUC/Downloads/ds project/DS-project/build-codex-qt682/CMakeFiles/rebuild_cache.dir
+C:/Users/AUC/Downloads/ds project/DS-project/build-codex-qt682/CMakeFiles/list_install_components.dir
+C:/Users/AUC/Downloads/ds project/DS-project/build-codex-qt682/CMakeFiles/install.dir
+C:/Users/AUC/Downloads/ds project/DS-project/build-codex-qt682/CMakeFiles/install/local.dir
+C:/Users/AUC/Downloads/ds project/DS-project/build-codex-qt682/CMakeFiles/install/strip.dir
+C:/Users/AUC/Downloads/ds project/DS-project/build-codex-qt682/CMakeFiles/appPatient_Manager_autogen_timestamp_deps.dir
+C:/Users/AUC/Downloads/ds project/DS-project/build-codex-qt682/CMakeFiles/appPatient_Manager_autogen.dir

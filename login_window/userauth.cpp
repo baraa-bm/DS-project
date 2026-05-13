@@ -27,7 +27,7 @@ QString defaultUsersPath()
         return exeCopy;
     }
 
-    return workingCopy;
+    return exeCopy;
 }
 }
 
@@ -40,6 +40,16 @@ bool UserAuth::login(const QString& username, const QString& password, QString* 
 {
     QFile file(m_usersFilePath);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QFile newFile(m_usersFilePath);
+        if (newFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            QTextStream out(&newFile);
+            out << "demo@hospital.com demo123\n";
+            newFile.close();
+            file.setFileName(m_usersFilePath);
+        }
+    }
+
+    if (!file.isOpen() && !file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         if (error) {
             *error = "Could not open users.txt.";
         }

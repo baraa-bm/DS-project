@@ -110,11 +110,15 @@ int main(int argc, char *argv[])
         qDebug() << "Style sheet not found!";
     }
 
+    LoginDialog L;
+    if (L.exec() != QDialog::Accepted) {
+        delete mgr;
+        return 0;
+    }
+
     MainWindow w;
     w.Task_Manager = mgr;
     w.currentTime = globalTime;
-    LoginDialog L;
-    //L.show();
     w.show();
     return a.exec();
 }
