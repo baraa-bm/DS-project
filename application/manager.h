@@ -1,11 +1,10 @@
 #ifndef ADS_PROJECT_MANAGER_H
 #define ADS_PROJECT_MANAGER_H
 
-#include "../DataStructures/task.h"
-#include "../DataStructures/List.h"
-#include "../DataStructures/queue.h"
-#include "../DataStructures/priorityQueue.h"
-
+#include "task.h"
+#include "List.h"
+#include "queue.h"
+#include "priorityQueue.h"
 //the manager class handles the logic of the program using the data structures and the tasks.
 
 class manager {
