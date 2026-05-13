@@ -7,12 +7,19 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
     ui->NewPatient->hide();
 
     ui->CurrentTime->setText(
         QString::number(currentTime.hours) + ":" +
         QString::number(currentTime.minutes).rightJustified(2, '0')
         );
+
+
+    displayTime(*currentTime);
+
+    ui->NewPatient->hide();
+
 
     ui->CrucialButton->setCheckable(true);
     ui->UrgentButton->setCheckable(true);
@@ -26,6 +33,23 @@ MainWindow::MainWindow(QWidget *parent)
 
     if (Task_Manager != nullptr)
         refreshPatientsList();
+}
+
+void MainWindow::displayTime(Time time)
+{
+    ui->CurrentTime->setText(
+        QString("%1:%2")
+            .arg(time.hours, 2, 10, QChar('0'))
+            .arg(time.minutes, 2, 10, QChar('0'))
+        );
+}
+
+void MainWindow::updateTime(Time increment)
+{
+    Time newTime = *currentTime + increment;
+    *currentTime = newTime;
+
+    displayTime(*currentTime);
 }
 
 MainWindow::~MainWindow()
@@ -89,12 +113,16 @@ void MainWindow::on_CheckIn_clicked()
     else if (ui->UrgentButton->isChecked())  { priority = 2; }
     else return;
 
+
     Task_Manager->addtask(
         Task_Manager->createTask(currentTime, Time{0, 10}, name, priority),
         priority
         );
 
     ui->PatientName->clear();
+
+    Task_Manager->addtask(Task_Manager->createTask(*currentTime, Time{0,10}, name , priority), priority);
+
     ui->NewPatient->hide();
     refreshPatientsList();
 }
@@ -104,6 +132,30 @@ void MainWindow::on_close_checkIn_clicked()
     ui->NewPatient->hide();
     refreshPatientsList();
 }
+
+void MainWindow::on_add5m_clicked()
+{
+    updateTime(Time{0, 5});
+}
+
+
+void MainWindow::on_add15m_clicked()
+{
+    updateTime(Time{0, 15});
+}
+
+
+void MainWindow::on_add30m_clicked()
+{
+    updateTime(Time{0, 30});
+}
+
+
+void MainWindow::on_add1h_clicked()
+{
+    updateTime(Time{1, 0});
+}
+
 
 // #include "mainwindow.h"
 // #include "ui_mainwindow.h"
@@ -204,4 +256,5 @@ void MainWindow::on_close_checkIn_clicked()
 //     ui->NewPatient->hide();
 //     refreshPatientsList();
 // }
+
 

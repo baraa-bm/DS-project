@@ -27,7 +27,7 @@ public:
     task* createTask(Time arrival_time, Time execution_duration, string name, int priority);
     void addtask(task * newTask, int priority);
     void executeTask(task *);
-    void updateTasks(Time globalTime);
+    void updateTasks(Time *globalTime);
     void printAllTasks();
     void printCompletedTask();
     //void printNextTask();
