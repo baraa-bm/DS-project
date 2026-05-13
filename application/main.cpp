@@ -112,7 +112,7 @@ int main(int argc, char *argv[])
 
     MainWindow w;
     w.Task_Manager = mgr;
-    w.currentTime = globalTime;
+   // w.currentTime = globalTime;
     LoginDialog L;
     //L.show();
     w.show();
