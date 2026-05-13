@@ -123,24 +123,28 @@ void MainWindow::updateTime(Time increment)
 void MainWindow::on_add5m_clicked()
 {
     updateTime(Time{0, 5});
+    Task_Manager->updateTasks(currentTime);
 }
 
 
 void MainWindow::on_add15m_clicked()
 {
     updateTime(Time{0, 15});
+    Task_Manager->updateTasks(currentTime);
 }
 
 
 void MainWindow::on_add30m_clicked()
 {
     updateTime(Time{0, 30});
+    Task_Manager->updateTasks(currentTime);
 }
 
 
 void MainWindow::on_add1h_clicked()
 {
     updateTime(Time{1, 0});
+    Task_Manager->updateTasks(currentTime);
 }
 
 

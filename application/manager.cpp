@@ -17,7 +17,7 @@ task* manager::createTask(Time arrival_time, Time execution_duration, string nam
 
 void manager::executeTask(task *completedTask){
     completedTasks++;
-    printCompletedTask();   // fix: was "pringCompletedTask" (typo)
+    //display completed task
     pq_tasks.pop();
 }
 
@@ -38,15 +38,7 @@ void manager::updateTasks(Time *globalTime){
     if((currentTask->arrival_time + currentTask->excution_duration) <= *globalTime){
         executeTask(pq_tasks.top());  // print + pop happens inside
 
-        // fix: guard against empty queue before calling top()
-        if(!pq_tasks.isEmpty()){
-            currentTask = pq_tasks.top();
-            cout << "Current Task: \n";
-            printCurrentTask();
-        } else {
-            currentTask = nullptr;
-            cout << "No more tasks in queue.\n";
-        }
+        //update the new tasks list
     }
 }
 
