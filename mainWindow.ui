@@ -715,11 +715,17 @@
   <widget class="QFrame" name="PatientsFrame">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>170</y>
+     <x>480</x>
+     <y>180</y>
      <width>821</width>
      <height>151</height>
     </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>151</height>
+    </size>
    </property>
    <property name="frameShape">
     <enum>QFrame::Shape::WinPanel</enum>
@@ -738,6 +744,16 @@
     </property>
     <property name="text">
      <string>No Patients in Queue</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="PatientsList">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>701</width>
+      <height>151</height>
+     </rect>
     </property>
    </widget>
   </widget>
@@ -954,8 +970,8 @@
   <widget class="QFrame" name="NewPatient">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>340</y>
+     <x>470</x>
+     <y>380</y>
      <width>821</width>
      <height>341</height>
     </rect>
