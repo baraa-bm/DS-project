@@ -1,12 +1,12 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include <QButtonGroup>
 #include <QBrush>
+#include <QButtonGroup>
 #include <QIntValidator>
 #include <QListWidgetItem>
 #include <QSize>
 #include <QTime>
 #include <QTimer>
+#include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QDialog(parent)
@@ -29,6 +29,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Age should only accept whole numbers.
     ui->PatientAge->setValidator(new QIntValidator(0, 130, this));
+    // Duration should only accept whole numbers.
+    ui->TaskDuration->setValidator(new QIntValidator(1, 300, this));
 
     QButtonGroup *priorityGroup = new QButtonGroup(this);
     priorityGroup->addButton(ui->CrucialButton);
@@ -54,7 +56,7 @@ void MainWindow::refreshPatientsList()
 
     // get tasks in priority order from the heap (not insertion order from l_tasks)
     int count = 0;
-    task** ordered = Task_Manager->pq_tasks.getAll(count);
+    task **ordered = Task_Manager->pq_tasks.getAll(count);
 
     // These numbers are shown in Queue Statistics.
     int crucialCount = 0;
@@ -73,8 +75,9 @@ void MainWindow::refreshPatientsList()
     ui->QueueStatus->setText(QString::number(count) + " patient(s) in queue");
 
     for (int i = 0; i < count; i++) {
-        task* t = ordered[i];
-        if (t == nullptr) continue;
+        task *t = ordered[i];
+        if (t == nullptr)
+            continue;
 
         QString priorityLabel;
         QColor textColor;
@@ -137,16 +140,25 @@ void MainWindow::on_CheckIn_clicked()
     string name = Qname.toStdString();
 
     int priority;
-    if      (ui->NormalButton->isChecked())  { priority = 1; }
-    else if (ui->CrucialButton->isChecked()) { priority = 3; }
-    else if (ui->UrgentButton->isChecked())  { priority = 2; }
-    else return;
+    if (ui->NormalButton->isChecked()) {
+        priority = 1;
+    } else if (ui->CrucialButton->isChecked()) {
+        priority = 3;
+    } else if (ui->UrgentButton->isChecked()) {
+        priority = 2;
+    } else
+        return;
+
+    int durationMinutes = 10; // default to 10 minutes if left blank
+    if (!ui->TaskDuration->text().isEmpty()) {
+        durationMinutes = ui->TaskDuration->text().toInt();
+    }
+
 
     Task_Manager->addtask(
-        Task_Manager->createTask(*currentTime, Time{0, 10}, name, priority),
+        Task_Manager->createTask(*currentTime, Time{0, durationMinutes}, name, priority),
         priority
         );
-
     ui->PatientName->clear();
     ui->PatientLastName->clear();
     ui->PatientAge->clear();
@@ -160,14 +172,10 @@ void MainWindow::on_close_checkIn_clicked()
     refreshPatientsList();
 }
 
-
 void MainWindow::displayTime(Time time)
 {
     ui->CurrentTime->setText(
-        QString("%1:%2")
-            .arg(time.hours, 2, 10, QChar('0'))
-            .arg(time.minutes, 2, 10, QChar('0'))
-        );
+        QString("%1:%2").arg(time.hours, 2, 10, QChar('0')).arg(time.minutes, 2, 10, QChar('0')));
 }
 
 void MainWindow::displayPcTime()
@@ -184,6 +192,11 @@ void MainWindow::displayPcTime()
 
     // Show hours, minutes, and seconds on the screen.
     ui->CurrentTime->setText(shownTime.toString("HH:mm:ss"));
+
+    if (Task_Manager != nullptr) {
+        Task_Manager->updateTasks(currentTime); // Tell manager time passed
+        refreshPatientsList();                  // Redraw the UI
+    }
 }
 
 void MainWindow::updateTime(Time increment)
@@ -195,13 +208,11 @@ void MainWindow::updateTime(Time increment)
     displayPcTime();
 }
 
-
 void MainWindow::on_add5m_clicked()
 {
     updateTime(Time{0, 5});
     Task_Manager->updateTasks(currentTime);
 }
-
 
 void MainWindow::on_add15m_clicked()
 {
@@ -209,13 +220,11 @@ void MainWindow::on_add15m_clicked()
     Task_Manager->updateTasks(currentTime);
 }
 
-
 void MainWindow::on_add30m_clicked()
 {
     updateTime(Time{0, 30});
     Task_Manager->updateTasks(currentTime);
 }
-
 
 void MainWindow::on_add1h_clicked()
 {
