@@ -1,35 +1,46 @@
-QDialog#MainWindow {
+QDialog {
     background-color: #f4f8ff;
-    font-family: "Segoe UI";
     color: #172033;
+    font-family: "Segoe UI";
+}
+
+QDialog#LoginDialog {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #1462f3, stop:1 #3627b9);
 }
 
 QFrame {
     background-color: #ffffff;
     border: 1px solid #edf2f7;
+    border-radius: 10px;
+}
+
+QFrame#MediQueueFrame,
+QFrame#SimulatorFrame,
+QFrame#PatientsFrame,
+QFrame#StatsFrame,
+QFrame#NewPatient,
+QFrame#Card {
+    background-color: #ffffff;
+    border: 1px solid #e7edf5;
     border-radius: 12px;
 }
 
-QFrame#MediQueueFrame {
-    border: 1px solid #e7edf5;
-    border-radius: 14px;
-    background-color: #ffffff;
+QFrame#Card {
+    border-radius: 16px;
 }
 
-QFrame#SimulatorFrame,
-QFrame#PatientsFrame,
-QFrame#StatsFrame {
-    border: 1px solid #edf2f7;
-    border-radius: 14px;
-    background-color: #ffffff;
+QFrame#DemoBox {
+    background-color: #eef6ff;
+    border: 1px solid #cfe1f5;
+    border-radius: 8px;
 }
 
 QFrame#CrucialFrame,
 QFrame#UrgentFrame,
 QFrame#NormalFrame,
 QFrame#TotalFrame {
-    border-radius: 8px;
     border: 0;
+    border-radius: 8px;
 }
 
 QFrame#CrucialFrame {
@@ -50,58 +61,90 @@ QFrame#TotalFrame {
 }
 
 QLabel {
-    color: #172033;
     background-color: transparent;
     border: 0;
+    color: #172033;
     font-family: "Segoe UI";
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
 }
 
 QLabel#label {
     qproperty-text: "MediQueue Pro";
     color: #123a7a;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 800;
 }
 
 QLabel#label_3 {
     color: #123a7a;
-    font-size: 14px;
+    font-size: 12px;
+}
+
+QLabel#label_4,
+QLabel#Subtitle,
+QLabel#Footer,
+QLabel#label_2 {
+    color: #5b6472;
+    font-size: 11px;
 }
 
 QLabel#label_4 {
-    color: #526071;
-    font-size: 12px;
+    qproperty-alignment: AlignCenter;
+}
+
+QLabel#Footer {
+    color: #ffffff;
 }
 
 QLabel#CurrentTime {
     color: #123a7a;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
+    qproperty-alignment: AlignCenter;
 }
 
 QLabel#TimeSimulator,
-QLabel#label_5 {
+QLabel#label_5,
+QLabel#QueueStatus {
     color: #172033;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 700;
 }
 
 QLabel#TimeSimulator {
-    qproperty-text: ">>  Time Simulator";
+    qproperty-text: "Time Simulator";
     color: #173f83;
 }
 
-QLabel#label_2 {
-    color: #5b6472;
-    font-size: 12px;
+QLabel#Title {
+    color: #111827;
+    font-size: 20px;
+    font-weight: 700;
 }
 
-QLabel#QueueStatus {
-    color: #172033;
-    font-size: 17px;
-    font-weight: 700;
+QLabel#FieldLabel {
+    color: #111827;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+QLabel#Message {
+    min-height: 18px;
+    font-size: 11px;
+}
+
+QLabel#DemoText {
+    color: #173f68;
+    font-size: 9px;
+}
+
+QLabel#LoginIcon {
+    background-color: #145de8;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 800;
 }
 
 QLabel#label_6,
@@ -109,7 +152,7 @@ QLabel#label_7,
 QLabel#label_8,
 QLabel#label_9 {
     color: #263242;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 QLabel#CurcialNumber {
@@ -132,80 +175,30 @@ QLabel#TotaNumber {
     font-weight: 800;
 }
 
-QPushButton {
-    border: 0;
-    border-radius: 4px;
-    padding: 1px 6px;
-    color: #ffffff;
-    font-family: "Segoe UI";
-    font-size: 12px;
-    font-weight: 700;
-    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #2884f7, stop:1 #1260ed);
-}
-
-QPushButton#CrucialButton,
-QPushButton#NormalButton,
-QPushButton#UrgentButton{
-    min-height: 70px;
-
-    border: 1px solid #d1d5db;
-    border-radius: 10px;
-
-    background-color: white;
-
-    font-family: "Segoe UI";
-    font-size: 14px;
-    font-weight: 600;
-
-    color: #111827;
-
-    padding: 6px;
-}
-
-QPushButton#NormalButton:hover {
-    border: 2px solid #00C950;
-}
-
-QPushButton#NormalButton:checked {
-    background-color: #F0FDF4;
-    border: 2px solid #00C950;
-    color: #00C950;
-}
-
-
-QPushButton#UrgentButton:hover {
-    border: 2px solid #FF6900;
-}
-
-QPushButton#UrgentButton:checked {
-    background-color: #FFF7ED;
-    border: 2px solid #FF6900;
-    color: #FF6900;
-}
-
-
-QPushButton#CrucialButton:hover {
-    border: 2px solid #FB2C36;
-}
-
-QPushButton#CrucialButton:checked {
-    background-color: #FEF2F2;
-    border: 2px solid #FB2C36;
-    color: #FB2C36;
-}
-
 QLineEdit {
-  min-height: 38px;
-  border: 1px solid #d6dbe3;
-  border-radius: 8px;
-  padding: 0 12px;
-  font-size: 13px;
-  background-color: white;
-  color: black;
+    min-height: 30px;
+    border: 1px solid #d6dbe3;
+    border-radius: 7px;
+    padding: 0 10px;
+    background-color: #ffffff;
+    color: #111827;
+    font-size: 12px;
 }
 
 QLineEdit:focus {
-  border: 1px solid #1f66f2;
+    border: 1px solid #1f66f2;
+}
+
+QPushButton {
+    min-height: 28px;
+    border: 0;
+    border-radius: 6px;
+    padding: 2px 8px;
+    color: #ffffff;
+    font-family: "Segoe UI";
+    font-size: 11px;
+    font-weight: 700;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #2884f7, stop:1 #1260ed);
 }
 
 QPushButton:hover {
@@ -214,6 +207,63 @@ QPushButton:hover {
 
 QPushButton:pressed {
     background: #0f47bd;
+}
+
+QPushButton#PrimaryButton {
+    min-height: 32px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+QPushButton#LinkButton {
+    min-height: 18px;
+    border: 0;
+    color: #1155c8;
+    background: transparent;
+    font-weight: 700;
+}
+
+QPushButton#CrucialButton,
+QPushButton#NormalButton,
+QPushButton#UrgentButton {
+    min-height: 48px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    background-color: #ffffff;
+    color: #111827;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px;
+}
+
+QPushButton#NormalButton:hover {
+    border: 2px solid #00c950;
+}
+
+QPushButton#NormalButton:checked {
+    background-color: #f0fdf4;
+    border: 2px solid #00c950;
+    color: #00a746;
+}
+
+QPushButton#UrgentButton:hover {
+    border: 2px solid #ff6900;
+}
+
+QPushButton#UrgentButton:checked {
+    background-color: #fff7ed;
+    border: 2px solid #ff6900;
+    color: #d95a00;
+}
+
+QPushButton#CrucialButton:hover {
+    border: 2px solid #fb2c36;
+}
+
+QPushButton#CrucialButton:checked {
+    background-color: #fef2f2;
+    border: 2px solid #fb2c36;
+    color: #d11d37;
 }
 
 QPushButton#add5m {
@@ -232,4 +282,35 @@ QPushButton#add1h {
     qproperty-text: "+ 1 hour";
 }
 
-QListWidget {color: red}
+QPushButton#close_checkIn {
+    min-width: 24px;
+    max-width: 24px;
+    min-height: 24px;
+    max-height: 24px;
+    border-radius: 6px;
+    padding: 0;
+    font-size: 11px;
+}
+
+QListWidget {
+    border: 1px solid #e6edf5;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #172033;
+    font-size: 12px;
+    font-weight: 600;
+    outline: 0;
+    padding: 8px;
+}
+
+QListWidget::item {
+    min-height: 30px;
+    border-radius: 7px;
+    padding: 6px 10px;
+    margin: 3px 0;
+}
+
+QListWidget::item:selected {
+    background-color: #dbeafe;
+    color: #123a7a;
+}

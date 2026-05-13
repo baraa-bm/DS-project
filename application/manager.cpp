@@ -37,10 +37,7 @@ void manager::updateTasks(Time *globalTime){
     if((currentTask->arrival_time + currentTask->excution_duration) >= *globalTime){
         executeTask(pq_tasks.top());  // print + pop happens inside
 
-<<<<<<< HEAD
-=======
         //update the new tasks list
->>>>>>> gui+integration
     }
 }
 

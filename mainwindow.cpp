@@ -1,6 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QButtonGroup>
+#include <QBrush>
+#include <QIntValidator>
+#include <QListWidgetItem>
+#include <QSize>
+#include <QTime>
+#include <QTimer>
 
 MainWindow::MainWindow(QWidget *parent)
     : QDialog(parent)
@@ -9,11 +15,20 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->NewPatient->hide();
 
-    displayTime(*currentTime);
+    // Show the real PC time when the window opens.
+    displayPcTime();
+
+    // Update the clock every second so the seconds visibly move.
+    QTimer *clockTimer = new QTimer(this);
+    connect(clockTimer, &QTimer::timeout, this, &MainWindow::displayPcTime);
+    clockTimer->start(1000);
 
     ui->CrucialButton->setCheckable(true);
     ui->UrgentButton->setCheckable(true);
     ui->NormalButton->setCheckable(true);
+
+    // Age should only accept whole numbers.
+    ui->PatientAge->setValidator(new QIntValidator(0, 130, this));
 
     QButtonGroup *priorityGroup = new QButtonGroup(this);
     priorityGroup->addButton(ui->CrucialButton);
@@ -41,8 +56,17 @@ void MainWindow::refreshPatientsList()
     int count = 0;
     task** ordered = Task_Manager->pq_tasks.getAll(count);
 
+    // These numbers are shown in Queue Statistics.
+    int crucialCount = 0;
+    int urgentCount = 0;
+    int normalCount = 0;
+
     if (count == 0 || ordered == nullptr) {
         ui->QueueStatus->setText("No Patients in Queue");
+        ui->CurcialNumber->setText("0");
+        ui->UrgentNumber->setText("0");
+        ui->NormaNumber->setText("0");
+        ui->TotaNumber->setText("0");
         return;
     }
 
@@ -53,13 +77,40 @@ void MainWindow::refreshPatientsList()
         if (t == nullptr) continue;
 
         QString priorityLabel;
-        if      (t->priority == 3) priorityLabel = "[Crucial]  ";
-        else if (t->priority == 2) priorityLabel = "[Urgrnt] ";
-        else                       priorityLabel = "[Normal]  ";
+        QColor textColor;
+        QColor rowColor;
 
-        QString text = priorityLabel + QString::fromStdString(t->name);
-        ui->PatientsList->addItem(text);
+        if (t->priority == 3) {
+            priorityLabel = "Crucial";
+            textColor = QColor("#b42318");
+            rowColor = QColor("#fff1f3");
+            crucialCount++;
+        } else if (t->priority == 2) {
+            priorityLabel = "Urgent";
+            textColor = QColor("#b45309");
+            rowColor = QColor("#fff7ed");
+            urgentCount++;
+        } else {
+            priorityLabel = "Normal";
+            textColor = QColor("#067647");
+            rowColor = QColor("#edfdf4");
+            normalCount++;
+        }
+
+        // Make each appointment easy to read in the display area.
+        QString text = priorityLabel + "  |  " + QString::fromStdString(t->name);
+        QListWidgetItem *item = new QListWidgetItem(text);
+        item->setForeground(QBrush(textColor));
+        item->setBackground(QBrush(rowColor));
+        item->setSizeHint(QSize(0, 38));
+        ui->PatientsList->addItem(item);
     }
+
+    // Put the new numbers on the screen.
+    ui->CurcialNumber->setText(QString::number(crucialCount));
+    ui->UrgentNumber->setText(QString::number(urgentCount));
+    ui->NormaNumber->setText(QString::number(normalCount));
+    ui->TotaNumber->setText(QString::number(count));
 
     delete[] ordered;
 }
@@ -71,13 +122,18 @@ void MainWindow::on_AddPatient_clicked()
 
 void MainWindow::on_CheckIn_clicked()
 {
-    if (ui->PatientName->text().isEmpty())
+    QString firstName = ui->PatientName->text().trimmed();
+    QString lastName = ui->PatientLastName->text().trimmed();
+    QString age = ui->PatientAge->text().trimmed();
+
+    if (firstName.isEmpty() || lastName.isEmpty() || age.isEmpty())
         return;
 
     if (Task_Manager == nullptr)
         return;
 
-    QString Qname = ui->PatientName->text();
+    // Save the details in one simple appointment text.
+    QString Qname = firstName + " " + lastName + "  |  Age: " + age;
     string name = Qname.toStdString();
 
     int priority;
@@ -92,6 +148,8 @@ void MainWindow::on_CheckIn_clicked()
         );
 
     ui->PatientName->clear();
+    ui->PatientLastName->clear();
+    ui->PatientAge->clear();
     ui->NewPatient->hide();
     refreshPatientsList();
 }
@@ -112,12 +170,29 @@ void MainWindow::displayTime(Time time)
         );
 }
 
+void MainWindow::displayPcTime()
+{
+    // Get the current time from the computer.
+    QTime pcTime = QTime::currentTime();
+
+    // Add the minutes from the Time Simulator buttons.
+    QTime shownTime = pcTime.addSecs(simulatedMinutes * 60);
+
+    // Save hours and minutes in the old project Time object.
+    currentTime->hours = shownTime.hour();
+    currentTime->minutes = shownTime.minute();
+
+    // Show hours, minutes, and seconds on the screen.
+    ui->CurrentTime->setText(shownTime.toString("HH:mm:ss"));
+}
+
 void MainWindow::updateTime(Time increment)
 {
-    Time newTime = *currentTime + increment;
-    *currentTime = newTime;
+    // Remember how much fake time the simulator added.
+    simulatedMinutes += increment.toTotalMinutes();
 
-    displayTime(*currentTime);
+    // Redraw the clock right away.
+    displayPcTime();
 }
 
 

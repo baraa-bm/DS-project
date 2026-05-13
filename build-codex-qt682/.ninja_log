@@ -1,0 +1,29 @@
+# ninja log v6
+503	998	8004054012022977	CMakeFiles/appPatient_Manager.dir/application/manager.cpp.obj	9bed6a7af666eaae
+2653	3029	8004072980212805	appPatient_Manager.exe	f43fe0ceac3ec53
+629	2652	8004072959969517	CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj	88b60e4ea24444a4
+1178	3164	8004065446453664	CMakeFiles/appPatient_Manager.dir/application/main.cpp.obj	b3befe4bdac7caac
+1146	2889	8004065446120391	CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/mocs_compilation.cpp.obj	fb9081f7ac9449de
+664	842	8004070563647752	CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp.obj	1dbe649c3c198228
+19	627	8004072953869708	C:/Users/AUC/Downloads/ds project/DS-project/build-codex-qt682/appPatient_Manager_autogen/timestamp	ba7449dd0e1dd1b6
+424	638	8004070563216488	appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp	d33cc875baafae36
+19	627	8004072953869708	C:/Users/AUC/Downloads/ds project/DS-project/build-codex-qt682/appPatient_Manager_autogen/mocs_compilation.cpp	ba7449dd0e1dd1b6
+1712	2381	8004053833841412	CMakeFiles/appPatient_Manager.dir/DataStructures/task.cpp.obj	37d317ff9b724208
+19	627	8004072953869708	appPatient_Manager_autogen/timestamp	ba7449dd0e1dd1b6
+19	627	8004072953869708	appPatient_Manager_autogen/mocs_compilation.cpp	ba7449dd0e1dd1b6
+424	638	8004070563216488	C:/Users/AUC/Downloads/ds project/DS-project/build-codex-qt682/appPatient_Manager_autogen/EWIEGA46WW/qrc_resources.cpp	d33cc875baafae36
+1835	2912	8004053835035951	CMakeFiles/appPatient_Manager.dir/application/persistence.cpp.obj	6ffe7356e183c0b9
+661	2042	8004061139955496	CMakeFiles/appPatient_Manager.dir/login_window/logindialog.cpp.obj	12d65bc5355c0a60
+1575	2033	8004053832477218	CMakeFiles/appPatient_Manager.dir/DataStructures/AppTime.cpp.obj	feb9f987fa3c83b1
+1947	4319	8004053836197476	CMakeFiles/appPatient_Manager.dir/login_window/userauth.cpp.obj	ff60139f176b722e
+1913	2169	8004053835854669	CMakeFiles/appPatient_Manager.dir/login_window/main_login.cpp.obj	7e07b9e04ae9b73a
+1640	2422	8004053833128981	CMakeFiles/appPatient_Manager.dir/DataStructures/priorityQueue.cpp.obj	7a3fdd99180057eb
+1866	2478	8004053835381998	CMakeFiles/appPatient_Manager.dir/application/user.cpp.obj	8ea8759445f11a68
+26	950	8004074335522497	appPatient_Manager_autogen/timestamp	ba7449dd0e1dd1b6
+26	950	8004074335522497	appPatient_Manager_autogen/mocs_compilation.cpp	ba7449dd0e1dd1b6
+26	950	8004074335522497	C:/Users/AUC/Downloads/ds project/DS-project/build-codex-qt682/appPatient_Manager_autogen/timestamp	ba7449dd0e1dd1b6
+26	950	8004074335522497	C:/Users/AUC/Downloads/ds project/DS-project/build-codex-qt682/appPatient_Manager_autogen/mocs_compilation.cpp	ba7449dd0e1dd1b6
+951	2658	8004074336565252	CMakeFiles/appPatient_Manager.dir/appPatient_Manager_autogen/mocs_compilation.cpp.obj	fb9081f7ac9449de
+980	2809	8004074336770027	CMakeFiles/appPatient_Manager.dir/application/main.cpp.obj	b3befe4bdac7caac
+1028	3155	8004074337268185	CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj	88b60e4ea24444a4
+3155	3545	8004074358618487	appPatient_Manager.exe	f43fe0ceac3ec53
