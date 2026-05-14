@@ -57,3 +57,10 @@
 1011	2888	8004366822868018	CMakeFiles/appPatient_Manager.dir/login_window/logindialog.cpp.obj	12d65bc5355c0a60
 1039	3202	8004366823148272	CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj	88b60e4ea24444a4
 3203	3693	8004366844784158	appPatient_Manager.exe	f43fe0ceac3ec53
+21	376	8004369861886120	appPatient_Manager_autogen/timestamp	ba7449dd0e1dd1b6
+21	376	8004369861886120	appPatient_Manager_autogen/mocs_compilation.cpp	ba7449dd0e1dd1b6
+21	376	8004369861886120	C:/Users/AUC/Downloads/ds project/DS-project/build-codex-qt682/appPatient_Manager_autogen/timestamp	ba7449dd0e1dd1b6
+21	376	8004369861886120	C:/Users/AUC/Downloads/ds project/DS-project/build-codex-qt682/appPatient_Manager_autogen/mocs_compilation.cpp	ba7449dd0e1dd1b6
+377	1672	8004369865449939	CMakeFiles/appPatient_Manager.dir/login_window/userauth.cpp.obj	ff60139f176b722e
+409	2140	8004369865762797	CMakeFiles/appPatient_Manager.dir/mainwindow.cpp.obj	88b60e4ea24444a4
+2141	2561	8004369883024400	appPatient_Manager.exe	f43fe0ceac3ec53

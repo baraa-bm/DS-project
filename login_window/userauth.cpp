@@ -2,7 +2,6 @@
 
 #include "../application/user.h"
 
-#include <QCoreApplication>
 #include <QDir>
 #include <QFile>
 #include <QTextStream>
@@ -11,32 +10,23 @@ namespace {
 
 QString defaultUsersPath()
 {
-    // Keep users.txt next to the exe.
-    // This is the file the app will really use when it runs.
-    return QCoreApplication::applicationDirPath() + "/users.txt";
+    // Use the normal users.txt in the folder where the app is started.
+    return QDir::current().absoluteFilePath("users.txt");
 }
 
 bool makeUsersFileIfMissing(const QString& path)
 {
-    // If users.txt already exists, everything is fine.
+    // If users.txt already exists, do nothing.
     if (QFile::exists(path)) {
         return true;
     }
 
-    // Make sure the folder exists.
-    QDir folder(QCoreApplication::applicationDirPath());
-    if (!folder.exists()) {
-        return false;
-    }
-
-    // Create a fresh users.txt file with the demo account.
+    // If users.txt is missing, create an empty one.
     QFile file(path);
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
         return false;
     }
 
-    QTextStream out(&file);
-    out << "demo@hospital.com demo123\n";
     file.close();
     return true;
 }
@@ -46,16 +36,16 @@ bool makeUsersFileIfMissing(const QString& path)
 UserAuth::UserAuth(QString usersFilePath)
     : m_usersFilePath(usersFilePath.isEmpty() ? defaultUsersPath() : usersFilePath)
 {
-    // Create users.txt as soon as UserAuth is made.
+    // Make sure users.txt exists before login or signup.
     makeUsersFileIfMissing(m_usersFilePath);
 }
 
 bool UserAuth::login(const QString& username, const QString& password, QString* error) const
 {
-    // Make sure the file exists before reading.
+    // Make sure users.txt exists.
     if (!makeUsersFileIfMissing(m_usersFilePath)) {
         if (error) {
-            *error = "Could not create users.txt at:\n" + m_usersFilePath;
+            *error = "Could not create users.txt.";
         }
         return false;
     }
@@ -63,14 +53,14 @@ bool UserAuth::login(const QString& username, const QString& password, QString* 
     QFile file(m_usersFilePath);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         if (error) {
-            *error = "Could not open users.txt at:\n" + m_usersFilePath;
+            *error = "Could not open users.txt.";
         }
         return false;
     }
 
     QTextStream in(&file);
 
-    // Read one username and one password at a time.
+    // Read username password pairs from users.txt.
     while (!in.atEnd()) {
         QString storedUsername;
         QString storedPassword;
@@ -103,10 +93,10 @@ bool UserAuth::registerUser(const QString& username, const QString& password, QS
         return false;
     }
 
-    // Make sure the file exists before reading or writing.
+    // Make sure users.txt exists.
     if (!makeUsersFileIfMissing(m_usersFilePath)) {
         if (error) {
-            *error = "Could not create users.txt at:\n" + m_usersFilePath;
+            *error = "Could not create users.txt.";
         }
         return false;
     }
@@ -114,14 +104,14 @@ bool UserAuth::registerUser(const QString& username, const QString& password, QS
     QFile readFile(m_usersFilePath);
     if (!readFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
         if (error) {
-            *error = "Could not read users.txt at:\n" + m_usersFilePath;
+            *error = "Could not read users.txt.";
         }
         return false;
     }
 
     QTextStream in(&readFile);
 
-    // Do not allow the same account twice.
+    // Do not save the same username twice.
     while (!in.atEnd()) {
         QString storedUsername;
         QString storedPassword;
@@ -140,14 +130,14 @@ bool UserAuth::registerUser(const QString& username, const QString& password, QS
     QFile writeFile(m_usersFilePath);
     if (!writeFile.open(QIODevice::Append | QIODevice::Text)) {
         if (error) {
-            *error = "Could not write to users.txt at:\n" + m_usersFilePath;
+            *error = "Could not write to users.txt.";
         }
         return false;
     }
 
     QTextStream out(&writeFile);
 
-    // Save the new account on a new line.
+    // Save the new username and password.
     out << cleanUsername << ' ' << password << '\n';
     writeFile.close();
 
