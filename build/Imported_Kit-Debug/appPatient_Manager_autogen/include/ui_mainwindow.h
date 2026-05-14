@@ -77,7 +77,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(982, 779);
+        MainWindow->resize(986, 777);
         QPalette palette;
         QBrush brush(QColor(226, 239, 240, 255));
         brush.setStyle(Qt::BrushStyle::SolidPattern);

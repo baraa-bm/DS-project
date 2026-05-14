@@ -18,6 +18,9 @@ public:
     int simulatedMinutes = 0;
     int realTimeSeconds = 0; //this is to update the remaining time of the current task accuratly accounting for the passing real time
 
+    int simulatedMinutesAtTaskStart = 0;
+    task* lastTrackedTask = nullptr; // To detect when the task switches
+
     void displayTime(Time time);
     void displayPcTime();
     void updateTime(Time increment);

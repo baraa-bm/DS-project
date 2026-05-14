@@ -14,6 +14,8 @@ void manager::addtask(task * newTask, int priority){
         }
 
         currentTask->_status = hold;
+        task * holdTask = currentTask;
+        holdTasks.enqueue(holdTask);
 
         newTask->_status = current;
         // Insert new task into queue. currentTask is already in the queue
@@ -44,6 +46,10 @@ void manager::addtask(task * newTask, int priority){
 
 List<task> &manager::getTasks(){
     return l_tasks;
+}
+
+queue<task*> &manager::getHoldTasks(){
+    return holdTasks;
 }
 
 task* manager::createTask(Time arrival_time, Time execution_duration, string name, int priority){

@@ -9,6 +9,7 @@
 class manager {
 private:
     queue<task*> q_tasks;
+    queue<task*> holdTasks;
     List<task> l_tasks;
 
 public:
@@ -16,6 +17,8 @@ public:
     task* currentTask;
 
     List<task>& getTasks();
+
+    queue<task*>& getHoldTasks();
     priorityQueue pq_tasks;
 
     task* createTask(Time arrival_time, Time execution_duration, string name, int priority);

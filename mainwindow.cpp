@@ -136,28 +136,30 @@ void MainWindow::refreshPatientsList()
     ui->NormaNumber->setText(QString::number(normalCount));
     ui->TotaNumber->setText(QString::number(count));
 
-    if(Task_Manager->currentTask != NULL){
-        Time remaining = Task_Manager->currentTask->remaining - Time{0, simulatedMinutes};
-        QString priorityLabel;
-        QColor textColor;
-        QColor rowColor;
+    if(Task_Manager->currentTask != nullptr){
 
-        if (Task_Manager->currentTask->priority == 3) {
-            priorityLabel = "Crucial";
-            textColor = QColor("#b42318");
-            rowColor = QColor("#fff1f3");
-            crucialCount++;
-        } else if (Task_Manager->currentTask->priority == 2) {
-            priorityLabel = "Urgent";
-            textColor = QColor("#b45309");
-            rowColor = QColor("#fff7ed");
-            urgentCount++;
-        } else {
-            priorityLabel = "Normal";
-            textColor = QColor("#067647");
-            rowColor = QColor("#edfdf4");
-            normalCount++;
+        // --- FIX LOGIC START ---
+        // If the task has changed (or just started), reset the starting marker
+        if (Task_Manager->currentTask != lastTrackedTask) {
+            simulatedMinutesAtTaskStart = simulatedMinutes;
+            lastTrackedTask = Task_Manager->currentTask;
         }
+
+        // Calculate minutes spent: Current total - marker at start
+        int minutesSpent = simulatedMinutes - simulatedMinutesAtTaskStart;
+
+        // Calculate remaining: Total duration - minutes spent
+        // We use toTotalMinutes() to make math easier, then convert back to Time
+        int totalDurationMins = Task_Manager->currentTask->excution_duration.toTotalMinutes();
+        int remainingMins = totalDurationMins - minutesSpent;
+
+        if (remainingMins < 0) remainingMins = 0;
+
+        Time remaining(remainingMins / 60, remainingMins % 60);
+        // --- FIX LOGIC END ---
+
+        QString priorityLabel;
+        // ... (Keep your existing color/label logic) ...
 
         QString executionTime = QString("%1:%2")
                                     .arg(Task_Manager->currentTask->excution_duration.hours, 2, 10, QChar('0'))
@@ -169,13 +171,72 @@ void MainWindow::refreshPatientsList()
 
         QString text = priorityLabel + "  |  " +
                        QString::fromStdString(Task_Manager->currentTask->name) +
-                       " | Execution Duration: " + executionTime +
+                       " | Duration: " + executionTime +
                        " | Remaining: " + remainingTime;
 
         ui->currentTaskInfo->setText(text);
+    } else {
+        lastTrackedTask = nullptr; // Reset if queue is empty
+        ui->currentTaskInfo->setText("No patients in queue");
     }
 
-    delete[] ordered;
+    //handling hold tasks
+    if (!Task_Manager->getHoldTasks().isEmpty()) {
+
+        queue<task*> &queue = Task_Manager->getHoldTasks();
+        int size = queue.sizeOfQueue();
+
+        for (int i = 0; i < size; i++) {
+
+            task *t = queue.front();
+            queue.dequeue();
+
+            if (t != nullptr) {
+
+                QString priorityLabel;
+                QColor textColor;
+                QColor rowColor;
+
+                if (t->priority == 3) {
+                    priorityLabel = "Crucial";
+                    textColor = QColor("#b42318");
+                    rowColor = QColor("#fff1f3");
+                    crucialCount++;
+
+                } else if (t->priority == 2) {
+                    priorityLabel = "Urgent";
+                    textColor = QColor("#b45309");
+                    rowColor = QColor("#fff7ed");
+                    urgentCount++;
+
+                } else {
+                    priorityLabel = "Normal";
+                    textColor = QColor("#067647");
+                    rowColor = QColor("#edfdf4");
+                    normalCount++;
+                }
+
+                QString executionTime = QString("%1:%2")
+                                            .arg(t->excution_duration.hours, 2, 10, QChar('0'))
+                                            .arg(t->excution_duration.minutes, 2, 10, QChar('0'));
+
+                QString text = "(ON HOLD) " + priorityLabel + " | " +
+                               QString::fromStdString(t->name) +
+                               " | Execution Duration: " + executionTime;
+
+                QListWidgetItem *item = new QListWidgetItem(text);
+
+                item->setForeground(QBrush(textColor));
+                item->setBackground(QBrush(rowColor));
+                item->setSizeHint(QSize(0, 38));
+
+                ui->PatientsList->addItem(item);
+            }
+
+            // restore queue order
+            queue.enqueue(t);
+        }
+    }
 }
 
 void MainWindow::on_AddPatient_clicked()
