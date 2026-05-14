@@ -1,44 +1,51 @@
 #include "manager.h"
 
-void manager::addtask(task * newTask, int priority){
+void manager::addtask(task * newTask, int priority) {
     l_tasks.push_back(*newTask);
 
     if (currentTask != nullptr && priority > currentTask->priority) {
-        // --- PREEMPTION LOGIC ---
-        // 1. Calculate how much time the current patient already spent with doctor
         int timeSpentMins = newTask->arrival_time.toTotalMinutes() - currentTask->start_time.toTotalMinutes();
         if (timeSpentMins > 0) {
             int remainingMins = currentTask->excution_duration.toTotalMinutes() - timeSpentMins;
-            if (remainingMins < 1) remainingMins = 1; // Prevent 0 min instant finish
+            if (remainingMins < 1) remainingMins = 1;
             currentTask->excution_duration = Time(0, remainingMins);
         }
 
         currentTask->_status = hold;
-        task * holdTask = currentTask;
-        holdTasks.enqueue(holdTask);
+        holdTasks.enqueue(currentTask);
 
         newTask->_status = current;
-        // Insert new task into queue. currentTask is already in the queue
-        pq_tasks.insert(newTask, priority);
-        currentTask = pq_tasks.top(); // The highest priority instantly becomes current
+        currentTask = newTask;
+        currentTask->start_time = newTask->arrival_time;
     }
     else if (currentTask == nullptr) {
-        // System is empty
         newTask->_status = current;
-        pq_tasks.insert(newTask, priority);
-        currentTask = pq_tasks.top();
+        currentTask = newTask;
+        currentTask->start_time = newTask->arrival_time;
     }
     else {
-        // Normal addition
         newTask->_status = pending;
         pq_tasks.insert(newTask, priority);
     }
 
-    // Update the copy in l_tasks so stats calculations are perfectly accurate
     int size = l_tasks.sizeOfList();
     for(int i = 0; i < size; i++){
         if(l_tasks[i].ID == newTask->ID){
             l_tasks[i]._status = newTask->_status;
+            break;
+        }
+    }
+}
+
+void manager::executeTask(task *completedTask) {
+    completedTask->_status = completed;
+    completedTasks++;
+
+    int size = l_tasks.sizeOfList();
+    for(int i = 0; i < size; i++){
+        if(l_tasks[i].ID == completedTask->ID){
+            l_tasks[i]._status = completed;
+            l_tasks[i].start_time = completedTask->start_time;
             break;
         }
     }
@@ -56,30 +63,6 @@ task* manager::createTask(Time arrival_time, Time execution_duration, string nam
     task * newTask = new task(arrival_time, execution_duration, name, priority);
     newTask->start_time = arrival_time; // <-- Initialize start time to when they arrive
     return newTask;
-}
-
-void manager::executeTask(task *completedTask){
-    completedTasks++;
-    //display completed task
-    int size = l_tasks.sizeOfList();
-    for(int i = 0; i < size; i++){
-        if(l_tasks[i].ID == completedTask->ID){
-            l_tasks[i]._status = completed;
-            l_tasks[i].start_time = completedTask->start_time;
-            break;
-        }
-    }
-}
-
-void manager::printCompletedTask(){   // fix: renamed from pringCompletedTask
-    cout << "\n[Completed Task]\n";
-    cout << "  ID       : " << currentTask->ID << "\n";
-    cout << "  Name     : " << currentTask->name << "\n";
-    cout << "  Priority : " << currentTask->priority << "\n";
-    cout << "  Arrival  : " << currentTask->arrival_time.hours << "h "
-         << currentTask->arrival_time.minutes << "m\n";
-    cout << "  Duration : " << currentTask->excution_duration.hours << "h "
-         << currentTask->excution_duration.minutes << "m\n\n";
 }
 
 
@@ -207,3 +190,8 @@ void manager::printCurrentTask(){
     cout << "  Duration : " << currentTask->excution_duration.hours << "h "
          << currentTask->excution_duration.minutes << "m\n";
 }
+
+
+
+
+

@@ -164,7 +164,7 @@ C:/Users/p8036/Desktop/Task-Scheduling/build/Imported_Kit-Debug/appPatient_Manag
   C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/AppTime.h \
   C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/List.h \
   C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/List.tpp \
-  C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/priorityQueue.h \
+  C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/PriorityQueue.h \
   C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/queue.h \
   C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/queue.tpp \
   C:/Users/p8036/Desktop/Task-Scheduling/DataStructures/task.h \
