@@ -74,15 +74,13 @@ void manager::updateTasks(Time *globalTime){
 
         if ( *globalTime >= finishTime ) {
 
-            currentTask->_status = completed;
+            // The current patient is finished.
             executeTask(currentTask);
 
-            // Pop the completed patient out of the priority queue
-            pq_tasks.pop();
-
-            // Bring in the next patient
+            // Bring in the next waiting patient.
             if (!pq_tasks.isEmpty()) {
                 task* nextTask = pq_tasks.top();
+                pq_tasks.pop();
 
                 if (nextTask->arrival_time > finishTime) {
                     nextTask->start_time = nextTask->arrival_time;
@@ -93,10 +91,12 @@ void manager::updateTasks(Time *globalTime){
                 currentTask = nextTask;
                 currentTask->_status = current;
             } else {
-                currentTask = nullptr; // Doctor is free
+                // Nobody is waiting.
+                currentTask = nullptr;
             }
         } else {
-            break; // Patient is still with doctor
+            // The current patient is still with the doctor.
+            break;
         }
     }
 }

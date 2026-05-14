@@ -375,7 +375,7 @@ C:/Users/AUC/Downloads/ds\ project/DS-project/build-codex-qt682/appPatient_Manag
   C:/Users/AUC/Downloads/ds\ project/DS-project/DataStructures/AppTime.h \
   C:/Users/AUC/Downloads/ds\ project/DS-project/DataStructures/List.h \
   C:/Users/AUC/Downloads/ds\ project/DS-project/DataStructures/List.tpp \
-  C:/Users/AUC/Downloads/ds\ project/DS-project/DataStructures/priorityQueue.h \
+  C:/Users/AUC/Downloads/ds\ project/DS-project/DataStructures/PriorityQueue.h \
   C:/Users/AUC/Downloads/ds\ project/DS-project/DataStructures/queue.h \
   C:/Users/AUC/Downloads/ds\ project/DS-project/DataStructures/queue.tpp \
   C:/Users/AUC/Downloads/ds\ project/DS-project/DataStructures/task.h \

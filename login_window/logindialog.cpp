@@ -26,19 +26,19 @@ void LoginDialog::buildUi()
 {
     setObjectName("LoginDialog");
     setWindowTitle("MediQueue Pro");
-    setFixedSize(460, 520);
+    setFixedSize(410, 470);
     if (QScreen* screen = QApplication::primaryScreen()) {
         const QRect available = screen->availableGeometry();
         move(available.center() - rect().center());
     }
 
     QVBoxLayout* pageLayout = new QVBoxLayout(this);
-    pageLayout->setContentsMargins(30, 18, 30, 16);
-    pageLayout->setSpacing(7);
+    pageLayout->setContentsMargins(24, 14, 24, 12);
+    pageLayout->setSpacing(6);
 
     QFrame* card = new QFrame(this);
     card->setObjectName("Card");
-    card->setFixedWidth(320);
+    card->setFixedWidth(290);
 
     QGraphicsDropShadowEffect* shadow = new QGraphicsDropShadowEffect(card);
     shadow->setBlurRadius(30);
@@ -47,13 +47,13 @@ void LoginDialog::buildUi()
     card->setGraphicsEffect(shadow);
 
     QVBoxLayout* cardLayout = new QVBoxLayout(card);
-    cardLayout->setContentsMargins(22, 16, 22, 14);
-    cardLayout->setSpacing(6);
+    cardLayout->setContentsMargins(18, 12, 18, 12);
+    cardLayout->setSpacing(5);
 
     QLabel* icon = new QLabel("+", card);
     icon->setObjectName("LoginIcon");
     icon->setAlignment(Qt::AlignCenter);
-    icon->setFixedSize(42, 42);
+    icon->setFixedSize(36, 36);
     cardLayout->addWidget(icon, 0, Qt::AlignHCenter);
 
     QLabel* title = new QLabel("MediQueue Pro", card);
@@ -98,11 +98,11 @@ void LoginDialog::buildUi()
     QFrame* demoBox = new QFrame(card);
     demoBox->setObjectName("DemoBox");
     QVBoxLayout* demoLayout = new QVBoxLayout(demoBox);
-    demoLayout->setContentsMargins(10, 7, 10, 7);
+    demoLayout->setContentsMargins(8, 6, 8, 6);
     QLabel* demoText = new QLabel("Demo Credentials:\nEmail: demo@hospital.com\nPassword: demo123", demoBox);
     demoText->setObjectName("DemoText");
     demoText->setWordWrap(true);
-    demoText->setMinimumHeight(36);
+    demoText->setMinimumHeight(32);
     demoLayout->addWidget(demoText);
     cardLayout->addWidget(demoBox);
 

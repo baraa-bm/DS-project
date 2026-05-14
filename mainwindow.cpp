@@ -74,8 +74,8 @@ void MainWindow::refreshPatientsList()
     int urgentCount = 0;
     int normalCount = 0;
 
-    // Check if both the Priority Queue and Hold Queue are empty
-    if (count == 0 && Task_Manager->getHoldTasks().isEmpty()) {
+    // Check if there are no current, waiting, or hold patients.
+    if (Task_Manager->currentTask == nullptr && count == 0 && Task_Manager->getHoldTasks().isEmpty()) {
         ui->QueueStatus->show();
         ui->QueueStatus->setText("No Patients in Queue");
         ui->currentTaskInfo->setText("No patients in queue");
@@ -133,6 +133,15 @@ void MainWindow::refreshPatientsList()
 
     // 3. Handle the Current Task (Single Info Display)
     if(Task_Manager->currentTask != nullptr){
+        // Count the current patient in Queue Statistics.
+        if (Task_Manager->currentTask->priority == 3) {
+            crucialCount++;
+        } else if (Task_Manager->currentTask->priority == 2) {
+            urgentCount++;
+        } else {
+            normalCount++;
+        }
+
         if (Task_Manager->currentTask != lastTrackedTask) {
             simulatedMinutesAtTaskStart = simulatedMinutes;
             lastTrackedTask = Task_Manager->currentTask;
