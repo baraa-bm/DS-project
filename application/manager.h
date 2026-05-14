@@ -13,7 +13,7 @@ private:
 
 public:
     int completedTasks = 0;
-    task* currentTask;
+    task* currentTask = nullptr;
 
     List<task>& getTasks();
     priorityQueue pq_tasks;

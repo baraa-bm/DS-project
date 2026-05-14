@@ -3,6 +3,7 @@ C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/DataStructu
 C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/DataStructures/List.h
 C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/DataStructures/priorityQueue.h
 C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/DataStructures/queue.h
+C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/DataStructures/task.h
 C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/login_window/logindialog.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.9.2/mingw_64/include/QtCore/QString
@@ -381,7 +382,6 @@ C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/login_windo
  mdp:C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/login_window/logindialog.h
  mdp:C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/login_window/userauth.h
 C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/application/user.h
-C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/DataStructures/task.h
 C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/application/persistence.h
 C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/application/manager.h
 C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/login_window/userauth.h
@@ -788,8 +788,8 @@ C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/DataStructu
 C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/application/main.cpp
 C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/application/manager.cpp
 C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/application/persistence.cpp
-C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/login_window/logindialog.cpp
 C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/application/user.cpp
+C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/login_window/logindialog.cpp
 C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/login_window/main_login.cpp
 C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/login_window/userauth.cpp
 C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/mainwindow.cpp

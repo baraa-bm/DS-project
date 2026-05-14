@@ -89,69 +89,43 @@ void manager::updateTasks(Time *globalTime){
     while (currentTask != nullptr) {
         Time finishTime = currentTask->start_time + currentTask->excution_duration;
 
-        if ( *globalTime >= finishTime ) {
-
+        if (*globalTime >= finishTime) {
             currentTask->_status = completed;
             executeTask(currentTask);
-
-            // Pop the completed patient out of the priority queue
             pq_tasks.pop();
 
-            // Bring in the next patient
             if (!pq_tasks.isEmpty()) {
                 task* nextTask = pq_tasks.top();
 
-                //handling hold feature added code
-                if (!pq_tasks.isEmpty()) {
-                    task* nextTask = pq_tasks.top();
-
-                    if (nextTask->_status == hold) {
+                if (nextTask->_status == hold) {
+                    // Resume held task from where it was interrupted
+                    nextTask->start_time = finishTime;
+                } else {
+                    // Fresh task: start at max(arrival, now)
+                    if (nextTask->arrival_time > finishTime)
+                        nextTask->start_time = nextTask->arrival_time;
+                    else
                         nextTask->start_time = finishTime;
-                    } else {
-                        // Fresh task: starts at max(its arrival, now)
-                        if (nextTask->arrival_time > finishTime)
-                            nextTask->start_time = nextTask->arrival_time;
-                        else
-                            nextTask->start_time = finishTime;
-                    }
+                }
 
-                    currentTask = nextTask;
-                    currentTask->_status = current;
+                currentTask = nextTask;
+                currentTask->_status = current;
 
-                    // Sync back to l_tasks, also added for hold feature
-                    for (int i = 0; i < l_tasks.sizeOfList(); i++) {
-                        if (l_tasks[i].ID == currentTask->ID) {
-                            l_tasks[i]._status = current;
-                            l_tasks[i].start_time = currentTask->start_time;
-                            break;
-                        }
+                // Sync status and start_time back to l_tasks
+                for (int i = 0; i < l_tasks.sizeOfList(); i++) {
+                    if (l_tasks[i].ID == currentTask->ID) {
+                        l_tasks[i]._status = current;
+                        l_tasks[i].start_time = currentTask->start_time;
+                        break;
                     }
                 }
-                else
-                    currentTask = nullptr;
+            } else {
+                currentTask = nullptr; // Doctor is free
             }
-            else
-                break;
-
+        } else {
+            break; // Current patient still being treated
         }
-
-
-    //             if (nextTask->arrival_time > finishTime) {
-    //                 nextTask->start_time = nextTask->arrival_time;
-    //             } else {
-    //                 nextTask->start_time = finishTime;
-    //             }
-
-    //             currentTask = nextTask;
-    //             currentTask->_status = current;
-    //         } else {
-    //             currentTask = nullptr; // Doctor is free
-    //         }
-    //     } else {
-    //         break; // Patient is still with doctor
-    //     }
-    // }
-   }
+    }
 }
 float manager::totalTimeExcecution(){
     int hours = 0; int minutes = 0;

@@ -41,6 +41,7 @@ namespace {
     std::string statusToString(status s) {
         if (s == pending) return "pending";
         if (s == current) return "current";
+        if (s == hold)      return "hold"; //added fro hold
         return "completed";
     }
 
@@ -48,6 +49,7 @@ namespace {
         if (s == "pending") { out = pending; return true; }
         if (s == "current") { out = current; return true; }
         if (s == "completed") { out = completed; return true; }
+         if (s == "hold")      { out = hold;      return true; }
         return false;
     }
 
