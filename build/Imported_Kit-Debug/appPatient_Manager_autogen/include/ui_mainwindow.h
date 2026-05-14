@@ -69,12 +69,15 @@ public:
     QPushButton *close_checkIn;
     QLineEdit *TaskDuration;
     QLabel *label_15;
+    QFrame *currentTask;
+    QLabel *label_16;
+    QLabel *currentTaskInfo;
 
     void setupUi(QDialog *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(982, 820);
+        MainWindow->resize(982, 779);
         QPalette palette;
         QBrush brush(QColor(226, 239, 240, 255));
         brush.setStyle(Qt::BrushStyle::SolidPattern);
@@ -224,7 +227,7 @@ public:
         label_2->setFont(font2);
         PatientsFrame = new QFrame(MainWindow);
         PatientsFrame->setObjectName("PatientsFrame");
-        PatientsFrame->setGeometry(QRect(310, 290, 631, 231));
+        PatientsFrame->setGeometry(QRect(290, 230, 631, 221));
         PatientsFrame->setMinimumSize(QSize(0, 116));
         PatientsFrame->setFrameShape(QFrame::Shape::WinPanel);
         PatientsFrame->setFrameShadow(QFrame::Shadow::Raised);
@@ -239,12 +242,12 @@ public:
         QueueStatus->setGeometry(QRect(230, 100, 200, 16));
         StatsFrame = new QFrame(MainWindow);
         StatsFrame->setObjectName("StatsFrame");
-        StatsFrame->setGeometry(QRect(38, 291, 230, 200));
+        StatsFrame->setGeometry(QRect(40, 360, 230, 371));
         StatsFrame->setFrameShape(QFrame::Shape::WinPanel);
         StatsFrame->setFrameShadow(QFrame::Shadow::Raised);
         label_5 = new QLabel(StatsFrame);
         label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(15, 8, 180, 20));
+        label_5->setGeometry(QRect(20, 10, 180, 20));
         CrucialFrame = new QFrame(StatsFrame);
         CrucialFrame->setObjectName("CrucialFrame");
         CrucialFrame->setGeometry(QRect(15, 38, 200, 24));
@@ -291,10 +294,10 @@ public:
         TotaNumber->setGeometry(QRect(184, 8, 37, 12));
         AddPatient = new QPushButton(MainWindow);
         AddPatient->setObjectName("AddPatient");
-        AddPatient->setGeometry(QRect(38, 505, 230, 31));
+        AddPatient->setGeometry(QRect(40, 310, 230, 31));
         NewPatient = new QFrame(MainWindow);
         NewPatient->setObjectName("NewPatient");
-        NewPatient->setGeometry(QRect(40, 540, 901, 261));
+        NewPatient->setGeometry(QRect(300, 470, 601, 261));
         NewPatient->setFrameShape(QFrame::Shape::WinPanel);
         NewPatient->setFrameShadow(QFrame::Shadow::Raised);
         label_10 = new QLabel(NewPatient);
@@ -342,6 +345,17 @@ public:
         label_15 = new QLabel(NewPatient);
         label_15->setObjectName("label_15");
         label_15->setGeometry(QRect(20, 190, 91, 16));
+        currentTask = new QFrame(MainWindow);
+        currentTask->setObjectName("currentTask");
+        currentTask->setGeometry(QRect(290, 130, 631, 80));
+        currentTask->setFrameShape(QFrame::Shape::WinPanel);
+        currentTask->setFrameShadow(QFrame::Shadow::Raised);
+        label_16 = new QLabel(currentTask);
+        label_16->setObjectName("label_16");
+        label_16->setGeometry(QRect(20, 30, 81, 16));
+        currentTaskInfo = new QLabel(currentTask);
+        currentTaskInfo->setObjectName("currentTaskInfo");
+        currentTaskInfo->setGeometry(QRect(110, 30, 511, 20));
 
         retranslateUi(MainWindow);
 
@@ -391,6 +405,8 @@ public:
         TaskDuration->setText(QString());
         TaskDuration->setPlaceholderText(QCoreApplication::translate("MainWindow", "Minutes", nullptr));
         label_15->setText(QCoreApplication::translate("MainWindow", "Task Duration", nullptr));
+        label_16->setText(QCoreApplication::translate("MainWindow", "Current Task:", nullptr));
+        currentTaskInfo->setText(QCoreApplication::translate("MainWindow", "Placeholder", nullptr));
     } // retranslateUi
 
 };

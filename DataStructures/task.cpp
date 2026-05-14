@@ -12,4 +12,5 @@ task::task(Time arrival_time, Time execution_duration, std::string name, int pri
     this->excution_duration = execution_duration;
     this->name = name;
     this->priority = priority;
+    this->remaining = execution_duration;
 }

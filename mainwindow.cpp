@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->NewPatient->hide();
+    ui->currentTaskInfo->setText("No patients in queue");
 
     // Show the real PC time when the window opens.
     displayPcTime();
@@ -22,6 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
     // Update the clock every second so the seconds visibly move.
     QTimer *clockTimer = new QTimer(this);
     connect(clockTimer, &QTimer::timeout, this, &MainWindow::displayPcTime);
+    connect(clockTimer, &QTimer::timeout, this, &MainWindow::addSecond);
     clockTimer->start(1000);
 
     ui->CrucialButton->setCheckable(true);
@@ -48,6 +50,15 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::addSecond(){
+    realTimeSeconds++;
+
+    if(realTimeSeconds == 60){
+        simulatedMinutes++;
+        realTimeSeconds = 0;
+    }
+}
+
 void MainWindow::refreshPatientsList()
 {
     if (Task_Manager == nullptr || ui->PatientsList == nullptr)
@@ -67,6 +78,7 @@ void MainWindow::refreshPatientsList()
     if (count == 0 || ordered == nullptr) {
         ui->QueueStatus->show();
         ui->QueueStatus->setText("No Patients in Queue");
+        ui->currentTaskInfo->setText("No patients in queue");
         ui->CurcialNumber->setText("0");
         ui->UrgentNumber->setText("0");
         ui->NormaNumber->setText("0");
@@ -103,7 +115,14 @@ void MainWindow::refreshPatientsList()
         }
 
         // Make each appointment easy to read in the display area.
-        QString text = priorityLabel + "  |  " + QString::fromStdString(t->name);
+        QString executionTime = QString("%1:%2")
+                                    .arg(t->excution_duration.hours, 2, 10, QChar('0'))
+                                    .arg(t->excution_duration.minutes, 2, 10, QChar('0'));
+
+        QString text = priorityLabel + "  |  " +
+                       QString::fromStdString(t->name) +
+                       " | Execution Duration: " + executionTime;
+
         QListWidgetItem *item = new QListWidgetItem(text);
         item->setForeground(QBrush(textColor));
         item->setBackground(QBrush(rowColor));
@@ -116,6 +135,45 @@ void MainWindow::refreshPatientsList()
     ui->UrgentNumber->setText(QString::number(urgentCount));
     ui->NormaNumber->setText(QString::number(normalCount));
     ui->TotaNumber->setText(QString::number(count));
+
+    if(Task_Manager->currentTask != NULL){
+        Time remaining = Task_Manager->currentTask->remaining - Time{0, simulatedMinutes};
+        QString priorityLabel;
+        QColor textColor;
+        QColor rowColor;
+
+        if (Task_Manager->currentTask->priority == 3) {
+            priorityLabel = "Crucial";
+            textColor = QColor("#b42318");
+            rowColor = QColor("#fff1f3");
+            crucialCount++;
+        } else if (Task_Manager->currentTask->priority == 2) {
+            priorityLabel = "Urgent";
+            textColor = QColor("#b45309");
+            rowColor = QColor("#fff7ed");
+            urgentCount++;
+        } else {
+            priorityLabel = "Normal";
+            textColor = QColor("#067647");
+            rowColor = QColor("#edfdf4");
+            normalCount++;
+        }
+
+        QString executionTime = QString("%1:%2")
+                                    .arg(Task_Manager->currentTask->excution_duration.hours, 2, 10, QChar('0'))
+                                    .arg(Task_Manager->currentTask->excution_duration.minutes, 2, 10, QChar('0'));
+
+        QString remainingTime = QString("%1:%2")
+                                    .arg(remaining.hours, 2, 10, QChar('0'))
+                                    .arg(remaining.minutes, 2, 10, QChar('0'));
+
+        QString text = priorityLabel + "  |  " +
+                       QString::fromStdString(Task_Manager->currentTask->name) +
+                       " | Execution Duration: " + executionTime +
+                       " | Remaining: " + remainingTime;
+
+        ui->currentTaskInfo->setText(text);
+    }
 
     delete[] ordered;
 }
@@ -157,6 +215,7 @@ void MainWindow::on_CheckIn_clicked()
         Task_Manager->createTask(*currentTime, Time{0, durationMinutes}, name, priority),
         priority
         );
+
     ui->PatientName->clear();
     ui->PatientLastName->clear();
     ui->TaskDuration->clear();
@@ -211,23 +270,27 @@ void MainWindow::on_add5m_clicked()
 {
     updateTime(Time{0, 5});
     Task_Manager->updateTasks(currentTime);
+    refreshPatientsList();
 }
 
 void MainWindow::on_add15m_clicked()
 {
     updateTime(Time{0, 15});
     Task_Manager->updateTasks(currentTime);
+    refreshPatientsList();
 }
 
 void MainWindow::on_add30m_clicked()
 {
     updateTime(Time{0, 30});
     Task_Manager->updateTasks(currentTime);
+    refreshPatientsList();
 }
 
 void MainWindow::on_add1h_clicked()
 {
     updateTime(Time{1, 0});
     Task_Manager->updateTasks(currentTime);
+    refreshPatientsList();
 }
 

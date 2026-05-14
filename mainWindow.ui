@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>982</width>
-    <height>820</height>
+    <height>779</height>
    </rect>
   </property>
   <property name="palette">
@@ -715,10 +715,10 @@
   <widget class="QFrame" name="PatientsFrame">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>290</y>
+     <x>290</x>
+     <y>230</y>
      <width>631</width>
-     <height>231</height>
+     <height>221</height>
     </rect>
    </property>
    <property name="minimumSize">
@@ -769,10 +769,10 @@
   <widget class="QFrame" name="StatsFrame">
    <property name="geometry">
     <rect>
-     <x>38</x>
-     <y>291</y>
+     <x>40</x>
+     <y>360</y>
      <width>230</width>
-     <height>200</height>
+     <height>371</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -784,8 +784,8 @@
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>15</x>
-      <y>8</y>
+      <x>20</x>
+      <y>10</y>
       <width>180</width>
       <height>20</height>
      </rect>
@@ -966,8 +966,8 @@
   <widget class="QPushButton" name="AddPatient">
    <property name="geometry">
     <rect>
-     <x>38</x>
-     <y>505</y>
+     <x>40</x>
+     <y>310</y>
      <width>230</width>
      <height>31</height>
     </rect>
@@ -979,9 +979,9 @@
   <widget class="QFrame" name="NewPatient">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>540</y>
-     <width>901</width>
+     <x>300</x>
+     <y>470</y>
+     <width>601</width>
      <height>261</height>
     </rect>
    </property>
@@ -1196,6 +1196,48 @@
     </property>
     <property name="text">
      <string>Task Duration</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="currentTask">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>130</y>
+     <width>631</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::WinPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_16">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Current Task:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="currentTaskInfo">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>30</y>
+      <width>511</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Placeholder</string>
     </property>
    </widget>
   </widget>
