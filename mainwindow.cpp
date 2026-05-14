@@ -19,6 +19,11 @@ MainWindow::MainWindow(QWidget *parent)
     // Show the real PC time when the window opens.
     displayPcTime();
 
+    // Update the clock every second so the seconds visibly move.
+    QTimer *clockTimer = new QTimer(this);
+    connect(clockTimer, &QTimer::timeout, this, &MainWindow::displayPcTime);
+    clockTimer->start(1000);
+
     ui->CrucialButton->setCheckable(true);
     ui->UrgentButton->setCheckable(true);
     ui->NormalButton->setCheckable(true);
@@ -60,6 +65,7 @@ void MainWindow::refreshPatientsList()
     int normalCount = 0;
 
     if (count == 0 || ordered == nullptr) {
+        ui->QueueStatus->show();
         ui->QueueStatus->setText("No Patients in Queue");
         ui->CurcialNumber->setText("0");
         ui->UrgentNumber->setText("0");
@@ -68,7 +74,7 @@ void MainWindow::refreshPatientsList()
         return;
     }
 
-    ui->QueueStatus->setText(QString::number(count) + " patient(s) in queue");
+    ui->QueueStatus->hide();
 
     for (int i = 0; i < count; i++) {
         task *t = ordered[i];
@@ -176,12 +182,15 @@ void MainWindow::displayPcTime()
     // Get the current time from the computer.
     QTime pcTime = QTime::currentTime();
 
+    // Add the minutes from the Time Simulator buttons.
+    QTime shownTime = pcTime.addSecs(simulatedMinutes * 60);
+
     // Save hours and minutes in the old project Time object.
-    currentTime->hours = pcTime.hour();
-    currentTime->minutes = pcTime.minute();
+    currentTime->hours = shownTime.hour();
+    currentTime->minutes = shownTime.minute();
 
     // Show hours, minutes, and seconds on the screen.
-    ui->CurrentTime->setText(pcTime.toString("HH:mm:ss"));
+    ui->CurrentTime->setText(shownTime.toString("HH:mm:ss"));
 
     if (Task_Manager != nullptr) {
         Task_Manager->updateTasks(currentTime); // Tell manager time passed
@@ -192,12 +201,10 @@ void MainWindow::displayPcTime()
 void MainWindow::updateTime(Time increment)
 {
     // Remember how much fake time the simulator added.
-    Time newTime = increment + *currentTime;
-
-    *currentTime = newTime;
+    simulatedMinutes += increment.toTotalMinutes();
 
     // Redraw the clock right away.
-    displayTime(*currentTime);
+    displayPcTime();
 }
 
 void MainWindow::on_add5m_clicked()
@@ -223,3 +230,4 @@ void MainWindow::on_add1h_clicked()
     updateTime(Time{1, 0});
     Task_Manager->updateTasks(currentTime);
 }
+

@@ -14,7 +14,8 @@ class MainWindow : public QDialog
 
 public:
     manager *Task_Manager = nullptr;
-    Time *currentTime = new Time(5,0);
+    Time *currentTime = new Time(5, 0);
+    int simulatedMinutes = 0;
 
     void displayTime(Time time);
     void displayPcTime();

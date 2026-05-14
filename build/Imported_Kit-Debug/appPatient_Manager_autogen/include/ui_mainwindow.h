@@ -36,8 +36,8 @@ public:
     QLabel *TimeSimulator;
     QLabel *label_2;
     QFrame *PatientsFrame;
-    QLabel *QueueStatus;
     QListWidget *PatientsList;
+    QLabel *QueueStatus;
     QFrame *StatsFrame;
     QLabel *label_5;
     QFrame *CrucialFrame;
@@ -74,7 +74,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(956, 589);
+        MainWindow->resize(982, 820);
         QPalette palette;
         QBrush brush(QColor(226, 239, 240, 255));
         brush.setStyle(Qt::BrushStyle::SolidPattern);
@@ -224,19 +224,19 @@ public:
         label_2->setFont(font2);
         PatientsFrame = new QFrame(MainWindow);
         PatientsFrame->setObjectName("PatientsFrame");
-        PatientsFrame->setGeometry(QRect(330, 138, 590, 116));
+        PatientsFrame->setGeometry(QRect(310, 290, 631, 231));
         PatientsFrame->setMinimumSize(QSize(0, 116));
         PatientsFrame->setFrameShape(QFrame::Shape::WinPanel);
         PatientsFrame->setFrameShadow(QFrame::Shadow::Raised);
-        QueueStatus = new QLabel(PatientsFrame);
-        QueueStatus->setObjectName("QueueStatus");
-        QueueStatus->setGeometry(QRect(195, 54, 200, 12));
         PatientsList = new QListWidget(PatientsFrame);
         PatientsList->setObjectName("PatientsList");
-        PatientsList->setGeometry(QRect(0, 0, 590, 116));
+        PatientsList->setGeometry(QRect(20, 10, 590, 201));
         PatientsList->setFrameShape(QFrame::Shape::WinPanel);
         PatientsList->setFrameShadow(QFrame::Shadow::Raised);
         PatientsList->setSortingEnabled(false);
+        QueueStatus = new QLabel(PatientsFrame);
+        QueueStatus->setObjectName("QueueStatus");
+        QueueStatus->setGeometry(QRect(230, 100, 200, 16));
         StatsFrame = new QFrame(MainWindow);
         StatsFrame->setObjectName("StatsFrame");
         StatsFrame->setGeometry(QRect(38, 291, 230, 200));
@@ -294,7 +294,7 @@ public:
         AddPatient->setGeometry(QRect(38, 505, 230, 31));
         NewPatient = new QFrame(MainWindow);
         NewPatient->setObjectName("NewPatient");
-        NewPatient->setGeometry(QRect(330, 291, 590, 261));
+        NewPatient->setGeometry(QRect(40, 540, 901, 261));
         NewPatient->setFrameShape(QFrame::Shape::WinPanel);
         NewPatient->setFrameShadow(QFrame::Shadow::Raised);
         label_10 = new QLabel(NewPatient);
