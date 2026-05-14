@@ -1,19 +1,19 @@
 {
 	"AUTOGEN_COMMAND_LINE_LENGTH_MAX" : 32000,
-	"BUILD_DIR" : "C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen",
-	"CMAKE_BINARY_DIR" : "C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project",
+	"BUILD_DIR" : "C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project",
 	"CMAKE_EXECUTABLE" : "C:/Qt/Tools/CMake_64/bin/cmake.exe",
 	"CMAKE_LIST_FILES" : 
 	[
-		"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/CMakeLists.txt",
-		"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake",
+		"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/CMakeLists.txt",
+		"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystem.cmake.in",
-		"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake",
+		"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeNinjaFindMake.cmake",
-		"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qtc/package-manager/maintenance_tool_provider.cmake",
+		"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qtc/package-manager/maintenance_tool_provider.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake",
@@ -66,7 +66,7 @@
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in",
-		"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+		"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake",
@@ -81,7 +81,7 @@
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineRCCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCCompiler.cmake.in",
-		"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake",
+		"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestRCCompiler.cmake",
@@ -98,7 +98,7 @@
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in",
-		"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+		"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake",
 		"C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake",
 		"C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake",
@@ -408,84 +408,84 @@
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
 		"C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6/Qt6Dependencies.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake",
-		"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/resources.qrc"
+		"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/resources.qrc"
 	],
-	"CMAKE_SOURCE_DIR" : "C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project",
+	"CMAKE_SOURCE_DIR" : "C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project",
 	"CROSS_CONFIG" : false,
-	"DEP_FILE" : "C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/deps",
+	"DEP_FILE" : "C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "appPatient_Manager_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/DataStructures/AppTime.h",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/DataStructures/AppTime.h",
 			"MU",
 			"XMZHDO24YM/moc_AppTime.cpp",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/DataStructures/List.h",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/DataStructures/List.h",
 			"MU",
 			"XMZHDO24YM/moc_List.cpp",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/DataStructures/priorityQueue.h",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/DataStructures/priorityQueue.h",
 			"MU",
 			"XMZHDO24YM/moc_priorityQueue.cpp",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/DataStructures/queue.h",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/DataStructures/queue.h",
 			"MU",
 			"XMZHDO24YM/moc_queue.cpp",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/DataStructures/task.h",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/DataStructures/task.h",
 			"MU",
 			"XMZHDO24YM/moc_task.cpp",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/application/manager.h",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/application/manager.h",
 			"MU",
 			"WTMXIFCN4H/moc_manager.cpp",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/application/persistence.h",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/application/persistence.h",
 			"MU",
 			"WTMXIFCN4H/moc_persistence.cpp",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/application/user.h",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/application/user.h",
 			"MU",
 			"WTMXIFCN4H/moc_user.cpp",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/login_window/logindialog.h",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/login_window/logindialog.h",
 			"MU",
 			"GOWCJZZ62T/moc_logindialog.cpp",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/login_window/userauth.h",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/login_window/userauth.h",
 			"MU",
 			"GOWCJZZ62T/moc_userauth.cpp",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/mainwindow.h",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/include",
-	"MOC_COMPILATION_FILE" : "C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/include",
+	"MOC_COMPILATION_FILE" : "C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"MINGW_HAS_SECURE_API=1",
@@ -508,11 +508,11 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project",
-		"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/application",
-		"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/DataStructures",
-		"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug",
-		"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/include",
+		"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project",
+		"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/application",
+		"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/DataStructures",
+		"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug",
+		"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/include",
 		"C:/Qt/6.9.2/mingw_64/include/QtCore",
 		"C:/Qt/6.9.2/mingw_64/include",
 		"C:/Qt/6.9.2/mingw_64/mkspecs/win32-g++",
@@ -544,71 +544,71 @@
 		"-c",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 10,
-	"PARSE_CACHE_FILE" : "C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/appPatient_Manager_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/appPatient_Manager_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "C:/Qt/6.9.2/mingw_64/bin/moc.exe",
 	"QT_UIC_EXECUTABLE" : "C:/Qt/6.9.2/mingw_64/bin/uic.exe",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 9,
-	"SETTINGS_FILE" : "C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/appPatient_Manager_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/appPatient_Manager_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/DataStructures/AppTime.cpp",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/DataStructures/AppTime.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/DataStructures/priorityQueue.cpp",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/DataStructures/priorityQueue.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/DataStructures/task.cpp",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/DataStructures/task.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/application/main.cpp",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/application/main.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/application/manager.cpp",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/application/manager.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/application/persistence.cpp",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/application/persistence.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/application/user.cpp",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/application/user.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/login_window/logindialog.cpp",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/login_window/logindialog.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/login_window/main_login.cpp",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/login_window/main_login.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/login_window/userauth.cpp",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/login_window/userauth.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/Youstina Abouelkher/Desktop/ads E-R/DS-project/mainwindow.cpp",
+			"C:/Users/Youstina Abouelkher/Desktop/ads project complete/DS-project/mainwindow.cpp",
 			"MU",
 			null
 		]

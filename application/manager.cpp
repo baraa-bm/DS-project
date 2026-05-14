@@ -1,12 +1,17 @@
 #include "manager.h"
 
-void manager::addtask(task * newTask, int priority){
+void manager::addtask(task * newTask, int priority,Time* globalTime){
     l_tasks.push_back(*newTask);
 
     if (currentTask != nullptr && priority > currentTask->priority) {
         // --- PREEMPTION LOGIC ---
         // 1. Calculate how much time the current patient already spent with doctor
-        int timeSpentMins = newTask->arrival_time.toTotalMinutes() - currentTask->start_time.toTotalMinutes();
+
+        //an issue with the following piece of code
+        //int timeSpentMins = newTask->arrival_time.toTotalMinutes() - currentTask->start_time.toTotalMinutes();
+        //resolved
+        int timeSpentMins = globalTime->toTotalMinutes() - currentTask->start_time.toTotalMinutes();
+
         if (timeSpentMins > 0) {
             int remainingMins = currentTask->excution_duration.toTotalMinutes() - timeSpentMins;
             if (remainingMins < 1) remainingMins = 1; // Prevent 0 min instant finish
@@ -14,6 +19,7 @@ void manager::addtask(task * newTask, int priority){
         }
 
         currentTask->_status = hold;
+        currentTask->wasHeld = true; //added for hold feature
 
         newTask->_status = current;
         // Insert new task into queue. currentTask is already in the queue
@@ -95,23 +101,58 @@ void manager::updateTasks(Time *globalTime){
             if (!pq_tasks.isEmpty()) {
                 task* nextTask = pq_tasks.top();
 
-                if (nextTask->arrival_time > finishTime) {
-                    nextTask->start_time = nextTask->arrival_time;
-                } else {
-                    nextTask->start_time = finishTime;
+                //handling hold feature added code
+                if (!pq_tasks.isEmpty()) {
+                    task* nextTask = pq_tasks.top();
+
+                    if (nextTask->_status == hold) {
+                        nextTask->start_time = finishTime;
+                    } else {
+                        // Fresh task: starts at max(its arrival, now)
+                        if (nextTask->arrival_time > finishTime)
+                            nextTask->start_time = nextTask->arrival_time;
+                        else
+                            nextTask->start_time = finishTime;
+                    }
+
+                    currentTask = nextTask;
+                    currentTask->_status = current;
+
+                    // Sync back to l_tasks, also added for hold feature
+                    for (int i = 0; i < l_tasks.sizeOfList(); i++) {
+                        if (l_tasks[i].ID == currentTask->ID) {
+                            l_tasks[i]._status = current;
+                            l_tasks[i].start_time = currentTask->start_time;
+                            break;
+                        }
+                    }
                 }
-
-                currentTask = nextTask;
-                currentTask->_status = current;
-            } else {
-                currentTask = nullptr; // Doctor is free
+                else
+                    currentTask = nullptr;
             }
-        } else {
-            break; // Patient is still with doctor
-        }
-    }
-}
+            else
+                break;
 
+        }
+
+
+    //             if (nextTask->arrival_time > finishTime) {
+    //                 nextTask->start_time = nextTask->arrival_time;
+    //             } else {
+    //                 nextTask->start_time = finishTime;
+    //             }
+
+    //             currentTask = nextTask;
+    //             currentTask->_status = current;
+    //         } else {
+    //             currentTask = nullptr; // Doctor is free
+    //         }
+    //     } else {
+    //         break; // Patient is still with doctor
+    //     }
+    // }
+   }
+}
 float manager::totalTimeExcecution(){
     int hours = 0; int minutes = 0;
     int size = l_tasks.sizeOfList();

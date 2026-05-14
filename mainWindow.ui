@@ -715,8 +715,8 @@
   <widget class="QFrame" name="PatientsFrame">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>290</y>
+     <x>270</x>
+     <y>120</y>
      <width>631</width>
      <height>231</height>
     </rect>
@@ -979,8 +979,8 @@
   <widget class="QFrame" name="NewPatient">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>540</y>
+     <x>270</x>
+     <y>360</y>
      <width>901</width>
      <height>261</height>
     </rect>

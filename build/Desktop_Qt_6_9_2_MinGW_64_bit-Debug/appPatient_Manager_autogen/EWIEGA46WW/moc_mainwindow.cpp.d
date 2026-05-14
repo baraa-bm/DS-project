@@ -1,5 +1,5 @@
-C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/mainwindow.h \
-  C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/moc_predefs.h \
+C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/mainwindow.h \
+  C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/moc_predefs.h \
   C:/Qt/6.9.2/mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.2/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.9.2/mingw_64/include/QtCore/q20iterator.h \
@@ -385,11 +385,11 @@ C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/build/Desktop_Qt_6_9_2
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
-  C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/DataStructures/AppTime.h \
-  C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/DataStructures/List.h \
-  C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/DataStructures/List.tpp \
-  C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/DataStructures/priorityQueue.h \
-  C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/DataStructures/queue.h \
-  C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/DataStructures/queue.tpp \
-  C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/DataStructures/task.h \
-  C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/application/manager.h
+  C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/DataStructures/AppTime.h \
+  C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/DataStructures/List.h \
+  C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/DataStructures/List.tpp \
+  C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/DataStructures/priorityQueue.h \
+  C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/DataStructures/queue.h \
+  C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/DataStructures/queue.tpp \
+  C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/DataStructures/task.h \
+  C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/application/manager.h

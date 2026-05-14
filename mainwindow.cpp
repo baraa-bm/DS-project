@@ -155,8 +155,9 @@ void MainWindow::on_CheckIn_clicked()
 
     Task_Manager->addtask(
         Task_Manager->createTask(*currentTime, Time{0, durationMinutes}, name, priority),
-        priority
+        priority, currentTime //added currentTime for feature holding
         );
+
     ui->PatientName->clear();
     ui->PatientLastName->clear();
     ui->TaskDuration->clear();

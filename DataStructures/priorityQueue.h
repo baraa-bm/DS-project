@@ -27,19 +27,56 @@ private:
     void swap(int i, int j);
     void fix_heap(int index);
 
-    // helper used only by getAll(): sift-down on a temporary copy
+    // helper used only by getAll(): sift-down on a temporary copy,
+    //Edited for holding feature
+
     static void siftDown(element* heap, int size, int index) {
         while (index * 2 <= size) {
             int maxChild = index * 2;
-            if (index * 2 + 1 <= size &&
-                heap[index * 2 + 1].priority > heap[maxChild].priority)
-                maxChild = index * 2 + 1;
-            if (heap[index].priority >= heap[maxChild].priority) break;
+            // if (index * 2 + 1 <= size &&
+            //     heap[index * 2 + 1].priority > heap[maxChild].priority)
+            //     maxChild = index * 2 + 1;
+            if (index * 2 + 1 <= size) {
+                element& r = heap[index * 2 + 1];
+                element& l = heap[maxChild];
+                // same tiebreak logic: priority → wasHeld → order
+                bool rightWins = (r.priority != l.priority)
+                                     ? r.priority > l.priority
+                                     : (r.value->wasHeld != l.value->wasHeld)
+                                           ? r.value->wasHeld
+                                           : r.order < l.order;
+                if (rightWins) maxChild = index * 2 + 1;
+            }
+            element& cur = heap[index];
+            element& child = heap[maxChild];
+            //this method is a bit lengthy and complicated
+            bool childWins = (child.priority != cur.priority) ? child.priority > cur.priority
+                             : (child.value->wasHeld != cur.value->wasHeld)
+                                       ? child.value->wasHeld
+                                       : child.order < cur.order;
+            if (!childWins) break;
             element tmp = heap[index];
             heap[index] = heap[maxChild];
             heap[maxChild] = tmp;
             index = maxChild;
         }
+
+        //     if (heap[index].priority >= heap[maxChild].priority) break;
+        //     element tmp = heap[index];
+        //     heap[index] = heap[maxChild];
+        //     heap[maxChild] = tmp;
+        //     index = maxChild;
+        // }
+    }
+
+//helper function for holding issue
+    // Returns true if element at i should be above element at j
+    bool higher(int i, int j) const {
+        if (maxHeap[i].priority != maxHeap[j].priority)
+            return maxHeap[i].priority > maxHeap[j].priority;   // higher priority wins
+        if (maxHeap[i].value->wasHeld != maxHeap[j].value->wasHeld)
+            return maxHeap[i].value->wasHeld;                   // held task wins tie
+        return maxHeap[i].order < maxHeap[j].order;             // earlier insertion wins fifo
     }
 
 public:

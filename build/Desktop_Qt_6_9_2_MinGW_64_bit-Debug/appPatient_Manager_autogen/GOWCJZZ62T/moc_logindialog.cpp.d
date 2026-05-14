@@ -1,5 +1,5 @@
-C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/GOWCJZZ62T/moc_logindialog.cpp: C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/login_window/logindialog.h \
-  C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/moc_predefs.h \
+C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/GOWCJZZ62T/moc_logindialog.cpp: C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/login_window/logindialog.h \
+  C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/moc_predefs.h \
   C:/Qt/6.9.2/mingw_64/include/QtCore/QString \
   C:/Qt/6.9.2/mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.2/mingw_64/include/QtCore/q20functional.h \
@@ -372,4 +372,4 @@ C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/build/Desktop_Qt_6_9_2
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/login_window/userauth.h
+  C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/login_window/userauth.h

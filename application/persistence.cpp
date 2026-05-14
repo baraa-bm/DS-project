@@ -252,7 +252,7 @@ bool PersistenceManager::loadFromTxt(const std::string& path, manager& mgr, Pers
 
             task* heapTask = new task();
             *heapTask = t;
-            mgr.addtask(heapTask, heapTask->priority);
+            mgr.addtask(heapTask, heapTask->priority,&heapTask->arrival_time);
         }
     }
 
@@ -446,7 +446,7 @@ bool PersistenceManager::loadFromJson(const std::string& path, manager& mgr, Per
 
         task* heapTask = new task();
         *heapTask = t;
-        mgr.addtask(heapTask, heapTask->priority);
+        mgr.addtask(heapTask, heapTask->priority, &heapTask->arrival_time);
     }
 
     return true;

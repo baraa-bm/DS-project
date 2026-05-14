@@ -653,37 +653,37 @@ appPatient_Manager_autogen/timestamp: \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/CMakeLists.txt \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/DataStructures/AppTime.cpp \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/DataStructures/AppTime.h \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/DataStructures/List.h \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/DataStructures/List.tpp \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/DataStructures/priorityQueue.cpp \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/DataStructures/priorityQueue.h \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/DataStructures/queue.h \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/DataStructures/queue.tpp \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/DataStructures/task.cpp \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/DataStructures/task.h \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/application/main.cpp \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/application/manager.cpp \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/application/manager.h \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/application/persistence.cpp \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/application/persistence.h \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/application/user.cpp \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/application/user.h \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qtc/package-manager/maintenance_tool_provider.cmake \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/moc_predefs.h \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/login_window/logindialog.cpp \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/login_window/logindialog.h \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/login_window/main_login.cpp \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/login_window/userauth.cpp \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/login_window/userauth.h \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/mainwindow.cpp \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/mainwindow.h \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/resources.qrc \
-	C:/Users/Youstina\ Abouelkher/Desktop/ads\ E-R/DS-project/mainWindow.ui \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/CMakeLists.txt \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/DataStructures/AppTime.cpp \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/DataStructures/AppTime.h \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/DataStructures/List.h \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/DataStructures/List.tpp \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/DataStructures/priorityQueue.cpp \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/DataStructures/priorityQueue.h \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/DataStructures/queue.h \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/DataStructures/queue.tpp \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/DataStructures/task.cpp \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/DataStructures/task.h \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/application/main.cpp \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/application/manager.cpp \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/application/manager.h \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/application/persistence.cpp \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/application/persistence.h \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/application/user.cpp \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/application/user.h \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qtc/package-manager/maintenance_tool_provider.cmake \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appPatient_Manager_autogen/moc_predefs.h \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/login_window/logindialog.cpp \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/login_window/logindialog.h \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/login_window/main_login.cpp \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/login_window/userauth.cpp \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/login_window/userauth.h \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/mainwindow.cpp \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/mainwindow.h \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/resources.qrc \
+	C:/Users/Youstina\ Abouelkher/Desktop/ads\ project\ complete/DS-project/mainWindow.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

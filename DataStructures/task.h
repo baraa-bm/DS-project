@@ -16,6 +16,8 @@ public:
     Time arrival_time;
     Time start_time;
     status _status;
+    //for hold feature purposes
+    bool wasHeld = false;
 
     task();
     task(Time arrival_time, Time execution_duration, std::string name, int priority);

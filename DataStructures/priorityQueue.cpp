@@ -63,11 +63,17 @@ void priorityQueue::fix_heap(int index) {
     while (index > 1) {
         int parent = p_parent(index);
 
-        // compare priority
-        if (maxHeap[index].priority > maxHeap[parent].priority) {
+        //updated using the helper function we write in th .h
+        if (higher(index, parent)) {   // ← was: maxHeap[index].priority > maxHeap[parent].priority
             swap(index, parent);
             index = parent;
         } else return;
+
+        // // compare priority
+        // if (maxHeap[index].priority > maxHeap[parent].priority) {
+        //     swap(index, parent);
+        //     index = parent;
+        // } else return;
     }
 }
 
@@ -117,17 +123,24 @@ void priorityQueue::pop() {
 
     int current = 1;
 
+    // while (p_left(current) <= p_size) {
+    //     int max_child = p_left(current);
+
+    //     if (p_right(current) <= p_size && (maxHeap[p_right(current)].priority > maxHeap[max_child].priority)) {
+
+    //using the helper function for handling the hold
     while (p_left(current) <= p_size) {
         int max_child = p_left(current);
-
-        if (p_right(current) <= p_size && (maxHeap[p_right(current)].priority > maxHeap[max_child].priority)) {
-
+        if (p_right(current) <= p_size && higher(p_right(current), max_child)) {
             max_child = p_right(current);
         }
 
-        if (maxHeap[current].priority > maxHeap[max_child].priority) {
+        // if (maxHeap[current].priority > maxHeap[max_child].priority) {
+        //     break;
+        // }
+        //using the helper function as well
+        if (!higher(max_child, current))
             break;
-        }
 
         swap(current, max_child);
         current = max_child;
